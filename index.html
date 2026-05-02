@@ -103,7 +103,7 @@ nav {
 /* ── SCROLL-PINNED VIDEO ── */
 .scroll-video-wrapper {
   position:relative;
-  height:1120vh;
+  height:1230vh;
   margin-top:64px; /* nav height */
 }
 .scroll-video-sticky {
@@ -515,6 +515,69 @@ nav {
   font-size:.8rem; line-height:1.8; color:rgba(255,255,255,.85); margin-top:8px;
 }
 
+/* ── PRICING TABLES ── */
+.phase-pricing-grid {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:1px; background:rgba(255,255,255,.07);
+  width:100%; max-width:960px; margin-top:28px;
+}
+.phase-pricing-col {
+  background:rgba(8,8,6,.72); padding:32px 28px;
+}
+.pricing-section-title {
+  font-size:9px; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--gold); font-weight:400; margin-bottom:20px;
+  display:flex; align-items:center; gap:12px;
+}
+.pricing-section-title::before { content:''; display:block; width:20px; height:1px; background:var(--gold) }
+.pricing-table { width:100%; border-collapse:collapse }
+.pricing-table tr { border-bottom:1px solid rgba(255,255,255,.07) }
+.pricing-table tr:last-child { border-bottom:none }
+.pricing-table td {
+  padding:11px 0; font-size:.82rem; line-height:1.4;
+  color:rgba(255,255,255,.9);
+}
+.pricing-table td:first-child { color:rgba(255,255,255,.75) }
+.pricing-table td:last-child {
+  text-align:right; font-weight:400;
+  font-family:'Cormorant Garamond',serif; font-size:1rem; color:var(--gold);
+}
+.pricing-table tr.pricing-header td {
+  font-size:8px; letter-spacing:.16em; text-transform:uppercase;
+  color:rgba(255,255,255,.3); padding-bottom:8px;
+}
+.pricing-note {
+  font-size:.72rem; color:rgba(255,255,255,.45);
+  line-height:1.6; margin-top:16px; font-style:italic;
+}
+.pricing-kit-list {
+  list-style:none; display:flex; flex-direction:column; gap:8px; margin-top:12px;
+}
+.pricing-kit-list li {
+  font-size:.8rem; color:rgba(255,255,255,.85);
+  display:flex; align-items:center; gap:10px; line-height:1.4;
+}
+.pricing-kit-list li::before {
+  content:''; display:block; flex-shrink:0;
+  width:12px; height:1px; background:var(--gold);
+}
+.pricing-kit-total {
+  font-size:9px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--gold); font-weight:400; margin-top:14px;
+  padding-top:14px; border-top:1px solid rgba(255,255,255,.08);
+}
+.pricing-vat {
+  font-size:7.5px; letter-spacing:.16em; text-transform:uppercase;
+  color:rgba(255,255,255,.25); margin-top:20px; text-align:center;
+}
+.pricing-kits-row {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:1px; background:rgba(255,255,255,.07); margin-top:1px;
+}
+.pricing-kit-card {
+  background:rgba(8,8,6,.72); padding:28px 28px;
+}
+
 /* ── GOOGLE BADGE ── */
 .phase-google-badge {
   display:inline-flex; align-items:center; gap:16px;
@@ -540,7 +603,9 @@ nav {
 @media (max-width:900px) {
   nav { padding:0 20px }
   .nav-wa span { display:none }
-  .scroll-video-wrapper { height:1600vh }
+  .scroll-video-wrapper { height:1750vh }
+  .phase-pricing-grid { grid-template-columns:1fr }
+  .pricing-kits-row { grid-template-columns:1fr }
   .phase-team-grid { grid-template-columns:1fr }
   .phase-values { grid-template-columns:1fr }
   .phase-partners { gap:28px }
@@ -752,7 +817,7 @@ nav {
         <span class="es">→ El próximo huésped encuentra el apartamento como nuevo. Siempre.</span>
       </div>
       <div class="phase-cta">
-        <button class="btn-gold" onclick="scrollToPhase(11)">
+        <button class="btn-gold" onclick="scrollToPhase(12)">
           <span class="it">Preventivo gratuito</span>
           <span class="es">Presupuesto gratis</span>
         </button>
@@ -920,9 +985,96 @@ nav {
     </div>
 
     <!-- ════════════════════
-         PHASE 6 — PRENOTAZIONI DIRETTE
+         PHASE 10 — LISTINO PREZZI
          ════════════════════ -->
     <div class="svideo-phase" id="sv-phase-10">
+      <div class="phase-eyebrow">
+        <span class="it">Listino prezzi · IVA inclusa</span>
+        <span class="es">Lista de precios · IVA incluido</span>
+      </div>
+      <h2 class="phase-title md serif">
+        <span class="it">Trasparenza totale.<br><em>Zero sorprese.</em></span>
+        <span class="es">Transparencia total.<br><em>Cero sorpresas.</em></span>
+      </h2>
+      <div class="phase-pricing-grid">
+        <!-- Colonna sinistra: Mano d'opera -->
+        <div class="phase-pricing-col">
+          <div class="pricing-section-title">
+            <span class="it">Mano d'opera + Prodotti</span>
+            <span class="es">Mano de obra + Productos</span>
+          </div>
+          <table class="pricing-table">
+            <tr class="pricing-header">
+              <td><span class="it">Superficie</span><span class="es">Superficie</span></td>
+              <td><span class="it">Prezzo</span><span class="es">Precio</span></td>
+            </tr>
+            <tr><td>25 – 40 m²</td><td>€ 30,00</td></tr>
+            <tr><td>40 – 75 m²</td><td>€ 40,00</td></tr>
+            <tr><td>75 – 110 m²</td><td>€ 50,00</td></tr>
+            <tr><td>110 – 145 m²</td><td>€ 60,00</td></tr>
+            <tr><td>145 – 170 m²</td><td>€ 75,00</td></tr>
+          </table>
+        </div>
+        <!-- Colonna destra: Biancheria -->
+        <div class="phase-pricing-col">
+          <div class="pricing-section-title">
+            <span class="it">Biancheria B.A.</span>
+            <span class="es">Ropa de cama B.A.</span>
+          </div>
+          <table class="pricing-table">
+            <tr class="pricing-header">
+              <td><span class="it">Servizio</span><span class="es">Servicio</span></td>
+              <td><span class="it">Prezzo</span><span class="es">Precio</span></td>
+            </tr>
+            <tr><td><span class="it">1 Matrimoniale + 1 Kit Bagno</span><span class="es">1 Matrimonial + 1 Kit Baño</span></td><td>€ 25,00</td></tr>
+            <tr><td><span class="it">Ogni matrimoniale aggiuntivo</span><span class="es">Cada matrimonial adicional</span></td><td>+ € 15,00</td></tr>
+            <tr><td><span class="it">Ogni kit bagno aggiuntivo</span><span class="es">Cada kit baño adicional</span></td><td>+ € 3,00</td></tr>
+            <tr><td><span class="it">1 Letto singolo</span><span class="es">1 Cama individual</span></td><td>€ 10,00</td></tr>
+          </table>
+          <p class="pricing-note">
+            <span class="it">Set letto: 2/3 lenzuola, 2 federe, 2 asciugamani per ospite (corpo e viso), 1 canovaccio cucina.</span>
+            <span class="es">Set cama: 2/3 sábanas, 2 fundas, 2 toallas por huésped (cuerpo y cara), 1 trapo de cocina.</span>
+          </p>
+        </div>
+      </div>
+      <!-- Kit row -->
+      <div class="pricing-kits-row" style="max-width:960px;width:100%">
+        <div class="pricing-kit-card">
+          <div class="pricing-section-title">Kit Bagno Extra</div>
+          <ul class="pricing-kit-list">
+            <li><span class="it">2 rotoli di carta igienica</span><span class="es">2 rollos de papel higiénico</span></li>
+            <li><span class="it">Refill dispenser sapone liquido mani</span><span class="es">Recarga dispensador jabón manos</span></li>
+            <li><span class="it">Tappeto doccia</span><span class="es">Alfombra de ducha</span></li>
+          </ul>
+          <div class="pricing-kit-total">€ 3,00</div>
+        </div>
+        <div class="pricing-kit-card">
+          <div class="pricing-section-title">Kit Cucina</div>
+          <ul class="pricing-kit-list">
+            <li><span class="it">2 pastiglie lavastoviglie</span><span class="es">2 pastillas lavavajillas</span></li>
+            <li><span class="it">1 dispenser sapone piatti + refill</span><span class="es">1 dispensador jabón platos + recarga</span></li>
+            <li><span class="it">Spugna piatti</span><span class="es">Estropajo</span></li>
+            <li><span class="it">2 buste extra per l'immondizia</span><span class="es">2 bolsas extra para basura</span></li>
+          </ul>
+          <div class="pricing-kit-total">€ 3,00</div>
+        </div>
+      </div>
+      <div class="pricing-vat">
+        <span class="it">Tutti i prezzi si intendono IVA inclusa · Per informazioni contattare Blue Arroyo</span>
+        <span class="es">Todos los precios incluyen IVA · Para información contactar Blue Arroyo</span>
+      </div>
+      <div class="phase-cta" style="margin-top:20px">
+        <button class="btn-gold" onclick="scrollToPhase(12)">
+          <span class="it">Richiedi preventivo gratuito</span>
+          <span class="es">Solicitar presupuesto gratis</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ════════════════════
+         PHASE 6 — PRENOTAZIONI DIRETTE
+         ════════════════════ -->
+    <div class="svideo-phase" id="sv-phase-11">
       <div class="phase-eyebrow">
         <span class="it">Esclusivo Blue Arroyo</span>
         <span class="es">Exclusivo Blue Arroyo</span>
@@ -940,7 +1092,7 @@ nav {
         <div><div class="db-sn serif">0%</div><div class="db-sl"><span class="it">commissioni prenotazioni dirette</span><span class="es">comisiones reservas directas</span></div></div>
       </div>
       <div class="phase-cta">
-        <button class="btn-outline-light" onclick="scrollToPhase(11)">
+        <button class="btn-outline-light" onclick="scrollToPhase(12)">
           <span class="it">Scopri come funziona →</span>
           <span class="es">Descubrir cómo funciona →</span>
         </button>
@@ -950,7 +1102,7 @@ nav {
     <!-- ════════════════════
          PHASE 7 — CONTATTO
          ════════════════════ -->
-    <div class="svideo-phase" id="sv-phase-11">
+    <div class="svideo-phase" id="sv-phase-12">
       <div class="phase-eyebrow">
         <span class="it">Per Proprietari &amp; Property Manager · Firenze · Senza rischio</span>
         <span class="es">Para Propietarios &amp; Property Managers · Sin riesgo</span>
@@ -1050,8 +1202,9 @@ nav {
       <div class="phase-dot" data-phase="6"  title="Come Funziona"></div>
       <div class="phase-dot" data-phase="7"  title="Il Team"></div>
       <div class="phase-dot" data-phase="8"  title="Recensioni"></div>
-      <div class="phase-dot" data-phase="9"  title="Prenotazioni Dirette"></div>
-      <div class="phase-dot" data-phase="10" title="Contatti"></div>
+      <div class="phase-dot" data-phase="9"  title="Prezzi"></div>
+      <div class="phase-dot" data-phase="10" title="Prenotazioni Dirette"></div>
+      <div class="phase-dot" data-phase="11" title="Contatti"></div>
     </div>
 
     <!-- Sound toggle -->
@@ -1097,12 +1250,12 @@ function setLang(l) {
   var wrapper  = document.getElementById('video-section');
   var progress = document.getElementById('sProgress');
   var dots     = document.querySelectorAll('.phase-dot');
-  var phases   = ['sv-phase-1','sv-phase-2','sv-phase-3','sv-phase-4','sv-phase-5','sv-phase-6','sv-phase-7','sv-phase-8','sv-phase-9','sv-phase-10','sv-phase-11'];
-  /* video cycling: 11 phases → v1 v2 v3 v1 v2 v3 v1 v2 v3 v1 v2 */
-  var videoMap = [0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1];
+  var phases   = ['sv-phase-1','sv-phase-2','sv-phase-3','sv-phase-4','sv-phase-5','sv-phase-6','sv-phase-7','sv-phase-8','sv-phase-9','sv-phase-10','sv-phase-11','sv-phase-12'];
+  /* video cycling: 12 phases → v1 v2 v3 v1 v2 v3 v1 v2 v3 v1 v2 v3 */
+  var videoMap = [0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2];
   var videoIds = ['sv-v1','sv-v2','sv-v3'];
-  /* phase breakpoints — give brand (p1) slightly more time */
-  var breaks   = [0.12, 0.21, 0.30, 0.39, 0.48, 0.57, 0.66, 0.75, 0.84, 0.92];
+  /* 11 breakpoints for 12 phases */
+  var breaks   = [0.11, 0.20, 0.29, 0.37, 0.46, 0.54, 0.63, 0.71, 0.79, 0.87, 0.93];
   if (!wrapper) return;
   var lastIdx  = -1;
 
@@ -1161,7 +1314,7 @@ function setLang(l) {
 /* ── SCROLL TO PHASE ── */
 function scrollToPhase(n) {
   var wrapper = document.getElementById('video-section');
-  var breaks  = [0, 0.12, 0.21, 0.30, 0.39, 0.48, 0.57, 0.66, 0.75, 0.84, 0.92, 1];
+  var breaks  = [0, 0.11, 0.20, 0.29, 0.37, 0.46, 0.54, 0.63, 0.71, 0.79, 0.87, 0.93, 1];
   var i       = n - 1; /* phase n is 0-indexed */
   var midPct  = (breaks[i] + breaks[i+1]) / 2;
   var total   = wrapper.offsetHeight - window.innerHeight;

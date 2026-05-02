@@ -519,64 +519,67 @@ nav {
 /* ── PRICING TABLES ── */
 .phase-pricing-grid {
   display:grid; grid-template-columns:1fr 1fr;
-  gap:1px; background:rgba(255,255,255,.07);
-  width:100%; max-width:960px; margin-top:28px;
+  gap:1px; background:rgba(255,255,255,.1);
+  width:100%; max-width:960px; margin-top:24px;
 }
 .phase-pricing-col {
-  background:rgba(8,8,6,.72); padding:32px 28px;
+  background:rgba(8,8,6,.8); padding:36px 32px;
 }
 .pricing-section-title {
-  font-size:9px; letter-spacing:.22em; text-transform:uppercase;
+  font-size:10px; letter-spacing:.22em; text-transform:uppercase;
   color:var(--gold); font-weight:400; margin-bottom:20px;
   display:flex; align-items:center; gap:12px;
 }
 .pricing-section-title::before { content:''; display:block; width:20px; height:1px; background:var(--gold) }
 .pricing-table { width:100%; border-collapse:collapse }
-.pricing-table tr { border-bottom:1px solid rgba(255,255,255,.07) }
+.pricing-table tr { border-bottom:1px solid rgba(255,255,255,.1) }
 .pricing-table tr:last-child { border-bottom:none }
 .pricing-table td {
-  padding:11px 0; font-size:.82rem; line-height:1.4;
-  color:rgba(255,255,255,.9);
+  padding:13px 0; font-size:.92rem; line-height:1.4;
+  color:rgba(255,255,255,.95);
 }
-.pricing-table td:first-child { color:rgba(255,255,255,.75) }
+.pricing-table td:first-child { color:rgba(255,255,255,.85) }
 .pricing-table td:last-child {
   text-align:right; font-weight:400;
-  font-family:'Cormorant Garamond',serif; font-size:1rem; color:var(--gold);
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.2rem; color:var(--gold);
+  letter-spacing:.02em;
 }
 .pricing-table tr.pricing-header td {
-  font-size:8px; letter-spacing:.16em; text-transform:uppercase;
-  color:rgba(255,255,255,.3); padding-bottom:8px;
+  font-size:9px; letter-spacing:.18em; text-transform:uppercase;
+  color:rgba(255,255,255,.4); padding-bottom:10px;
 }
 .pricing-note {
-  font-size:.72rem; color:rgba(255,255,255,.45);
-  line-height:1.6; margin-top:16px; font-style:italic;
+  font-size:.78rem; color:rgba(255,255,255,.65);
+  line-height:1.7; margin-top:16px; font-style:italic;
 }
 .pricing-kit-list {
-  list-style:none; display:flex; flex-direction:column; gap:8px; margin-top:12px;
+  list-style:none; display:flex; flex-direction:column; gap:10px; margin-top:14px;
 }
 .pricing-kit-list li {
-  font-size:.8rem; color:rgba(255,255,255,.85);
-  display:flex; align-items:center; gap:10px; line-height:1.4;
+  font-size:.88rem; color:rgba(255,255,255,.92);
+  display:flex; align-items:center; gap:12px; line-height:1.4;
 }
 .pricing-kit-list li::before {
   content:''; display:block; flex-shrink:0;
-  width:12px; height:1px; background:var(--gold);
+  width:14px; height:1px; background:var(--gold);
 }
 .pricing-kit-total {
-  font-size:9px; letter-spacing:.18em; text-transform:uppercase;
-  color:var(--gold); font-weight:400; margin-top:14px;
-  padding-top:14px; border-top:1px solid rgba(255,255,255,.08);
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem; font-weight:300;
+  color:var(--gold); margin-top:18px;
+  padding-top:16px; border-top:1px solid rgba(255,255,255,.1);
 }
 .pricing-vat {
-  font-size:7.5px; letter-spacing:.16em; text-transform:uppercase;
-  color:rgba(255,255,255,.25); margin-top:20px; text-align:center;
+  font-size:8px; letter-spacing:.16em; text-transform:uppercase;
+  color:rgba(255,255,255,.35); margin-top:20px; text-align:center;
 }
 .pricing-kits-row {
   display:grid; grid-template-columns:1fr 1fr;
-  gap:1px; background:rgba(255,255,255,.07); margin-top:1px;
+  gap:1px; background:rgba(255,255,255,.1); margin-top:1px;
 }
 .pricing-kit-card {
-  background:rgba(8,8,6,.72); padding:28px 28px;
+  background:rgba(8,8,6,.8); padding:28px 32px;
 }
 
 /* ── GOOGLE BADGE ── */

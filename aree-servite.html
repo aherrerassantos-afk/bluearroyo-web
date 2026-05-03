@@ -11,6 +11,9 @@
 <meta property="og:url" content="https://palazzobluearroyo.it/aree-servite.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/shared.css">
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -38,129 +41,16 @@
   "aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"10","bestRating":"5"}
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
-<style>
-:root{--white:#FFFFFF;--off:#F7F5F2;--dark:#0C0C0B;--mid:#3A3A38;--muted:#7A7A76;--gold:#C6A96B;--gold-l:#DFC48A;--pad:clamp(24px,6vw,96px)}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;font-size:16px}
-body{background:var(--dark);color:var(--white);font-family:'Jost',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-.serif{font-family:'Cormorant Garamond',serif}
-a{color:inherit;text-decoration:none}
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:300;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);background:rgba(12,12,11,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
-.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.nav-logo-img{height:34px;width:auto;filter:brightness(0) invert(1)}
-.nav-logo-fallback{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;letter-spacing:.06em;color:var(--white);display:flex;align-items:center;gap:10px}
-.nav-logo-line{width:24px;height:1px;background:var(--gold);display:inline-block}
-.nav-links{display:flex;align-items:center;gap:28px}
-.nav-links a{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);text-decoration:none;transition:color .3s;font-weight:400}
-.nav-links a:hover,.nav-links a.active{color:var(--gold)}
-.nav-right{display:flex;align-items:center;gap:14px}
-.nav-wa{display:inline-flex;align-items:center;gap:8px;font-size:9px;letter-spacing:.18em;text-transform:uppercase;font-weight:400;background:#25D366;color:var(--white);padding:8px 18px;text-decoration:none;transition:all .3s}
-.nav-wa:hover{background:#1da851}
-.lang-toggle{display:flex;gap:4px}
-.lang-btn{font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;background:none;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.4);padding:4px 9px;cursor:pointer;transition:all .3s}
-.lang-btn.active,.lang-btn:hover{border-color:var(--gold);color:var(--gold)}
-.nav-hamburger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
-.nav-hamburger span{display:block;width:22px;height:1px;background:rgba(255,255,255,.7);transition:all .3s}
-.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;z-index:299;background:rgba(12,12,11,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);padding:24px var(--pad);flex-direction:column;gap:0}
-.mobile-menu.open{display:flex}
-.mobile-menu a{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.6);text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.05);transition:color .3s}
-.mobile-menu a:hover{color:var(--gold)}
-.mobile-menu a:last-child{border-bottom:none}
-/* WA FLOAT */
-.wa-float{position:fixed;bottom:32px;left:var(--pad);z-index:300;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 24px rgba(37,211,102,.35);transition:transform .3s,box-shadow .3s}
-.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 32px rgba(37,211,102,.5)}
-/* BUTTONS */
-.btn-gold{font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:400;border:1px solid var(--gold);color:var(--dark);padding:14px 32px;text-decoration:none;background:var(--gold);transition:all .3s;cursor:pointer;font-family:'Jost',sans-serif;display:inline-block}
-.btn-gold:hover{background:transparent;color:var(--gold)}
-.btn-outline-light{font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:400;border:1px solid rgba(255,255,255,.35);color:var(--white);padding:14px 32px;text-decoration:none;background:transparent;transition:all .3s;cursor:pointer;font-family:'Jost',sans-serif;display:inline-block}
-.btn-outline-light:hover{background:var(--white);color:var(--dark)}
-.btn-outline-gold{font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:400;border:1px solid var(--gold);color:var(--gold);padding:14px 32px;text-decoration:none;background:transparent;transition:all .3s;cursor:pointer;font-family:'Jost',sans-serif;display:inline-block}
-.btn-outline-gold:hover{background:var(--gold);color:var(--dark)}
-/* SECTION */
-.section{padding:120px var(--pad)}
-.section-sm{padding:80px var(--pad)}
-.eyebrow{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:20px;display:flex;align-items:center;gap:18px}
-.eyebrow::before{content:'';display:block;width:40px;height:1px;background:var(--gold)}
-.section-title{font-family:'Cormorant Garamond',serif;font-weight:300;line-height:1.15;color:var(--white);letter-spacing:-.01em}
-.section-title em{font-style:italic;color:var(--gold)}
-.title-xl{font-size:clamp(2.8rem,7.5vw,6.5rem)}
-.title-lg{font-size:clamp(2.4rem,5.5vw,5rem)}
-.title-md{font-size:clamp(2rem,4vw,3.6rem)}
-.title-sm{font-size:clamp(1.6rem,3vw,2.6rem)}
-.body-text{font-size:.95rem;line-height:1.95;color:rgba(255,255,255,.82);max-width:640px}
-/* HERO */
-.page-hero{padding:160px var(--pad) 100px;background:radial-gradient(ellipse at 20% 60%,rgba(198,169,107,.07) 0%,transparent 55%),radial-gradient(ellipse at 80% 20%,rgba(198,169,107,.04) 0%,transparent 50%);border-bottom:1px solid rgba(255,255,255,.05);position:relative;overflow:hidden}
-.page-hero::after{content:'';position:absolute;bottom:0;left:var(--pad);width:80px;height:1px;background:var(--gold)}
-.breadcrumb{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:24px;display:flex;align-items:center;gap:8px}
-.breadcrumb a{color:rgba(255,255,255,.25);transition:color .25s}
-.breadcrumb a:hover{color:var(--gold)}
-.breadcrumb span{color:rgba(255,255,255,.1)}
-.cta-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:36px}
-/* GLASS */
-.glass-panel{background:rgba(8,8,6,.65);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(198,169,107,.12);padding:40px 48px}
-/* GAP GRID */
-.gap-grid{display:grid;gap:1px;background:rgba(255,255,255,.07)}
-.gap-grid>*{background:rgba(8,8,6,.7)}
-/* ZONE CARDS */
-.zone-card{padding:36px 32px;position:relative;transition:background .3s}
-.zone-card:hover{background:rgba(12,12,10,.9)}
-.zone-name{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--white);margin-bottom:8px;line-height:1.2}
-.zone-badge{display:inline-block;font-size:7.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--dark);background:var(--gold);padding:3px 10px;margin-bottom:14px}
-.zone-desc{font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:14px}
-.zone-time{font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);display:flex;align-items:center;gap:10px}
-.zone-time::before{content:'';display:block;width:16px;height:1px;background:var(--gold)}
-/* STATS */
-.stats-row{display:flex;gap:56px;flex-wrap:wrap;justify-content:center;margin-top:32px}
-.stat-block{text-align:center}
-.stat-n{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;color:var(--gold);line-height:1}
-.stat-l{font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:6px}
-/* TWO COL */
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.two-col-left{}
-/* LOCAL SEO TEXT */
-.seo-text{font-size:.9rem;line-height:2;color:rgba(255,255,255,.7);max-width:780px}
-.seo-text p+p{margin-top:20px}
-/* FAQ */
-.faq-list{display:flex;flex-direction:column;max-width:800px}
-.faq-item{border-bottom:1px solid rgba(255,255,255,.07)}
-.faq-question{width:100%;text-align:left;padding:20px 0;background:none;border:none;cursor:pointer;font-family:'Jost',sans-serif;font-size:.88rem;font-weight:400;color:rgba(255,255,255,.85);display:flex;justify-content:space-between;align-items:center;gap:20px}
-.faq-question:hover{color:var(--white)}
-.faq-icon{color:var(--gold);font-size:1.2rem;flex-shrink:0;transition:transform .3s;line-height:1}
-.faq-item.open .faq-icon{transform:rotate(45deg)}
-.faq-answer{font-size:.85rem;line-height:1.9;color:rgba(255,255,255,.6);max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;padding-bottom:0}
-.faq-item.open .faq-answer{max-height:300px;padding-bottom:20px}
-/* CTA BANNER */
-.cta-banner{padding:100px var(--pad);text-align:center;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);background:radial-gradient(ellipse at 50% 50%,rgba(198,169,107,.05) 0%,transparent 65%)}
-/* FOOTER */
-footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05)}
-.footer-main{padding:80px var(--pad) 48px;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px}
-.footer-brand-name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--white);display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.footer-brand-line{width:24px;height:1px;background:var(--gold);display:inline-block;flex-shrink:0}
-.footer-tagline{font-size:.78rem;color:rgba(255,255,255,.35);line-height:1.7;max-width:240px;margin-bottom:28px}
-.footer-col-title{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
-.footer-links a{font-size:.8rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .25s}
-.footer-links a:hover{color:var(--gold)}
-.footer-bottom{padding:20px var(--pad);border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.footer-copy{font-size:.7rem;color:rgba(255,255,255,.2)}
-.footer-copy a{color:rgba(255,255,255,.25);transition:color .25s}
-.footer-copy a:hover{color:var(--gold)}
-/* RESPONSIVE */
-@media(max-width:900px){.nav-links{display:none}.nav-hamburger{display:flex}.footer-main{grid-template-columns:1fr 1fr;gap:32px}.two-col{grid-template-columns:1fr;gap:48px}}
-@media(max-width:600px){.section{padding:80px var(--pad)}.page-hero{padding:120px var(--pad) 72px}.gap-grid.cols-3{grid-template-columns:1fr!important}.footer-main{grid-template-columns:1fr}.glass-panel{padding:28px 24px}.stats-row{gap:32px}}
-</style>
 </head>
 <body>
+
 <!-- NAV -->
-<nav>
+<nav class="site-nav" id="site-nav">
   <a href="/index.html" class="nav-logo">
     <img src="https://static.wixstatic.com/media/2de5da_838eadad656846bfa85ab3598927e9b8~mv2.png" alt="Blue Arroyo" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-    <div class="nav-logo-fallback" style="display:none"><span class="nav-logo-line"></span>Blue Arroyo</div>
+    <div class="nav-logo-text" style="display:none"><span class="nav-logo-rule"></span>Blue Arroyo</div>
   </a>
-  <div class="nav-links">
+  <div class="nav-center">
     <a href="/servizi.html">Servizi</a>
     <a href="/chi-siamo.html">Chi Siamo</a>
     <a href="/aree-servite.html" class="active">Zone</a>
@@ -168,10 +58,10 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05)}
     <a href="/blog.html">Blog</a>
     <a href="/contatti.html">Contatti</a>
   </div>
-  <div class="nav-right">
-    <a href="https://wa.me/393510380392" target="_blank" class="nav-wa">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      <span>WhatsApp</span>
+  <div class="nav-end">
+    <a href="https://wa.me/393510380392" target="_blank" class="nav-cta">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
     </a>
     <div class="lang-toggle">
       <button class="lang-btn" onclick="setLang('es')" id="btn-es">ES</button>
@@ -182,10 +72,9 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05)}
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="/servizi.html">Servizi</a><a href="/chi-siamo.html">Chi Siamo</a><a href="/aree-servite.html">Zone</a><a href="/pacchetti-tariffe.html">Prezzi</a><a href="/blog.html">Blog</a><a href="/contatti.html">Contatti</a>
-  <a href="https://wa.me/393510380392" target="_blank">WhatsApp → +39 351 038 0392</a>
+  <a href="https://wa.me/393510380392" target="_blank" class="mob-cta">WhatsApp → +39 351 038 0392</a>
 </div>
 
-<!-- WA FLOAT -->
 <a href="https://wa.me/393510380392" target="_blank" class="wa-float" title="WhatsApp">
   <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
@@ -193,15 +82,15 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05)}
 <main>
   <!-- HERO -->
   <header class="page-hero">
-    <div class="breadcrumb"><a href="/index.html">Home</a><span>›</span><span>Zone Servite</span></div>
-    <div class="eyebrow">Aree Servite · Firenze</div>
-    <h1 class="section-title title-xl" style="max-width:700px;margin-bottom:24px">
-      Operiamo in<br>tutta <em>Firenze.</em>
-    </h1>
-    <p class="body-text">Intervento garantito entro 3 ore dal check-out in tutta la città di Firenze e zone limitrofe. Un solo numero, tutta Firenze coperta, 7 giorni su 7.</p>
-    <div class="cta-row">
-      <a href="https://wa.me/393510380392?text=Ciao!%20Vorrei%20verificare%20se%20operate%20nella%20mia%20zona." target="_blank" class="btn-gold">Verifica la tua zona →</a>
-      <a href="/contatti.html" class="btn-outline-light">Richiedi Preventivo</a>
+    <div class="page-hero-inner">
+      <nav class="breadcrumb"><a href="/index.html">Home</a><span class="breadcrumb-sep">›</span><span>Zone Servite</span></nav>
+      <div class="eyebrow">Aree Servite · Firenze</div>
+      <h1 class="title-xl">Operiamo in<br>tutta <em>Firenze.</em></h1>
+      <p class="lead">Intervento garantito entro 3 ore dal check-out in tutta la città di Firenze e zone limitrofe. Un solo numero, tutta Firenze coperta, 7 giorni su 7.</p>
+      <div class="cta-row" style="margin-top:36px">
+        <a href="https://wa.me/393510380392?text=Ciao!%20Vorrei%20verificare%20se%20operate%20nella%20mia%20zona." target="_blank" class="btn btn-gold">Verifica la tua zona →</a>
+        <a href="/contatti.html" class="btn btn-outline">Richiedi Preventivo</a>
+      </div>
     </div>
   </header>
 
@@ -209,7 +98,7 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05)}
   <section class="section">
     <div class="eyebrow">Zone Coperte</div>
     <h2 class="section-title title-lg" style="margin-bottom:48px">15+ quartieri,<br><em>zero limitazioni.</em></h2>
-    <div class="gap-grid cols-3" style="grid-template-columns:repeat(3,1fr)">
+    <div class="divider-grid" style="grid-template-columns:repeat(3,1fr)">
       <div class="zone-card">
         <div class="zone-badge">Coperto</div>
         <div class="zone-name">Centro Storico</div>
@@ -247,19 +136,19 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05)}
         <div class="zone-time">Intervento entro 3 ore</div>
       </div>
       <div class="zone-card">
-        <div class="zone-badge" style="background:rgba(198,169,107,.3);color:var(--gold)">Su prenotazione</div>
+        <div class="zone-badge" style="background:var(--bg-off);color:var(--gold);border:1px solid var(--gold)">Su prenotazione</div>
         <div class="zone-name">Fiesole</div>
         <p class="zone-desc">Collina fiorentina, ville e appartamenti panoramici. Disponibile su prenotazione con pianificazione anticipata.</p>
         <div class="zone-time">Intervento entro 3 ore</div>
       </div>
       <div class="zone-card">
-        <div class="zone-badge" style="background:rgba(198,169,107,.3);color:var(--gold)">Su prenotazione</div>
+        <div class="zone-badge" style="background:var(--bg-off);color:var(--gold);border:1px solid var(--gold)">Su prenotazione</div>
         <div class="zone-name">Scandicci</div>
         <p class="zone-desc">Prima periferia ovest, ben collegata con la tramvia. In espansione per il mercato degli affitti brevi.</p>
         <div class="zone-time">Intervento entro 3 ore</div>
       </div>
       <div class="zone-card">
-        <div class="zone-badge" style="background:rgba(198,169,107,.3);color:var(--gold)">Su prenotazione</div>
+        <div class="zone-badge" style="background:var(--bg-off);color:var(--gold);border:1px solid var(--gold)">Su prenotazione</div>
         <div class="zone-name">Bagno a Ripoli</div>
         <p class="zone-desc">Prima periferia sud-est. Appartamenti e ville con giardino, molto richiesti in estate.</p>
         <div class="zone-time">Intervento entro 3 ore</div>
@@ -268,70 +157,68 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05)}
   </section>
 
   <!-- STATS + TEXT -->
-  <section class="section-sm" style="padding:80px var(--pad);border-top:1px solid rgba(255,255,255,.05)">
+  <section class="section bg-off">
     <div class="two-col">
       <div>
         <div class="eyebrow">Numeri</div>
         <h2 class="section-title title-md" style="margin-bottom:24px">La copertura<br><em>che conta.</em></h2>
         <p class="body-text">La posizione del tuo appartamento non deve essere un limite. In oltre 5 anni di operatività, abbiamo esteso la nostra rete in tutta la città metropolitana di Firenze. Il nostro sistema di pianificazione ottimizza i percorsi per garantire i tempi promessi — sempre.</p>
         <div class="cta-row" style="margin-top:32px">
-          <a href="https://wa.me/393510380392" target="_blank" class="btn-gold">Conferma la tua zona →</a>
+          <a href="https://wa.me/393510380392" target="_blank" class="btn btn-gold">Conferma la tua zona →</a>
         </div>
       </div>
-      <div class="stats-row" style="justify-content:flex-start;flex-direction:column;gap:36px">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
-          <div class="stat-block">
-            <div class="stat-n">15+</div>
-            <div class="stat-l">Zone coperte</div>
-          </div>
-          <div class="stat-block">
-            <div class="stat-n">&lt;3h</div>
-            <div class="stat-l">Tempo max</div>
-          </div>
-          <div class="stat-block">
-            <div class="stat-n">7/7</div>
-            <div class="stat-l">Giorni operativi</div>
-          </div>
-          <div class="stat-block">
-            <div class="stat-n">0</div>
-            <div class="stat-l">Costi extra per zona</div>
-          </div>
+      <div class="stats-row">
+        <div>
+          <div class="stat-n">15+</div>
+          <div class="stat-l">Zone coperte</div>
+        </div>
+        <div>
+          <div class="stat-n">&lt;3h</div>
+          <div class="stat-l">Tempo max</div>
+        </div>
+        <div>
+          <div class="stat-n">7/7</div>
+          <div class="stat-l">Giorni operativi</div>
+        </div>
+        <div>
+          <div class="stat-n">0</div>
+          <div class="stat-l">Costi extra per zona</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA VERIFICA ZONA (glass panel) -->
-  <section class="section-sm" style="padding:0 var(--pad) 80px">
-    <div class="glass-panel" style="text-align:center;max-width:800px;margin:0 auto">
+  <!-- CTA VERIFICA ZONA -->
+  <section class="section">
+    <div class="card" style="text-align:center;max-width:800px;margin:0 auto;padding:56px clamp(32px,5vw,72px)">
       <div class="eyebrow" style="justify-content:center">Non sei sicuro?</div>
       <h3 class="section-title title-sm" style="margin-bottom:20px">Verifica la tua zona<br><em>in 5 minuti.</em></h3>
-      <p style="font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.8;max-width:520px;margin:0 auto 32px">Contattaci su WhatsApp con il tuo indirizzo. Ti confermiamo in meno di 5 minuti se operiamo nella tua zona e i tempi esatti di intervento.</p>
-      <a href="https://wa.me/393510380392?text=Ciao!%20Vorrei%20sapere%20se%20operate%20al%20seguente%20indirizzo%3A%20" target="_blank" class="btn-gold" style="font-size:9.5px">
+      <p class="body-text" style="margin:0 auto 32px;text-align:center">Contattaci su WhatsApp con il tuo indirizzo. Ti confermiamo in meno di 5 minuti se operiamo nella tua zona e i tempi esatti di intervento.</p>
+      <a href="https://wa.me/393510380392?text=Ciao!%20Vorrei%20sapere%20se%20operate%20al%20seguente%20indirizzo%3A%20" target="_blank" class="btn btn-wa">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Scrivi su WhatsApp
       </a>
-      <p style="font-size:.72rem;color:rgba(255,255,255,.2);margin-top:16px">Via Matteo Palmieri 20R · 50122 Firenze FI — Base operativa</p>
+      <p class="label-text" style="margin-top:16px;color:var(--text-muted)">Via Matteo Palmieri 20R · 50122 Firenze FI — Base operativa</p>
     </div>
   </section>
 
   <!-- LOCAL SEO TEXT -->
-  <section class="section" style="border-top:1px solid rgba(255,255,255,.05)">
+  <section class="section bg-off">
     <div class="eyebrow">Presenza sul territorio</div>
     <h2 class="section-title title-md" style="margin-bottom:40px">Pulizie Airbnb a Firenze:<br><em>la nostra storia locale.</em></h2>
-    <div class="seo-text">
-      <p>Blue Arroyo è nata e cresciuta a Firenze. Dal 2019 operiamo quotidianamente nei quartieri della città, dai palazzi storici del Centro Storico agli appartamenti moderni di Novoli. Conosciamo le specificità di ogni zona: i portoni stretti di Via dei Servi, le scale ripide di Oltrarno, i cortili interni di Campo di Marte. Questa conoscenza capillare del territorio si traduce in interventi più rapidi e precisi.</p>
-      <p>Il nostro team di operatori specializzati in pulizie post check-out per Airbnb a Firenze è distribuito strategicamente in città per garantire i tempi di intervento promessi. Quando il tuo ospite lascia l'appartamento al mattino, Blue Arroyo è già operativo entro 3 ore — che tu sia in Centro Storico, Oltrarno o Campo di Marte.</p>
-      <p>La gestione dei property manager fiorentini richiede flessibilità e reattività. I flussi turistici a Firenze sono tra i più intensi d'Italia: alta stagione da aprile a ottobre, punte nei weekend e nei ponti. Blue Arroyo ha costruito la propria operatività attorno a questi ritmi, con team sempre disponibili e un sistema di pianificazione che si adatta in tempo reale ai cambiamenti di check-out.</p>
+    <div class="body-text" style="max-width:780px">
+      <p style="margin-bottom:20px">Blue Arroyo è nata e cresciuta a Firenze. Dal 2019 operiamo quotidianamente nei quartieri della città, dai palazzi storici del Centro Storico agli appartamenti moderni di Novoli. Conosciamo le specificità di ogni zona: i portoni stretti di Via dei Servi, le scale ripide di Oltrarno, i cortili interni di Campo di Marte. Questa conoscenza capillare del territorio si traduce in interventi più rapidi e precisi.</p>
+      <p style="margin-bottom:20px">Il nostro team di operatori specializzati in pulizie post check-out per Airbnb a Firenze è distribuito strategicamente in città per garantire i tempi di intervento promessi. Quando il tuo ospite lascia l'appartamento al mattino, Blue Arroyo è già operativo entro 3 ore — che tu sia in Centro Storico, Oltrarno o Campo di Marte.</p>
+      <p style="margin-bottom:20px">La gestione dei property manager fiorentini richiede flessibilità e reattività. I flussi turistici a Firenze sono tra i più intensi d'Italia: alta stagione da aprile a ottobre, punte nei weekend e nei ponti. Blue Arroyo ha costruito la propria operatività attorno a questi ritmi, con team sempre disponibili e un sistema di pianificazione che si adatta in tempo reale ai cambiamenti di check-out.</p>
       <p>Se sei un host Airbnb o un property manager a Firenze e stai cercando un servizio di pulizie post check-out affidabile, puntuale e con standard alberghieri, contattaci. Operiamo in tutte le principali zone di Firenze e siamo pronti a gestire il tuo prossimo check-out.</p>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="section" style="border-top:1px solid rgba(255,255,255,.05)">
+  <section class="section">
     <div class="eyebrow">Domande Frequenti</div>
     <h2 class="section-title title-md" style="margin-bottom:48px">Tutto quello che<br><em>vuoi sapere.</em></h2>
-    <div class="faq-list">
+    <div class="faq-list" style="max-width:800px">
       <div class="faq-item">
         <button class="faq-question">Operate anche fuori Firenze?<span class="faq-icon">+</span></button>
         <div class="faq-answer">Su richiesta, operiamo in alcune zone della cintura fiorentina come Bagno a Ripoli, Scandicci, Sesto Fiorentino e Fiesole. Contattaci su WhatsApp per verificare disponibilità e tempistiche nella tua specifica zona.</div>
@@ -356,38 +243,41 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05)}
   </section>
 
   <!-- CTA BANNER -->
-  <section class="cta-banner">
+  <section class="cta-section">
     <div class="eyebrow" style="justify-content:center">Inizia oggi</div>
-    <h2 class="section-title title-lg" style="margin-bottom:20px">Il tuo appartamento<br>è nella <em>nostra zona.</em></h2>
-    <p style="font-size:.9rem;color:rgba(255,255,255,.6);max-width:480px;margin:0 auto 40px;line-height:1.8">Conferma la zona su WhatsApp e ricevi un preventivo personalizzato entro 2 ore.</p>
-    <div class="cta-row" style="justify-content:center">
-      <a href="https://wa.me/393510380392" target="_blank" class="btn-gold">WhatsApp →</a>
-      <a href="/pacchetti-tariffe.html" class="btn-outline-light">Vedi i Prezzi</a>
+    <h2 class="title-lg">Il tuo appartamento<br>è nella <em>nostra zona.</em></h2>
+    <p class="lead" style="max-width:480px;margin:20px auto 0">Conferma la zona su WhatsApp e ricevi un preventivo personalizzato entro 2 ore.</p>
+    <div class="cta-row" style="justify-content:center;margin-top:36px">
+      <a href="https://wa.me/393510380392" target="_blank" class="btn btn-wa">WhatsApp →</a>
+      <a href="/pacchetti-tariffe.html" class="btn btn-outline-gold">Vedi i Prezzi</a>
     </div>
   </section>
 </main>
 
 <!-- FOOTER -->
-<footer>
+<footer class="site-footer">
   <div class="footer-main">
     <div>
-      <div class="footer-brand-name serif"><span class="footer-brand-line"></span>Blue Arroyo</div>
+      <div class="footer-brand-name"><span class="footer-brand-rule"></span>Blue Arroyo</div>
       <p class="footer-tagline">Pulizie post check-out e gestione biancheria per property manager a Firenze.</p>
-      <a href="https://wa.me/393510380392" target="_blank" class="btn-gold" style="font-size:8.5px;padding:12px 24px;display:inline-block;margin-top:20px">WhatsApp →</a>
+      <a href="https://wa.me/393510380392" target="_blank" class="btn btn-dark" style="font-size:8.5px;padding:12px 24px;margin-top:20px;display:inline-block">WhatsApp →</a>
     </div>
     <div><div class="footer-col-title">Servizi</div><ul class="footer-links"><li><a href="/pulizia-post-checkout.html">Pulizia Post Check-out</a></li><li><a href="/servizio-biancheria.html">Servizio Biancheria</a></li><li><a href="/pacchetti-tariffe.html">Pacchetti &amp; Tariffe</a></li><li><a href="/servizi.html">Tutti i Servizi</a></li></ul></div>
     <div><div class="footer-col-title">Azienda</div><ul class="footer-links"><li><a href="/chi-siamo.html">Chi Siamo</a></li><li><a href="/recensioni.html">Recensioni &amp; Casi Studio</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/aree-servite.html">Aree Servite</a></li></ul></div>
-    <div><div class="footer-col-title">Contatti</div><ul class="footer-links"><li><a href="mailto:hello@bluearroyo.it">hello@bluearroyo.it</a></li><li><a href="tel:+393510380392">+39 351 038 0392</a></li><li><a href="/contatti.html">Preventivo Gratuito</a></li></ul><p style="margin-top:20px;font-size:.75rem;color:rgba(255,255,255,.3);line-height:1.7">Via Matteo Palmieri 20R<br>50122 Firenze FI</p></div>
+    <div><div class="footer-col-title">Contatti</div><ul class="footer-links"><li><a href="mailto:hello@bluearroyo.it">hello@bluearroyo.it</a></li><li><a href="tel:+393510380392">+39 351 038 0392</a></li><li><a href="/contatti.html">Preventivo Gratuito</a></li></ul><p style="margin-top:20px;font-size:.78rem;color:var(--text-muted);line-height:1.7">Via Matteo Palmieri 20R<br>50122 Firenze FI</p></div>
   </div>
   <div class="footer-bottom"><span class="footer-copy">© 2025 Blue Arroyo · Via Matteo Palmieri 20R, 50122 Firenze · <a href="#">Privacy Policy</a> · <a href="#">Cookie Policy</a></span></div>
 </footer>
+<button class="back-top" id="backTop" aria-label="Torna su">↑</button>
 
 <script>
+window.addEventListener('scroll',function(){document.getElementById('site-nav').classList.toggle('scrolled',window.scrollY>20);});
 function setLang(l){document.documentElement.setAttribute('data-lang',l);document.getElementById('btn-it').classList.toggle('active',l==='it');document.getElementById('btn-es').classList.toggle('active',l==='es');localStorage.setItem('ba-lang',l);}
 (function(){var s=localStorage.getItem('ba-lang');if(s)setLang(s);})();
 function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
 document.addEventListener('click',function(e){var mm=document.getElementById('mobileMenu');if(mm&&mm.classList.contains('open')&&!mm.contains(e.target)&&!e.target.closest('.nav-hamburger'))mm.classList.remove('open');});
 document.querySelectorAll('.faq-question').forEach(function(btn){btn.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});
+var bt=document.getElementById('backTop');if(bt){window.addEventListener('scroll',function(){bt.classList.toggle('visible',window.scrollY>400);});bt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});}
 </script>
 </body>
 </html>

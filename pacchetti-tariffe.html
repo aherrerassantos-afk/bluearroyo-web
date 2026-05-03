@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/shared.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -138,543 +139,19 @@
   }
   </script>
   <style>
-    :root {
-      --white: #FFFFFF;
-      --dark: #0C0C0B;
-      --gold: #C6A96B;
-      --gold-l: #DFC48A;
-      --pad: clamp(24px, 6vw, 96px);
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--dark);
-      color: var(--white);
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
-    }
-
-    .serif { font-family: 'Cormorant Garamond', serif; }
-
-    em { color: var(--gold); font-style: italic; font-family: 'Cormorant Garamond', serif; }
-
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      height: 64px;
-      background: rgba(12,12,11,.88);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,.06);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 var(--pad);
-      z-index: 1000;
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      color: var(--white);
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
-      font-weight: 300;
-      letter-spacing: .08em;
-    }
-
-    .nav-logo-img { height: 32px; width: auto; }
-
-    .nav-logo-fallback {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .nav-logo-line {
-      display: block;
-      width: 24px;
-      height: 1px;
-      background: var(--gold);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-    }
-
-    .nav-links a {
-      color: rgba(255,255,255,.7);
-      text-decoration: none;
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
-      font-size: .8rem;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      transition: color .2s;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active { color: var(--gold); }
-
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .nav-wa {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--white);
-      text-decoration: none;
-      font-size: .75rem;
-      font-weight: 400;
-      letter-spacing: .04em;
-      opacity: .85;
-      transition: opacity .2s;
-    }
-
-    .nav-wa:hover { opacity: 1; }
-
-    .lang-toggle {
-      display: flex;
-      gap: 4px;
-    }
-
-    .lang-btn {
-      background: none;
-      border: 1px solid rgba(255,255,255,.2);
-      color: rgba(255,255,255,.5);
-      font-family: 'Jost', sans-serif;
-      font-size: .65rem;
-      font-weight: 400;
-      letter-spacing: .08em;
-      padding: 3px 7px;
-      cursor: pointer;
-      transition: all .2s;
-    }
-
-    .lang-btn.active,
-    .lang-btn:hover {
-      border-color: var(--gold);
-      color: var(--gold);
-    }
-
-    .nav-hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 4px;
-    }
-
-    .nav-hamburger span {
-      display: block;
-      width: 22px;
-      height: 1px;
-      background: var(--white);
-    }
-
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      position: fixed;
-      top: 64px;
-      left: 0; right: 0;
-      background: rgba(12,12,11,.97);
-      border-bottom: 1px solid rgba(255,255,255,.08);
-      padding: 24px var(--pad);
-      gap: 0;
-      z-index: 999;
-    }
-
-    .mobile-menu.open { display: flex; }
-
-    .mobile-menu a {
-      color: rgba(255,255,255,.8);
-      text-decoration: none;
-      font-size: .85rem;
-      font-weight: 300;
-      letter-spacing: .05em;
-      padding: 14px 0;
-      border-bottom: 1px solid rgba(255,255,255,.06);
-      transition: color .2s;
-    }
-
-    .mobile-menu a:hover { color: var(--gold); }
-
-    /* SECTIONS */
-    section {
-      padding: 120px var(--pad);
-    }
-
-    /* HERO */
-    .hero {
-      padding-top: 160px;
-      padding-bottom: 100px;
-      padding-left: var(--pad);
-      padding-right: var(--pad);
-    }
-
-    .breadcrumb {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: .72rem;
-      font-weight: 300;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.4);
-      margin-bottom: 48px;
-    }
-
-    .breadcrumb a {
-      color: rgba(255,255,255,.4);
-      text-decoration: none;
-      transition: color .2s;
-    }
-
-    .breadcrumb a:hover { color: var(--gold); }
-
-    .breadcrumb span { color: rgba(255,255,255,.2); }
-
-    /* EYEBROW */
-    .eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      font-size: 9px;
-      font-weight: 400;
-      letter-spacing: .3em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 28px;
-    }
-
-    .eyebrow::before {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 1px;
-      background: var(--gold);
-      flex-shrink: 0;
-    }
-
-    /* TITLES */
-    .title-xl {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.8rem, 6vw, 5rem);
-      font-weight: 300;
-      line-height: 1.1;
-      letter-spacing: -.01em;
-      margin-bottom: 28px;
-    }
-
-    .title-md {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 300;
-      line-height: 1.15;
-      letter-spacing: -.01em;
-      margin-bottom: 24px;
-    }
-
-    .hero-body {
-      font-size: clamp(.9rem, 1.5vw, 1.05rem);
-      font-weight: 300;
-      color: rgba(255,255,255,.65);
-      line-height: 1.8;
-      max-width: 600px;
-      margin-bottom: 48px;
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      align-items: center;
-    }
-
-    /* BUTTONS */
-    .btn-gold {
-      background: var(--gold);
-      color: #0C0C0B;
-      font-family: 'Jost', sans-serif;
-      font-weight: 400;
-      font-size: .78rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 16px 32px;
-      border: 1px solid var(--gold);
-      cursor: pointer;
-      transition: all .25s;
-      display: inline-block;
-    }
-
-    .btn-gold:hover {
-      background: transparent;
-      color: var(--gold);
-    }
-
-    .btn-outline-light {
-      background: transparent;
-      color: var(--white);
-      font-family: 'Jost', sans-serif;
-      font-weight: 400;
-      font-size: .78rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 16px 32px;
-      border: 1px solid rgba(255,255,255,.35);
-      cursor: pointer;
-      transition: all .25s;
-      display: inline-block;
-    }
-
-    .btn-outline-light:hover {
-      background: var(--white);
-      color: var(--dark);
-    }
-
-    .btn-outline-gold {
-      background: transparent;
-      color: var(--gold);
-      font-family: 'Jost', sans-serif;
-      font-weight: 400;
-      font-size: .78rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 16px 32px;
-      border: 1px solid var(--gold);
-      cursor: pointer;
-      transition: all .25s;
-      display: inline-block;
-    }
-
-    .btn-outline-gold:hover {
-      background: var(--gold);
-      color: var(--dark);
-    }
-
-    /* GLASS PANEL */
-    .glass-panel {
-      background: rgba(8,8,6,.65);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(198,169,107,.12);
-      padding: 40px 48px;
-    }
-
-    /* PRICING SECTION */
-    .pricing-section {
-      background: rgba(8,8,6,.3);
-    }
-
-    .pricing-intro {
-      max-width: 560px;
-      margin-bottom: 64px;
-    }
-
-    .pricing-intro p {
-      font-size: .9rem;
-      color: rgba(255,255,255,.55);
-      line-height: 1.75;
-    }
-
-    /* GAP-GRID */
-    .gap-grid {
-      display: grid;
-      gap: 1px;
-      background: rgba(255,255,255,.07);
-    }
-
-    .gap-grid > * {
-      background: rgba(8,8,6,.7);
-    }
-
-    /* PRICING TABLE */
-    .pricing-table {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1px;
-      background: rgba(255,255,255,.07);
-      margin-bottom: 32px;
-    }
-
-    .pricing-row {
-      display: grid;
-      grid-template-columns: 1fr auto 1.4fr;
-      align-items: center;
-      gap: 0;
-      background: rgba(8,8,6,.7);
-    }
-
-    .pricing-row:first-child {
-      grid-template-columns: 1fr auto 1.4fr;
-    }
-
-    .pricing-cell {
-      padding: 24px 28px;
-      border-right: 1px solid rgba(255,255,255,.07);
-    }
-
-    .pricing-cell:last-child {
-      border-right: none;
-    }
-
-    .pricing-range {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.35rem;
-      font-weight: 300;
-      color: var(--white);
-    }
-
-    .pricing-price {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.4rem;
-      font-weight: 300;
-      color: var(--gold);
-      text-align: center;
-      padding: 20px 40px;
-    }
-
-    .pricing-note {
-      font-size: .8rem;
-      font-weight: 300;
-      color: rgba(255,255,255,.5);
-      line-height: 1.6;
-    }
-
+    /* Page-specific: pricing table note bar */
     .pricing-note-bar {
-      background: rgba(8,8,6,.85);
-      border: 1px solid rgba(198,169,107,.12);
+      background: var(--bg-off);
+      border: 1px solid var(--border);
       border-top: none;
-      padding: 20px 28px;
-      font-size: .8rem;
-      font-weight: 300;
-      color: rgba(255,255,255,.45);
+      padding: 18px 28px;
+      font-size: .82rem;
+      color: var(--text-mid);
       line-height: 1.75;
+      margin-bottom: 0;
     }
 
-    /* BIANCHERIA TABLE */
-    .biancheria-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: rgba(255,255,255,.07);
-      margin-bottom: 32px;
-    }
-
-    .biancheria-card {
-      background: rgba(8,8,6,.7);
-      padding: 36px 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .biancheria-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      font-weight: 300;
-      color: var(--white);
-      line-height: 1.3;
-    }
-
-    .biancheria-price {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.8rem;
-      font-weight: 300;
-      color: var(--gold);
-      line-height: 1;
-    }
-
-    .biancheria-desc {
-      font-size: .78rem;
-      font-weight: 300;
-      color: rgba(255,255,255,.45);
-      line-height: 1.65;
-    }
-
-    /* EXTRAS */
-    .extras-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: rgba(255,255,255,.07);
-    }
-
-    .extra-card {
-      background: rgba(8,8,6,.7);
-      padding: 40px 36px;
-    }
-
-    .extra-icon-line {
-      width: 32px;
-      height: 1px;
-      background: var(--gold);
-      margin-bottom: 20px;
-    }
-
-    .extra-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 300;
-      color: var(--white);
-      margin-bottom: 8px;
-    }
-
-    .extra-price {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      font-weight: 300;
-      color: var(--gold);
-      margin-bottom: 16px;
-    }
-
-    .extra-desc {
-      font-size: .78rem;
-      font-weight: 300;
-      color: rgba(255,255,255,.45);
-      line-height: 1.7;
-    }
-
-    /* CALC / PREVENTIVO */
-    .calc-section {
-      padding: 120px var(--pad);
-    }
-
-    .calc-inner {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    .calc-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
-      font-weight: 300;
-      color: rgba(255,255,255,.7);
-      margin-bottom: 36px;
-      letter-spacing: .02em;
-    }
-
+    /* Example preventivo calc block */
     .calc-lines {
       list-style: none;
     }
@@ -684,17 +161,16 @@
       justify-content: space-between;
       align-items: center;
       padding: 14px 0;
-      border-bottom: 1px solid rgba(255,255,255,.06);
+      border-bottom: 1px solid var(--border);
       font-size: .88rem;
-      font-weight: 300;
-      color: rgba(255,255,255,.6);
+      color: var(--text-mid);
     }
 
-    .calc-lines li:first-child { border-top: 1px solid rgba(255,255,255,.06); }
+    .calc-lines li:first-child { border-top: 1px solid var(--border); }
 
-    .calc-lines li .calc-amount {
-      color: var(--white);
-      font-weight: 400;
+    .calc-amount {
+      color: var(--text);
+      font-weight: 500;
     }
 
     .calc-total-row {
@@ -710,7 +186,7 @@
       font-weight: 400;
       letter-spacing: .2em;
       text-transform: uppercase;
-      color: rgba(255,255,255,.4);
+      color: var(--text-muted);
     }
 
     .calc-total-amount {
@@ -724,309 +200,112 @@
     .calc-cta {
       margin-top: 40px;
       padding-top: 32px;
-      border-top: 1px solid rgba(198,169,107,.15);
+      border-top: 1px solid var(--border);
     }
 
-    /* PROPERTY MANAGER HIGHLIGHT */
+    /* PM box */
     .pm-box {
-      border: 1px solid rgba(198,169,107,.25);
-      background: rgba(198,169,107,.04);
+      border: 1px solid var(--border);
+      background: var(--bg-off);
       padding: 56px clamp(32px, 5vw, 72px);
     }
 
-    .pm-box .eyebrow { margin-bottom: 24px; }
-
-    .pm-body {
-      font-size: clamp(.9rem, 1.5vw, 1.05rem);
-      font-weight: 300;
-      color: rgba(255,255,255,.6);
-      line-height: 1.85;
-      max-width: 640px;
-      margin-bottom: 36px;
+    /* Highlighted pricing row */
+    .price-row-featured {
+      background: #FFFBF4;
+      border-left: 3px solid var(--gold);
     }
 
-    /* FAQ */
-    .faq-list {
-      margin-top: 56px;
-      max-width: 800px;
-    }
-
-    .faq-item {
-      border-bottom: 1px solid rgba(255,255,255,.07);
-    }
-
-    .faq-question {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      background: none;
-      border: none;
-      color: var(--white);
-      font-family: 'Jost', sans-serif;
-      font-weight: 300;
-      font-size: .95rem;
-      text-align: left;
-      padding: 24px 0;
-      cursor: pointer;
-      gap: 16px;
-      letter-spacing: .01em;
-      line-height: 1.5;
-      transition: color .2s;
-    }
-
-    .faq-question:hover { color: var(--gold-l); }
-
-    .faq-icon {
-      width: 20px;
-      height: 20px;
-      flex-shrink: 0;
-      position: relative;
-      color: var(--gold);
-      font-size: 1.2rem;
-      font-weight: 200;
-      line-height: 20px;
-      text-align: center;
-      transition: transform .3s ease;
-    }
-
-    .faq-item.open .faq-icon { transform: rotate(45deg); }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .35s ease;
-    }
-
-    .faq-item.open .faq-answer { max-height: 400px; }
-
-    .faq-answer-inner {
-      padding: 0 0 28px;
-      font-size: .88rem;
-      font-weight: 300;
-      color: rgba(255,255,255,.55);
-      line-height: 1.85;
-      max-width: 680px;
-    }
-
-    /* CTA BANNER */
-    .cta-banner {
-      padding: 120px var(--pad);
-      text-align: center;
-      background: rgba(198,169,107,.03);
-      border-top: 1px solid rgba(198,169,107,.08);
-      border-bottom: 1px solid rgba(198,169,107,.08);
-    }
-
-    .cta-banner .title-xl {
-      margin-bottom: 48px;
-    }
-
-    .cta-banner .cta-row {
-      justify-content: center;
-    }
-
-    /* STATS ROW */
-    .stat-block {
-      text-align: center;
-    }
-
-    .stat-number {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.4rem;
-      font-weight: 300;
-      color: var(--gold);
-      display: block;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-
-    .stat-label {
-      font-size: 8px;
-      font-weight: 400;
-      letter-spacing: .2em;
+    .price-row-featured .price-label::after {
+      content: ' — Più richiesto';
+      font-size: .7rem;
+      letter-spacing: .1em;
       text-transform: uppercase;
-      color: rgba(255,255,255,.35);
+      color: var(--gold);
+      margin-left: 10px;
     }
 
-    /* FOOTER */
-    footer {
-      background: rgba(4,4,3,1);
-      border-top: 1px solid rgba(255,255,255,.06);
-    }
-
-    .footer-main {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
-      gap: 64px;
-      padding: 80px var(--pad);
-    }
-
-    .footer-brand-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 300;
-      font-size: 1.3rem;
-      letter-spacing: .06em;
-      color: var(--white);
+    /* Biancheria cards */
+    .biancheria-card {
+      padding: 36px 32px;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       gap: 12px;
-      margin-bottom: 16px;
     }
 
-    .footer-brand-line {
-      display: block;
-      width: 28px;
+    .biancheria-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .biancheria-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .biancheria-desc {
+      font-size: .78rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    .biancheria-rule {
+      width: 24px;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* Extra cards */
+    .extra-card {
+      padding: 40px 36px;
+    }
+
+    .extra-icon-line {
+      width: 32px;
       height: 1px;
       background: var(--gold);
-    }
-
-    .footer-tagline {
-      font-size: .8rem;
-      font-weight: 300;
-      color: rgba(255,255,255,.35);
-      line-height: 1.75;
-    }
-
-    .footer-col-title {
-      font-size: .68rem;
-      font-weight: 400;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.3);
       margin-bottom: 20px;
     }
 
-    .footer-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .footer-links a {
-      color: rgba(255,255,255,.5);
-      text-decoration: none;
-      font-size: .8rem;
+    .extra-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
       font-weight: 300;
-      transition: color .2s;
+      color: var(--text);
+      margin-bottom: 8px;
     }
 
-    .footer-links a:hover { color: var(--gold); }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,.05);
-      padding: 24px var(--pad);
-    }
-
-    .footer-copy {
-      font-size: .7rem;
+    .extra-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
       font-weight: 300;
-      color: rgba(255,255,255,.2);
-      letter-spacing: .03em;
+      color: var(--gold);
+      margin-bottom: 16px;
     }
 
-    .footer-copy a {
-      color: rgba(255,255,255,.3);
-      text-decoration: none;
-      transition: color .2s;
-    }
-
-    .footer-copy a:hover { color: var(--gold); }
-
-    /* WA FLOAT */
-    .wa-float {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      width: 56px;
-      height: 56px;
-      background: #25D366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      box-shadow: 0 4px 20px rgba(37,211,102,.35);
-      z-index: 900;
-      transition: transform .2s, box-shadow .2s;
-    }
-
-    .wa-float:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(37,211,102,.45);
-    }
-
-    /* SECTION DIVIDER LINE */
-    .section-line {
-      display: block;
-      width: 1px;
-      height: 64px;
-      background: rgba(198,169,107,.2);
-      margin: 0 auto;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .nav-links { display: none; }
-      .nav-wa span { display: none; }
-      .nav-hamburger { display: flex; }
-
-      .pricing-row {
-        grid-template-columns: 1fr;
-      }
-
-      .pricing-cell {
-        border-right: none;
-        border-bottom: 1px solid rgba(255,255,255,.07);
-      }
-
-      .pricing-cell:last-child { border-bottom: none; }
-
-      .pricing-price {
-        text-align: left;
-        padding: 0 28px 16px;
-      }
-
-      .biancheria-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .extras-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-main {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      section { padding: 80px var(--pad); }
-      .hero { padding-top: 120px; padding-bottom: 80px; }
-      .glass-panel { padding: 32px 24px; }
-      .pm-box { padding: 40px 24px; }
-
-      .footer-main {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        padding: 56px var(--pad);
-      }
-
-      .calc-section { padding: 80px var(--pad); }
-      .cta-banner { padding: 80px var(--pad); }
+    .extra-desc {
+      font-size: .78rem;
+      font-weight: 300;
+      color: var(--text-muted);
+      line-height: 1.7;
     }
   </style>
 </head>
 <body>
 
-  <nav>
+  <nav class="site-nav" id="site-nav">
     <a href="/index.html" class="nav-logo">
       <img src="https://static.wixstatic.com/media/2de5da_838eadad656846bfa85ab3598927e9b8~mv2.png" alt="Blue Arroyo" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="nav-logo-fallback" style="display:none"><span class="nav-logo-line"></span>Blue Arroyo</div>
+      <div class="nav-logo-text" style="display:none"><span class="nav-logo-rule"></span>Blue Arroyo</div>
     </a>
-    <div class="nav-links">
+    <div class="nav-center">
       <a href="/servizi.html">Servizi</a>
       <a href="/chi-siamo.html">Chi Siamo</a>
       <a href="/aree-servite.html">Zone</a>
@@ -1034,10 +313,10 @@
       <a href="/blog.html">Blog</a>
       <a href="/contatti.html">Contatti</a>
     </div>
-    <div class="nav-right">
-      <a href="https://wa.me/393510380392" target="_blank" class="nav-wa">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        <span>WhatsApp</span>
+    <div class="nav-end">
+      <a href="https://wa.me/393510380392" target="_blank" class="nav-cta">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
       </a>
       <div class="lang-toggle">
         <button class="lang-btn" onclick="setLang('es')" id="btn-es">ES</button>
@@ -1048,174 +327,133 @@
   </nav>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a href="/servizi.html">Servizi</a>
-    <a href="/chi-siamo.html">Chi Siamo</a>
-    <a href="/aree-servite.html">Zone</a>
-    <a href="/pacchetti-tariffe.html">Prezzi</a>
-    <a href="/blog.html">Blog</a>
-    <a href="/contatti.html">Contatti</a>
-    <a href="https://wa.me/393510380392" target="_blank">WhatsApp → +39 351 038 0392</a>
+    <a href="/servizi.html">Servizi</a><a href="/chi-siamo.html">Chi Siamo</a><a href="/aree-servite.html">Zone</a><a href="/pacchetti-tariffe.html">Prezzi</a><a href="/blog.html">Blog</a><a href="/contatti.html">Contatti</a>
+    <a href="https://wa.me/393510380392" target="_blank" class="mob-cta">WhatsApp → +39 351 038 0392</a>
   </div>
 
+  <a href="https://wa.me/393510380392" target="_blank" class="wa-float" aria-label="WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
   <!-- HERO -->
-  <section class="hero">
-    <div class="breadcrumb">
-      <a href="/index.html">Home</a>
-      <span>→</span>
-      <span style="color:rgba(255,255,255,.6)">Prezzi</span>
+  <header class="page-hero">
+    <div class="page-hero-inner">
+      <nav class="breadcrumb">
+        <a href="/index.html">Home</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Prezzi</span>
+      </nav>
+      <div class="eyebrow">Pacchetti &amp; Tariffe · 2025</div>
+      <h1 class="title-xl">Prezzi chiari,<br><em>nessuna sorpresa.</em></h1>
+      <p class="lead">Listino trasparente per property manager e host Airbnb a Firenze. Nessun costo nascosto, nessuna tariffa oraria: prezzi fissi per ogni tipo di appartamento.</p>
+      <div class="cta-row" style="margin-top:36px">
+        <a href="#calc" class="btn btn-gold">Calcola il tuo preventivo</a>
+        <a href="https://wa.me/393510380392" target="_blank" class="btn btn-outline">WhatsApp diretto</a>
+      </div>
     </div>
-    <div class="eyebrow">PACCHETTI &amp; TARIFFE · 2025</div>
-    <h1 class="title-xl">Prezzi chiari,<br><em>nessuna sorpresa.</em></h1>
-    <p class="hero-body">Listino trasparente per property manager e host Airbnb a Firenze. Nessun costo nascosto, nessuna tariffa oraria: prezzi fissi per ogni tipo di appartamento.</p>
-    <div class="cta-row">
-      <a href="#calc" class="btn-gold">Calcola il tuo preventivo</a>
-      <a href="https://wa.me/393510380392" target="_blank" class="btn-outline-light">WhatsApp diretto</a>
-    </div>
-  </section>
+  </header>
 
   <!-- PULIZIE SECTION -->
-  <section class="pricing-section">
-    <div class="pricing-intro">
-      <div class="eyebrow">PULIZIA POST CHECK-OUT</div>
-      <h2 class="title-md">Mano d'opera +<br><em>prodotti inclusi.</em></h2>
-      <p>Prezzi fissi per metratura. Nessuna tariffa oraria, nessun supplemento materiali. Sai esattamente cosa paghi prima ancora di chiamarci.</p>
-    </div>
+  <section class="section bg-off">
+    <div class="eyebrow">Pulizia Post Check-out</div>
+    <h2 class="section-title title-lg" style="margin-bottom:16px">Mano d'opera +<br><em>prodotti inclusi.</em></h2>
+    <p class="body-text" style="margin-bottom:48px">Prezzi fissi per metratura. Nessuna tariffa oraria, nessun supplemento materiali. Sai esattamente cosa paghi prima ancora di chiamarci.</p>
 
-    <div class="pricing-table">
-      <div class="pricing-row">
-        <div class="pricing-cell">
-          <div class="pricing-range">25–40 m²</div>
-          <div class="pricing-note" style="margin-top:6px">Monolocale o bilocale piccolo</div>
+    <div class="card" style="max-width:720px">
+      <div class="price-row">
+        <div class="price-label">
+          <strong>25–40 m²</strong><br>
+          <span class="label-text">Monolocale o bilocale piccolo</span>
         </div>
-        <div style="display:flex;align-items:center;background:rgba(8,8,6,.7)">
-          <div class="pricing-price">€30</div>
-        </div>
-        <div class="pricing-cell">
-          <div class="pricing-note">Prodotti eco-certificati inclusi · Aspirazione · Lavaggio pavimenti · Cucina e bagni · Rifacimento letti</div>
-        </div>
+        <span class="price-val">€30</span>
       </div>
-
-      <div class="pricing-row">
-        <div class="pricing-cell">
-          <div class="pricing-range">40–75 m²</div>
-          <div class="pricing-note" style="margin-top:6px">Bilocale o trilocale</div>
+      <div class="price-row">
+        <div class="price-label">
+          <strong>40–75 m²</strong><br>
+          <span class="label-text">Bilocale o trilocale</span>
         </div>
-        <div style="display:flex;align-items:center;background:rgba(8,8,6,.7)">
-          <div class="pricing-price">€40</div>
-        </div>
-        <div class="pricing-cell">
-          <div class="pricing-note">Prodotti eco-certificati inclusi · Aspirazione · Lavaggio pavimenti · Cucina e bagni · Rifacimento letti</div>
-        </div>
+        <span class="price-val">€40</span>
       </div>
-
-      <div class="pricing-row" style="background:rgba(198,169,107,.04)">
-        <div class="pricing-cell" style="border-color:rgba(198,169,107,.1)">
-          <div class="pricing-range" style="color:var(--gold-l)">75–110 m²</div>
-          <div class="pricing-note" style="margin-top:6px">Trilocale o quadrilocale</div>
-          <div style="margin-top:10px;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:400">Più richiesto</div>
+      <div class="price-row price-row-featured">
+        <div class="price-label">
+          <strong>75–110 m²</strong><br>
+          <span class="label-text">Trilocale o quadrilocale</span>
         </div>
-        <div style="display:flex;align-items:center;background:rgba(8,8,6,.7)">
-          <div class="pricing-price">€50</div>
-        </div>
-        <div class="pricing-cell" style="border-color:rgba(198,169,107,.1)">
-          <div class="pricing-note">Prodotti eco-certificati inclusi · Aspirazione · Lavaggio pavimenti · Cucina e bagni · Rifacimento letti</div>
-        </div>
+        <span class="price-val">€50</span>
       </div>
-
-      <div class="pricing-row">
-        <div class="pricing-cell">
-          <div class="pricing-range">110–145 m²</div>
-          <div class="pricing-note" style="margin-top:6px">Quadrilocale o appartamento grande</div>
+      <div class="price-row">
+        <div class="price-label">
+          <strong>110–145 m²</strong><br>
+          <span class="label-text">Quadrilocale o appartamento grande</span>
         </div>
-        <div style="display:flex;align-items:center;background:rgba(8,8,6,.7)">
-          <div class="pricing-price">€60</div>
-        </div>
-        <div class="pricing-cell">
-          <div class="pricing-note">Prodotti eco-certificati inclusi · Aspirazione · Lavaggio pavimenti · Cucina e bagni · Rifacimento letti</div>
-        </div>
+        <span class="price-val">€60</span>
       </div>
-
-      <div class="pricing-row">
-        <div class="pricing-cell">
-          <div class="pricing-range">145–170 m²</div>
-          <div class="pricing-note" style="margin-top:6px">Villa o appartamento di lusso</div>
+      <div class="price-row">
+        <div class="price-label">
+          <strong>145–170 m²</strong><br>
+          <span class="label-text">Villa o appartamento di lusso</span>
         </div>
-        <div style="display:flex;align-items:center;background:rgba(8,8,6,.7)">
-          <div class="pricing-price">€75</div>
-        </div>
-        <div class="pricing-cell">
-          <div class="pricing-note">Prodotti eco-certificati inclusi · Aspirazione · Lavaggio pavimenti · Cucina e bagni · Rifacimento letti</div>
-        </div>
+        <span class="price-val">€75</span>
       </div>
     </div>
-
     <div class="pricing-note-bar">
-      <strong style="color:rgba(255,255,255,.6);font-weight:400">Incluso in tutti i pacchetti:</strong> prodotti professionali eco-certificati, aspirazione, lavaggio pavimenti, pulizia cucina e bagni, rifacimento letti.
+      <strong>Incluso in tutti i pacchetti:</strong> prodotti professionali eco-certificati, aspirazione, lavaggio pavimenti, pulizia cucina e bagni, rifacimento letti.
     </div>
   </section>
 
   <!-- BIANCHERIA SECTION -->
-  <section>
-    <div class="pricing-intro">
-      <div class="eyebrow">SERVIZIO BIANCHERIA</div>
-      <h2 class="title-md">Ogni letto,<br><em>impeccabile.</em></h2>
-      <p>Raccolta, lavaggio industriale a 60°C, stiratura e riconsegna impacchettata. Standard alberghiero per ogni appartamento.</p>
-    </div>
+  <section class="section">
+    <div class="eyebrow">Servizio Biancheria</div>
+    <h2 class="section-title title-lg" style="margin-bottom:16px">Ogni letto,<br><em>impeccabile.</em></h2>
+    <p class="body-text" style="margin-bottom:48px">Raccolta, lavaggio industriale a 60°C, stiratura e riconsegna impacchettata. Standard alberghiero per ogni appartamento.</p>
 
-    <div class="biancheria-grid">
-      <div class="biancheria-card">
-        <div class="biancheria-name">Letto matrimoniale<br><span style="color:rgba(255,255,255,.35);font-size:.85rem">(1° letto)</span></div>
+    <div class="divider-grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:0">
+      <div class="biancheria-card card">
+        <div class="biancheria-name">Letto matrimoniale<br><span class="label-text">(1° letto)</span></div>
         <div class="biancheria-price">€25</div>
         <div class="biancheria-desc">Lenzuola, federe, asciugamani per due ospiti</div>
-        <div style="width:24px;height:1px;background:rgba(198,169,107,.3)"></div>
+        <div class="biancheria-rule"></div>
         <div class="biancheria-desc">Raccolta · Lavaggio 60°C · Stiratura · Riconsegna impacchettata</div>
       </div>
-
-      <div class="biancheria-card" style="border-left:1px solid rgba(255,255,255,.07)">
-        <div class="biancheria-name">Letto matrimoniale<br><span style="color:rgba(255,255,255,.35);font-size:.85rem">(aggiuntivo)</span></div>
+      <div class="biancheria-card card">
+        <div class="biancheria-name">Letto matrimoniale<br><span class="label-text">(aggiuntivo)</span></div>
         <div class="biancheria-price">€15</div>
         <div class="biancheria-desc">Per ogni letto matrimoniale aggiuntivo</div>
-        <div style="width:24px;height:1px;background:rgba(198,169,107,.3)"></div>
+        <div class="biancheria-rule"></div>
         <div class="biancheria-desc">Raccolta · Lavaggio 60°C · Stiratura · Riconsegna impacchettata</div>
       </div>
-
-      <div class="biancheria-card" style="border-left:1px solid rgba(255,255,255,.07)">
+      <div class="biancheria-card card">
         <div class="biancheria-name">Letto singolo</div>
         <div class="biancheria-price">€10</div>
         <div class="biancheria-desc">Lenzuola, federe, asciugamano singolo</div>
-        <div style="width:24px;height:1px;background:rgba(198,169,107,.3)"></div>
+        <div class="biancheria-rule"></div>
         <div class="biancheria-desc">Raccolta · Lavaggio 60°C · Stiratura · Riconsegna impacchettata</div>
       </div>
     </div>
-
     <div class="pricing-note-bar">
-      <strong style="color:rgba(255,255,255,.6);font-weight:400">Incluso nel servizio biancheria:</strong> raccolta presso l'appartamento, lavaggio industriale a 60°C, stiratura professionale, riconsegna impacchettata pronta all'uso.
+      <strong>Incluso nel servizio biancheria:</strong> raccolta presso l'appartamento, lavaggio industriale a 60°C, stiratura professionale, riconsegna impacchettata pronta all'uso.
     </div>
   </section>
 
   <!-- EXTRAS -->
-  <section style="padding-top:0">
-    <div class="pricing-intro" style="margin-bottom:48px">
-      <div class="eyebrow">EXTRA &amp; ADD-ONS</div>
-      <h2 class="title-md">Tutto ciò di cui<br><em>hai bisogno.</em></h2>
-    </div>
+  <section class="section bg-off">
+    <div class="eyebrow">Extra &amp; Add-ons</div>
+    <h2 class="section-title title-lg" style="margin-bottom:48px">Tutto ciò di cui<br><em>hai bisogno.</em></h2>
 
-    <div class="extras-grid">
-      <div class="extra-card">
+    <div class="divider-grid" style="grid-template-columns:repeat(3,1fr)">
+      <div class="extra-card card">
         <div class="extra-icon-line"></div>
         <div class="extra-name">Kit Bagno</div>
         <div class="extra-price">€3</div>
         <div class="extra-desc">Carta igienica (3 rotoli), sapone mani, shampoo, tappeto doccia</div>
       </div>
-
-      <div class="extra-card">
+      <div class="extra-card card">
         <div class="extra-icon-line"></div>
         <div class="extra-name">Kit Cucina</div>
         <div class="extra-price">€3</div>
         <div class="extra-desc">Pastiglie lavastoviglie, sapone piatti, spugna, buste spazzatura</div>
       </div>
-
-      <div class="extra-card">
+      <div class="extra-card card">
         <div class="extra-icon-line"></div>
         <div class="extra-name">Spolverata / Riassetto</div>
         <div class="extra-price" style="font-size:1.3rem;padding-top:4px">Su richiesta</div>
@@ -1225,13 +463,13 @@
   </section>
 
   <!-- PREVENTIVO RAPIDO -->
-  <section class="calc-section" id="calc">
+  <section class="section" id="calc">
     <div style="max-width:720px;margin:0 auto">
-      <div class="eyebrow">ESEMPIO DI PREVENTIVO</div>
-      <h2 class="title-md" style="margin-bottom:48px">Calcola il costo<br><em>del tuo intervento.</em></h2>
+      <div class="eyebrow">Esempio di Preventivo</div>
+      <h2 class="section-title title-lg" style="margin-bottom:48px">Calcola il costo<br><em>del tuo intervento.</em></h2>
 
-      <div class="glass-panel">
-        <div class="calc-title">Appartamento 75m² · 1 matrimoniale · 1 singolo · kit bagno + kit cucina</div>
+      <div class="card" style="padding:40px 48px">
+        <p class="title-sm" style="margin-bottom:32px;color:var(--text-mid);font-weight:300">Appartamento 75m² · 1 matrimoniale · 1 singolo · kit bagno + kit cucina</p>
         <ul class="calc-lines">
           <li>
             <span>Pulizia post check-out (75–110 m²)</span>
@@ -1259,36 +497,36 @@
           <span class="calc-total-amount">€91</span>
         </div>
         <div class="calc-cta">
-          <p style="font-size:.8rem;color:rgba(255,255,255,.4);margin-bottom:20px;font-weight:300">Vuoi calcolare il preventivo per il tuo appartamento specifico? Scrivici su WhatsApp in 2 minuti.</p>
-          <a href="https://wa.me/393510380392?text=Ciao!%20Vorrei%20un%20preventivo%20per%20le%20pulizie%20del%20mio%20appartamento." target="_blank" class="btn-gold">Calcola il tuo preventivo personalizzato →</a>
+          <p class="body-text" style="margin-bottom:20px;font-size:.82rem">Vuoi calcolare il preventivo per il tuo appartamento specifico? Scrivici su WhatsApp in 2 minuti.</p>
+          <a href="https://wa.me/393510380392?text=Ciao!%20Vorrei%20un%20preventivo%20per%20le%20pulizie%20del%20mio%20appartamento." target="_blank" class="btn btn-gold">Calcola il tuo preventivo personalizzato →</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PROPERTY MANAGER -->
-  <section style="padding-top:0;padding-bottom:120px;padding-left:var(--pad);padding-right:var(--pad)">
-    <div class="pm-box">
-      <div class="eyebrow">TARIFFE DEDICATE</div>
-      <h2 class="title-md">Per i property<br><em>manager.</em></h2>
-      <p class="pm-body">Gestisci 3 o più strutture? Accedi alle nostre tariffe riservate ai property manager: sconto volume, fatturazione mensile unificata, coordinatore dedicato, priorità slot orari. Un unico interlocutore per tutte le tue proprietà.</p>
-      <a href="https://wa.me/393510380392?text=Ciao!%20Gestisco%20pi%C3%B9%20strutture%20e%20vorrei%20conoscere%20le%20tariffe%20dedicate%20ai%20property%20manager." target="_blank" class="btn-outline-gold">Contattaci per una tariffa dedicata</a>
+  <section class="section bg-off">
+    <div class="pm-box" style="max-width:860px">
+      <div class="eyebrow">Tariffe Dedicate</div>
+      <h2 class="section-title title-lg" style="margin-bottom:20px">Per i property<br><em>manager.</em></h2>
+      <p class="body-text" style="margin-bottom:32px">Gestisci 3 o più strutture? Accedi alle nostre tariffe riservate ai property manager: sconto volume, fatturazione mensile unificata, coordinatore dedicato, priorità slot orari. Un unico interlocutore per tutte le tue proprietà.</p>
+      <a href="https://wa.me/393510380392?text=Ciao!%20Gestisco%20pi%C3%B9%20strutture%20e%20vorrei%20conoscere%20le%20tariffe%20dedicate%20ai%20property%20manager." target="_blank" class="btn btn-outline-gold">Contattaci per una tariffa dedicata</a>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section style="padding-top:0;padding-bottom:120px;padding-left:var(--pad);padding-right:var(--pad)">
-    <div class="eyebrow">DOMANDE FREQUENTI</div>
-    <h2 class="title-md">Tutto chiaro,<br><em>nessuna sorpresa.</em></h2>
+  <section class="section">
+    <div class="eyebrow">Domande Frequenti</div>
+    <h2 class="section-title title-lg" style="margin-bottom:48px">Tutto chiaro,<br><em>nessuna sorpresa.</em></h2>
 
-    <div class="faq-list">
+    <div class="faq-list" style="max-width:800px">
       <div class="faq-item">
         <button class="faq-question">
           I prezzi includono i prodotti di pulizia?
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Sì. I prezzi di mano d'opera includono tutti i prodotti professionali eco-certificati. Non ci sono costi aggiuntivi per i materiali di pulizia.</div>
+          Sì. I prezzi di mano d'opera includono tutti i prodotti professionali eco-certificati. Non ci sono costi aggiuntivi per i materiali di pulizia.
         </div>
       </div>
 
@@ -1298,7 +536,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">La metratura si riferisce alla superficie utile dell'appartamento. In caso di dubbio, puoi inviarci la planimetria su WhatsApp e la calcoliamo insieme gratuitamente.</div>
+          La metratura si riferisce alla superficie utile dell'appartamento. In caso di dubbio, puoi inviarci la planimetria su WhatsApp e la calcoliamo insieme gratuitamente.
         </div>
       </div>
 
@@ -1308,7 +546,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">No. I nostri prezzi sono fissi 7 giorni su 7, festivi inclusi. Zero sovrapprezzi.</div>
+          No. I nostri prezzi sono fissi 7 giorni su 7, festivi inclusi. Zero sovrapprezzi.
         </div>
       </div>
 
@@ -1318,7 +556,7 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Fatturazione mensile per i property manager con contratto. Pagamento anticipato per interventi singoli. Accettiamo bonifico e carta.</div>
+          Fatturazione mensile per i property manager con contratto. Pagamento anticipato per interventi singoli. Accettiamo bonifico e carta.
         </div>
       </div>
 
@@ -1328,71 +566,45 @@
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Sì. Per property manager con calendario regolare, offriamo preventivi annuali con tariffe bloccate.</div>
+          Sì. Per property manager con calendario regolare, offriamo preventivi annuali con tariffe bloccate.
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA BANNER -->
-  <div class="cta-banner">
-    <h2 class="title-xl">Il prezzo giusto<br>per ogni <em>appartamento.</em></h2>
-    <div class="cta-row">
-      <a href="https://wa.me/393510380392" target="_blank" class="btn-gold">WhatsApp →</a>
-      <a href="/contatti.html" class="btn-outline-light">Contattaci</a>
+  <section class="cta-section">
+    <div class="eyebrow" style="justify-content:center">Inizia oggi</div>
+    <h2 class="title-lg">Il prezzo giusto<br>per ogni <em>appartamento.</em></h2>
+    <div class="cta-row" style="justify-content:center;margin-top:36px">
+      <a href="https://wa.me/393510380392" target="_blank" class="btn btn-wa">WhatsApp →</a>
+      <a href="/contatti.html" class="btn btn-outline-gold">Contattaci</a>
     </div>
-  </div>
+  </section>
 
-  <footer>
+  <footer class="site-footer">
     <div class="footer-main">
       <div>
-        <div class="footer-brand-name serif"><span class="footer-brand-line"></span>Blue Arroyo</div>
+        <div class="footer-brand-name"><span class="footer-brand-rule"></span>Blue Arroyo</div>
         <p class="footer-tagline">Pulizie post check-out e gestione biancheria per property manager a Firenze.</p>
-        <a href="https://wa.me/393510380392" target="_blank" class="btn-gold" style="font-size:8.5px;padding:12px 24px;display:inline-block;margin-top:20px">WhatsApp →</a>
+        <a href="https://wa.me/393510380392" target="_blank" class="btn btn-dark" style="font-size:8.5px;padding:12px 24px;margin-top:20px;display:inline-block">WhatsApp →</a>
       </div>
-      <div>
-        <div class="footer-col-title">Servizi</div>
-        <ul class="footer-links">
-          <li><a href="/pulizia-post-checkout.html">Pulizia Post Check-out</a></li>
-          <li><a href="/servizio-biancheria.html">Servizio Biancheria</a></li>
-          <li><a href="/pacchetti-tariffe.html">Pacchetti &amp; Tariffe</a></li>
-          <li><a href="/servizi.html">Tutti i Servizi</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-title">Azienda</div>
-        <ul class="footer-links">
-          <li><a href="/chi-siamo.html">Chi Siamo</a></li>
-          <li><a href="/recensioni.html">Recensioni &amp; Casi Studio</a></li>
-          <li><a href="/blog.html">Blog</a></li>
-          <li><a href="/aree-servite.html">Aree Servite</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-title">Contatti</div>
-        <ul class="footer-links">
-          <li><a href="mailto:hello@bluearroyo.it">hello@bluearroyo.it</a></li>
-          <li><a href="tel:+393510380392">+39 351 038 0392</a></li>
-          <li><a href="/contatti.html">Preventivo Gratuito</a></li>
-        </ul>
-        <p style="margin-top:20px;font-size:.75rem;color:rgba(255,255,255,.3);line-height:1.7">Via Matteo Palmieri 20R<br>50122 Firenze FI</p>
-      </div>
+      <div><div class="footer-col-title">Servizi</div><ul class="footer-links"><li><a href="/pulizia-post-checkout.html">Pulizia Post Check-out</a></li><li><a href="/servizio-biancheria.html">Servizio Biancheria</a></li><li><a href="/pacchetti-tariffe.html">Pacchetti &amp; Tariffe</a></li><li><a href="/servizi.html">Tutti i Servizi</a></li></ul></div>
+      <div><div class="footer-col-title">Azienda</div><ul class="footer-links"><li><a href="/chi-siamo.html">Chi Siamo</a></li><li><a href="/recensioni.html">Recensioni &amp; Casi Studio</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/aree-servite.html">Aree Servite</a></li></ul></div>
+      <div><div class="footer-col-title">Contatti</div><ul class="footer-links"><li><a href="mailto:hello@bluearroyo.it">hello@bluearroyo.it</a></li><li><a href="tel:+393510380392">+39 351 038 0392</a></li><li><a href="/contatti.html">Preventivo Gratuito</a></li></ul><p style="margin-top:20px;font-size:.78rem;color:var(--text-muted);line-height:1.7">Via Matteo Palmieri 20R<br>50122 Firenze FI</p></div>
     </div>
-    <div class="footer-bottom">
-      <span class="footer-copy">© 2025 Blue Arroyo · Via Matteo Palmieri 20R, 50122 Firenze · <a href="#">Privacy Policy</a> · <a href="#">Cookie Policy</a></span>
-    </div>
+    <div class="footer-bottom"><span class="footer-copy">© 2025 Blue Arroyo · Via Matteo Palmieri 20R, 50122 Firenze · <a href="#">Privacy Policy</a> · <a href="#">Cookie Policy</a></span></div>
   </footer>
-
-  <a href="https://wa.me/393510380392" target="_blank" class="wa-float" aria-label="WhatsApp">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
+  <button class="back-top" id="backTop" aria-label="Torna su">↑</button>
 
   <script>
-    function setLang(l){document.documentElement.setAttribute('data-lang',l);document.getElementById('btn-it').classList.toggle('active',l==='it');document.getElementById('btn-es').classList.toggle('active',l==='es');localStorage.setItem('ba-lang',l);}
-    (function(){var s=localStorage.getItem('ba-lang');if(s)setLang(s);})();
-    function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
-    document.addEventListener('click',function(e){var mm=document.getElementById('mobileMenu');if(mm&&mm.classList.contains('open')&&!mm.contains(e.target)&&!e.target.closest('.nav-hamburger'))mm.classList.remove('open');});
-    document.querySelectorAll('.faq-question').forEach(function(btn){btn.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});
+window.addEventListener('scroll',function(){document.getElementById('site-nav').classList.toggle('scrolled',window.scrollY>20);});
+function setLang(l){document.documentElement.setAttribute('data-lang',l);document.getElementById('btn-it').classList.toggle('active',l==='it');document.getElementById('btn-es').classList.toggle('active',l==='es');localStorage.setItem('ba-lang',l);}
+(function(){var s=localStorage.getItem('ba-lang');if(s)setLang(s);})();
+function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+document.addEventListener('click',function(e){var mm=document.getElementById('mobileMenu');if(mm&&mm.classList.contains('open')&&!mm.contains(e.target)&&!e.target.closest('.nav-hamburger'))mm.classList.remove('open');});
+document.querySelectorAll('.faq-question').forEach(function(btn){btn.addEventListener('click',function(){this.closest('.faq-item').classList.toggle('open');});});
+var bt=document.getElementById('backTop');if(bt){window.addEventListener('scroll',function(){bt.classList.toggle('visible',window.scrollY>400);});bt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});}
   </script>
 </body>
 </html>

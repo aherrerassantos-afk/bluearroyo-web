@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Toscan Costruzioni</title>
+<meta name="description" content="Ogni spazio racconta una storia. Scopri i progetti di ristrutturazione firmati Toscan Costruzioni a Firenze e in Toscana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ── TOKENS ───────────────────────────────────────── */
+:root {
+  --char:   #231F1B;   /* deep charcoal brown        */
+  --terra:  #B85438;   /* terracotta / rust           */
+  --terra-l:#D4795B;
+  --cream:  #FAF6F0;   /* warm off-white              */
+  --sand:   #EDE5D8;   /* light sand                  */
+  --olive:  #4C5640;   /* tuscan olive                */
+  --muted:  #8C857D;   /* warm grey text              */
+  --border: rgba(35,31,27,.12);
+  --pad:    clamp(20px, 6vw, 96px);
+  --radius: 4px;
+}
+
+/* ── RESET ────────────────────────────────────────── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box }
+html { scroll-behavior:smooth; font-size:16px }
+body {
+  background: var(--cream);
+  color: var(--char);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { display:block; width:100%; object-fit:cover }
+a  { text-decoration:none; color:inherit }
+.serif { font-family:'Cormorant Garamond', serif }
+
+/* ── UTILITY ──────────────────────────────────────── */
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.tag--terra {
+  color: var(--terra);
+}
+.divider {
+  width: 40px; height: 1px;
+  background: var(--terra);
+  margin: 0 auto 32px;
+}
+
+/* ── NAV ──────────────────────────────────────────── */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:400;
+  height: 68px;
+  display: flex; align-items:center; justify-content:space-between;
+  padding: 0 var(--pad);
+  background: rgba(250,246,240,.90);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  transition: background .4s;
+}
+.nav-brand {
+  display: flex; align-items:center; gap:14px;
+}
+.nav-monogram {
+  width: 36px; height: 36px;
+  border: 1.5px solid var(--char);
+  display: flex; align-items:center; justify-content:center;
+}
+.nav-monogram span {
+  font-family:'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: .04em;
+}
+.nav-name {
+  font-family:'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.nav-links {
+  display: flex; gap:36px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--char);
+  position: relative;
+  transition: color .3s;
+}
+.nav-links a.active,
+.nav-links a:hover { color: var(--terra) }
+.nav-links a.active::after {
+  content:'';
+  position:absolute; bottom:-4px; left:0; right:0;
+  height:1px; background:var(--terra);
+}
+.nav-cta {
+  padding: 10px 24px;
+  background: var(--char);
+  color: var(--cream) !important;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  transition: background .3s;
+}
+.nav-cta:hover { background: var(--terra) !important; color:var(--cream) !important }
+.nav-mobile-toggle {
+  display: none;
+  flex-direction:column; gap:5px;
+  background:none; border:none; cursor:pointer; padding:4px;
+}
+.nav-mobile-toggle span { display:block; width:22px; height:1.5px; background:var(--char) }
+
+/* ── HERO ─────────────────────────────────────────── */
+.hero {
+  padding-top: 68px;
+  min-height: 88vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  overflow: hidden;
+}
+.hero-left {
+  background: var(--char);
+  display: flex; flex-direction:column; justify-content:flex-end;
+  padding: clamp(40px, 7vw, 80px) var(--pad) clamp(40px, 7vw, 80px) var(--pad);
+  position: relative;
+}
+.hero-eyebrow {
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--terra-l);
+  margin-bottom: 20px;
+}
+.hero-title {
+  font-family:'Cormorant Garamond', serif;
+  font-size: clamp(42px, 5.5vw, 82px);
+  font-weight: 400;
+  line-height: 1.06;
+  color: var(--cream);
+  margin-bottom: 28px;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--terra-l);
+}
+.hero-body {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(250,246,240,.6);
+  max-width: 380px;
+  margin-bottom: 40px;
+}
+.hero-cta-row {
+  display: flex; gap:16px; align-items:center; flex-wrap:wrap;
+}
+.btn-primary {
+  padding: 14px 32px;
+  background: var(--terra);
+  color: var(--cream);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  transition: background .3s;
+  cursor: pointer;
+}
+.btn-primary:hover { background: var(--terra-l) }
+.btn-ghost {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(250,246,240,.5);
+  display: flex; align-items:center; gap:8px;
+  transition: color .3s;
+}
+.btn-ghost:hover { color: var(--cream) }
+.btn-ghost::after { content:'→' }
+.hero-counter {
+  position: absolute; bottom: clamp(40px,7vw,80px); right: 40px;
+  text-align: right;
+}
+.hero-counter-num {
+  font-family:'Cormorant Garamond', serif;
+  font-size: 64px;
+  font-weight: 300;
+  color: rgba(250,246,240,.08);
+  line-height: 1;
+}
+.hero-counter-label {
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(250,246,240,.3);
+}
+.hero-right {
+  position: relative;
+  overflow: hidden;
+}
+.hero-right img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(.92);
+}
+.hero-right-overlay {
+  position: absolute; inset:0;
+  background: linear-gradient(to right, rgba(35,31,27,.25) 0%, transparent 50%);
+}
+.hero-badge {
+  position: absolute; bottom:36px; left:36px;
+  background: var(--cream);
+  padding: 20px 24px;
+  max-width: 240px;
+}
+.hero-badge-label {
+  font-size: 9px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.hero-badge-value {
+  font-family:'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.hero-badge-sub {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* ── STATS BAR ────────────────────────────────────── */
+.stats-bar {
+  background: var(--terra);
+  padding: 20px var(--pad);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.stat-item {
+  display: flex; flex-direction:column; align-items:center;
+  text-align: center;
+  padding: 8px 16px;
+  border-right: 1px solid rgba(250,246,240,.2);
+}
+.stat-item:last-child { border-right: none }
+.stat-num {
+  font-family:'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--cream);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(250,246,240,.65);
+  margin-top: 4px;
+}
+
+/* ── SECTION HEADER ───────────────────────────────── */
+.section-header {
+  text-align: center;
+  padding: clamp(60px, 8vw, 100px) var(--pad) clamp(32px, 4vw, 48px);
+}
+.section-header .tag { margin-bottom: 12px }
+.section-title {
+  font-family:'Cormorant Garamond', serif;
+  font-size: clamp(30px, 4vw, 54px);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.section-title em { font-style:italic; color:var(--terra) }
+.section-subtitle {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* ── FILTER BAR ───────────────────────────────────── */
+.filter-bar {
+  display: flex; justify-content:center; gap:0;
+  flex-wrap: wrap;
+  padding: 0 var(--pad) 48px;
+  border-bottom: 1px solid var(--border);
+  margin: 0 var(--pad);
+}
+.filter-btn {
+  padding: 10px 24px;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color .3s, border-color .3s;
+  margin-bottom: -1px;
+}
+.filter-btn:hover { color: var(--char) }
+.filter-btn.active {
+  color: var(--terra);
+  border-bottom-color: var(--terra);
+}
+
+/* ── FEATURED PROJECT ─────────────────────────────── */
+.featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 560px;
+  margin: 48px var(--pad) 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+.featured-img {
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+}
+.featured-img img {
+  height: 100%;
+  transition: transform .7s ease;
+}
+.featured:hover .featured-img img { transform: scale(1.03) }
+.featured-img-badge {
+  position: absolute; top:24px; left:24px;
+  background: var(--terra);
+  color: var(--cream);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: var(--radius);
+}
+.featured-content {
+  background: var(--char);
+  padding: clamp(36px, 5vw, 60px);
+  display: flex; flex-direction:column; justify-content:space-between;
+}
+.featured-tag { color: var(--terra-l) }
+.featured-title {
+  font-family:'Cormorant Garamond', serif;
+  font-size: clamp(26px, 3.5vw, 48px);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--cream);
+  margin: 12px 0 20px;
+}
+.featured-desc {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: rgba(250,246,240,.6);
+  margin-bottom: 32px;
+  flex: 1;
+}
+.featured-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 36px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(250,246,240,.1);
+}
+.featured-meta-item {}
+.featured-meta-label {
+  font-size: 9px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(250,246,240,.35);
+  margin-bottom: 4px;
+}
+.featured-meta-value {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(250,246,240,.8);
+}
+.featured-link {
+  display: inline-flex; align-items:center; gap:10px;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--terra-l);
+  transition: gap .3s;
+}
+.featured-link:hover { gap: 16px }
+
+/* ── PROJECT GRID ─────────────────────────────────── */
+.grid-section { padding: 40px var(--pad) clamp(60px,8vw,100px) }
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+.project-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  background: var(--sand);
+  cursor: pointer;
+}
+.project-card.wide {
+  grid-column: span 2;
+  aspect-ratio: 16/9;
+}
+.project-card img {
+  height: 100%;
+  transition: transform .6s ease;
+}
+.project-card:hover img { transform: scale(1.05) }
+.project-overlay {
+  position: absolute; inset:0;
+  background: linear-gradient(to top, rgba(35,31,27,.85) 0%, transparent 55%);
+  display: flex; flex-direction:column; justify-content:flex-end;
+  padding: 28px;
+  opacity: 0;
+  transition: opacity .4s;
+}
+.project-card:hover .project-overlay { opacity:1 }
+.project-overlay-tag {
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--terra-l);
+  margin-bottom: 6px;
+}
+.project-overlay-title {
+  font-family:'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--cream);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.project-overlay-link {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(250,246,240,.6);
+  display: flex; align-items:center; gap:6px;
+}
+.project-overlay-link::after { content:'→' }
+/* Always-visible title strip for non-hover */
+.project-label {
+  position: absolute; bottom:0; left:0; right:0;
+  padding: 12px 20px 14px;
+  background: linear-gradient(to top, rgba(35,31,27,.7) 0%, transparent 100%);
+}
+.project-label-title {
+  font-family:'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--cream);
+}
+.project-label-sub {
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(250,246,240,.55);
+}
+.project-card:hover .project-label { display:none }
+
+/* placeholder color-blocks for demo */
+.placeholder { width:100%; height:100%; object-fit:cover }
+.ph-1 { background: linear-gradient(135deg, #6E5043, #3D2C25) }
+.ph-2 { background: linear-gradient(135deg, #8B6E5A, #5A3E30) }
+.ph-3 { background: linear-gradient(135deg, #4C5640, #2E342A) }
+.ph-4 { background: linear-gradient(135deg, #7D6455, #452E23) }
+.ph-5 { background: linear-gradient(135deg, #B38B74, #6B4C3A) }
+.ph-6 { background: linear-gradient(135deg, #5C6850, #354030) }
+.ph-7 { background: linear-gradient(135deg, #8A5C4A, #3E2419) }
+.ph-8 { background: linear-gradient(135deg, #9A7460, #503420) }
+
+/* ── PRIMA E DOPO TEASER ──────────────────────────── */
+.prima-dopo {
+  background: var(--sand);
+  padding: clamp(60px,8vw,100px) var(--pad);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+.pd-text .section-header { text-align:left; padding:0 0 32px 0 }
+.pd-text .divider { margin:0 0 24px 0 }
+.pd-body {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+.pd-visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  position: relative;
+}
+.pd-img-wrap {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  background: var(--char);
+}
+.pd-img-label {
+  position: absolute;
+  top: 12px; left: 12px;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--cream);
+  background: rgba(35,31,27,.55);
+  padding: 5px 10px;
+  border-radius: var(--radius);
+}
+.pd-ph-prima  { background: linear-gradient(135deg, #4A4A48, #2C2C2A) }
+.pd-ph-dopo   { background: linear-gradient(135deg, #B85438, #7A3220) }
+.pd-divider-line {
+  position: absolute; top:50%; left:50%;
+  transform: translate(-50%, -50%);
+  width: 32px; height: 32px;
+  background: var(--cream);
+  border-radius: 50%;
+  display: flex; align-items:center; justify-content:center;
+  font-size: 14px;
+  color: var(--char);
+  z-index: 10;
+  box-shadow: 0 2px 12px rgba(35,31,27,.2);
+}
+
+/* ── TESTIMONIALS ─────────────────────────────────── */
+.testimonials {
+  background: var(--char);
+  padding: clamp(60px,8vw,100px) var(--pad);
+  text-align: center;
+}
+.testimonials .section-title { color: var(--cream) }
+.testimonials .section-subtitle { color: rgba(250,246,240,.5) }
+.testimonials .divider { background: var(--terra) }
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 48px;
+  text-align: left;
+}
+.testi-card {
+  background: rgba(250,246,240,.04);
+  padding: 36px 32px;
+  border: 1px solid rgba(250,246,240,.07);
+  border-radius: var(--radius);
+  position: relative;
+}
+.testi-quote {
+  font-family:'Cormorant Garamond', serif;
+  font-size: 52px;
+  line-height: .6;
+  color: var(--terra);
+  margin-bottom: 20px;
+}
+.testi-text {
+  font-family:'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.65;
+  color: rgba(250,246,240,.75);
+  margin-bottom: 24px;
+}
+.testi-author {
+  display: flex; align-items:center; gap:12px;
+}
+.testi-avatar {
+  width: 38px; height:38px;
+  border-radius: 50%;
+  background: var(--terra);
+  display: flex; align-items:center; justify-content:center;
+  font-family:'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--cream);
+  flex-shrink: 0;
+}
+.testi-name {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 2px;
+}
+.testi-role {
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(250,246,240,.35);
+}
+.stars {
+  position: absolute; top:28px; right:24px;
+  color: var(--terra-l);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+/* ── CTA SECTION ──────────────────────────────────── */
+.cta-section {
+  padding: clamp(80px,10vw,120px) var(--pad);
+  background: var(--cream);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin: 0 var(--pad);
+}
+.cta-title {
+  font-family:'Cormorant Garamond', serif;
+  font-size: clamp(28px, 3.5vw, 50px);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+.cta-title em { font-style:italic; color:var(--terra) }
+.cta-sub {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.cta-actions {
+  display: flex; flex-direction:column; gap:12px; align-items:flex-end;
+  flex-shrink: 0;
+}
+.btn-outline {
+  padding: 14px 32px;
+  background: none;
+  border: 1.5px solid var(--char);
+  color: var(--char);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background .3s, color .3s;
+}
+.btn-outline:hover { background:var(--char); color:var(--cream) }
+.cta-note {
+  font-size: 11px;
+  color: var(--muted);
+  text-align: right;
+}
+
+/* ── FOOTER ───────────────────────────────────────── */
+footer {
+  background: var(--char);
+  padding: clamp(48px,7vw,80px) var(--pad) 32px;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 56px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(250,246,240,.08);
+}
+.footer-brand-name {
+  font-family:'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--cream);
+  margin-bottom: 16px;
+}
+.footer-tagline {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(250,246,240,.45);
+  margin-bottom: 28px;
+  max-width: 280px;
+}
+.footer-social {
+  display: flex; gap:16px;
+}
+.social-link {
+  width: 36px; height:36px;
+  border: 1px solid rgba(250,246,240,.15);
+  border-radius: var(--radius);
+  display: flex; align-items:center; justify-content:center;
+  font-size: 12px;
+  color: rgba(250,246,240,.5);
+  transition: border-color .3s, color .3s;
+}
+.social-link:hover { border-color: var(--terra); color: var(--terra-l) }
+.footer-col-title {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(250,246,240,.35);
+  margin-bottom: 20px;
+}
+.footer-col-links {
+  list-style: none;
+  display: flex; flex-direction:column; gap:12px;
+}
+.footer-col-links a {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(250,246,240,.55);
+  transition: color .3s;
+}
+.footer-col-links a:hover { color: var(--cream) }
+.footer-contact-item {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(250,246,240,.55);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.footer-contact-item strong {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(250,246,240,.25);
+  margin-bottom: 2px;
+}
+.footer-bottom {
+  display: flex; justify-content:space-between; align-items:center;
+  flex-wrap: wrap; gap:12px;
+}
+.footer-legal {
+  font-size: 11px;
+  color: rgba(250,246,240,.25);
+  line-height: 1.7;
+}
+.footer-credit {
+  font-size: 11px;
+  color: rgba(250,246,240,.25);
+  text-align: right;
+}
+
+/* ── MOBILE ───────────────────────────────────────── */
+@media (max-width: 900px) {
+  .nav-links, .nav-cta { display:none }
+  .nav-mobile-toggle { display:flex }
+
+  .hero { grid-template-columns: 1fr; min-height:auto }
+  .hero-right { min-height: 50vw }
+  .hero-counter { display:none }
+
+  .stats-bar { grid-template-columns: repeat(2,1fr); gap:1px }
+  .stat-item { border-right:none; border-bottom:1px solid rgba(250,246,240,.15) }
+  .stat-item:nth-child(even) { border-bottom:none }
+  .stat-item:nth-child(3) { border-bottom:none }
+
+  .featured { grid-template-columns:1fr }
+  .featured-content { order:-1 }
+
+  .project-grid { grid-template-columns: 1fr 1fr }
+  .project-card.wide { grid-column: span 2 }
+
+  .prima-dopo { grid-template-columns:1fr; gap:40px }
+
+  .testi-grid { grid-template-columns:1fr }
+
+  .cta-section { grid-template-columns:1fr; gap:28px; margin:0 }
+  .cta-actions { align-items:flex-start }
+  .cta-note { text-align:left }
+
+  .footer-top { grid-template-columns:1fr 1fr; gap:32px }
+
+  .footer-bottom { flex-direction:column; align-items:flex-start }
+  .footer-credit { text-align:left }
+}
+@media (max-width: 560px) {
+  .project-grid { grid-template-columns:1fr }
+  .project-card.wide { grid-column:span 1; aspect-ratio:4/3 }
+  .stats-bar { grid-template-columns:1fr 1fr }
+  .footer-top { grid-template-columns:1fr }
+  .hero-badge { display:none }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="#" class="nav-brand">
+    <div class="nav-monogram"><span>TC</span></div>
+    <span class="nav-name">Toscan Costruzioni</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#portfolio" class="active">Portfolio</a></li>
+    <li><a href="#">Servizi</a></li>
+    <li><a href="#">Prima &amp; Dopo</a></li>
+    <li><a href="#">Contatti</a></li>
+  </ul>
+  <a href="tel:+393270288245" class="nav-cta">+39 327 028 8245</a>
+  <button class="nav-mobile-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Portfolio · Firenze e Toscana</p>
+    <h1 class="hero-title serif">Ogni spazio<br>racconta una<br><em>storia nostra</em></h1>
+    <p class="hero-body">Dalle fondamenta al dettaglio finale, ogni progetto è una trasformazione unica. Scopri i lavori che ci rendono orgogliosi: ristrutturazioni, frazionamenti e recuperi del patrimonio toscano.</p>
+    <div class="hero-cta-row">
+      <a href="#portfolio" class="btn-primary">Esplora i Progetti</a>
+      <a href="#prima-dopo" class="btn-ghost">Vedi Prima &amp; Dopo</a>
+    </div>
+    <div class="hero-counter">
+      <div class="hero-counter-num">17</div>
+      <div class="hero-counter-label">Progetti completati</div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <!-- Replace src with actual project hero image -->
+    <div class="ph-1 placeholder" style="height:100%"></div>
+    <div class="hero-right-overlay"></div>
+    <div class="hero-badge">
+      <div class="hero-badge-label">Progetto in evidenza</div>
+      <div class="hero-badge-value serif">Via degli Alfani 15</div>
+      <div class="hero-badge-sub">Ristrutturazione integrale · 120 m²</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS BAR ── -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num serif">17+</div>
+    <div class="stat-label">Progetti Completati</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num serif">8</div>
+    <div class="stat-label">Anni di Esperienza</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num serif">3.200</div>
+    <div class="stat-label">m² Ristrutturati</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num serif">100%</div>
+    <div class="stat-label">Clienti Soddisfatti</div>
+  </div>
+</div>
+
+<!-- ── PORTFOLIO HEADER + FILTER ── -->
+<div id="portfolio">
+  <div class="section-header">
+    <span class="tag tag--terra">Il Nostro Lavoro</span>
+    <h2 class="section-title serif">Ristrutturazioni che <em>durano nel tempo</em></h2>
+    <p class="section-subtitle">Dal centro storico fiorentino alle colline toscane, ogni intervento rispetta la storia del luogo e introduce il futuro.</p>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">Tutti i Progetti</button>
+    <button class="filter-btn" data-filter="ristrutturazione">Ristrutturazione</button>
+    <button class="filter-btn" data-filter="frazionamento">Frazionamento</button>
+    <button class="filter-btn" data-filter="recupero">Recupero Rurale</button>
+    <button class="filter-btn" data-filter="premium">Premium</button>
+  </div>
+</div>
+
+<!-- ── FEATURED PROJECT ── -->
+<div class="featured" style="margin-top:48px">
+  <div class="featured-img">
+    <div class="ph-2 placeholder" style="height:100%; min-height:420px"></div>
+    <div class="featured-img-badge">Progetto in Evidenza</div>
+  </div>
+  <div class="featured-content">
+    <div>
+      <span class="tag featured-tag">Ristrutturazione Integrale</span>
+      <h3 class="featured-title serif">Via degli Alfani 15<br>— Firenze</h3>
+      <p class="featured-desc">Appartamento nel cuore del centro storico fiorentino. Recupero completo degli elementi originali — travi a vista, pavimenti in cotto, archi in pietra — integrati con impianti di ultima generazione e finiture di pregio. Un lavoro che ha restituito dignità a uno spazio che la storia aveva lasciato in attesa.</p>
+    </div>
+    <div>
+      <div class="featured-meta">
+        <div class="featured-meta-item">
+          <div class="featured-meta-label">Superficie</div>
+          <div class="featured-meta-value">120 m²</div>
+        </div>
+        <div class="featured-meta-item">
+          <div class="featured-meta-label">Durata lavori</div>
+          <div class="featured-meta-value">6 mesi</div>
+        </div>
+        <div class="featured-meta-item">
+          <div class="featured-meta-label">Tipologia</div>
+          <div class="featured-meta-value">Residenziale</div>
+        </div>
+        <div class="featured-meta-item">
+          <div class="featured-meta-label">Anno</div>
+          <div class="featured-meta-value">2024</div>
+        </div>
+      </div>
+      <a href="#" class="featured-link">Scopri il progetto →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── PROJECT GRID ── -->
+<div class="grid-section">
+  <div class="project-grid">
+
+    <!-- card 1 - wide -->
+    <div class="project-card wide" data-category="ristrutturazione">
+      <div class="ph-3 placeholder" style="height:100%"></div>
+      <div class="project-label">
+        <div class="project-label-title serif">Via San Giuseppe 24</div>
+        <div class="project-label-sub">Ristrutturazione · 85 m²</div>
+      </div>
+      <div class="project-overlay">
+        <div class="project-overlay-tag">Ristrutturazione Integrale</div>
+        <div class="project-overlay-title serif">Via San Giuseppe 24</div>
+        <div class="project-overlay-link">Scopri il progetto</div>
+      </div>
+    </div>
+
+    <!-- card 2 -->
+    <div class="project-card" data-category="recupero">
+      <div class="ph-4 placeholder" style="height:100%"></div>
+      <div class="project-label">
+        <div class="project-label-title serif">Loc. Caiano 6/a</div>
+        <div class="project-label-sub">Recupero Rurale</div>
+      </div>
+      <div class="project-overlay">
+        <div class="project-overlay-tag">Recupero Rurale</div>
+        <div class="project-overlay-title serif">Loc. Caiano 6/a</div>
+        <div class="project-overlay-link">Scopri il progetto</div>
+      </div>
+    </div>
+
+    <!-- card 3 -->
+    <div class="project-card" data-category="ristrutturazione">
+      <div class="ph-5 placeholder" style="height:100%"></div>
+      <div class="project-label">
+        <div class="project-label-title serif">Via F. G. Angelico 36</div>
+        <div class="project-label-sub">Ristrutturazione · 95 m²</div>
+      </div>
+      <div class="project-overlay">
+        <div class="project-overlay-tag">Ristrutturazione</div>
+        <div class="project-overlay-title serif">Via F. G. Angelico 36</div>
+        <div class="project-overlay-link">Scopri il progetto</div>
+      </div>
+    </div>
+
+    <!-- card 4 -->
+    <div class="project-card" data-category="ristrutturazione">
+      <div class="ph-6 placeholder" style="height:100%"></div>
+      <div class="project-label">
+        <div class="project-label-title serif">Via degli Alfani 77</div>
+        <div class="project-label-sub">Ristrutturazione · 70 m²</div>
+      </div>
+      <div class="project-overlay">
+        <div class="project-overlay-tag">Ristrutturazione</div>
+        <div class="project-overlay-title serif">Via degli Alfani 77</div>
+        <div class="project-overlay-link">Scopri il progetto</div>
+      </div>
+    </div>
+
+    <!-- card 5 - wide -->
+    <div class="project-card wide" data-category="frazionamento">
+      <div class="ph-7 placeholder" style="height:100%"></div>
+      <div class="project-label">
+        <div class="project-label-title serif">Frazionamento · Viale dei Cadorna 79F</div>
+        <div class="project-label-sub">Frazionamento · 180 m²</div>
+      </div>
+      <div class="project-overlay">
+        <div class="project-overlay-tag">Frazionamento</div>
+        <div class="project-overlay-title serif">Viale dei Cadorna 79F</div>
+        <div class="project-overlay-link">Scopri il progetto</div>
+      </div>
+    </div>
+
+    <!-- card 6 -->
+    <div class="project-card" data-category="premium">
+      <div class="ph-8 placeholder" style="height:100%"></div>
+      <div class="project-label">
+        <div class="project-label-title serif">Via Ricasoli 8</div>
+        <div class="project-label-sub">Premium · 140 m²</div>
+      </div>
+      <div class="project-overlay">
+        <div class="project-overlay-tag">Livello Premium</div>
+        <div class="project-overlay-title serif">Via Ricasoli 8</div>
+        <div class="project-overlay-link">Scopri il progetto</div>
+      </div>
+    </div>
+
+    <!-- card 7 -->
+    <div class="project-card" data-category="ristrutturazione">
+      <div class="ph-1 placeholder" style="height:100%"></div>
+      <div class="project-label">
+        <div class="project-label-title serif">Via Roma 38</div>
+        <div class="project-label-sub">Ristrutturazione</div>
+      </div>
+      <div class="project-overlay">
+        <div class="project-overlay-tag">Ristrutturazione</div>
+        <div class="project-overlay-title serif">Via Roma 38</div>
+        <div class="project-overlay-link">Scopri il progetto</div>
+      </div>
+    </div>
+
+    <!-- card 8 -->
+    <div class="project-card" data-category="recupero">
+      <div class="ph-2 placeholder" style="height:100%"></div>
+      <div class="project-label">
+        <div class="project-label-title serif">Via Cerreta</div>
+        <div class="project-label-sub">Recupero Rurale</div>
+      </div>
+      <div class="project-overlay">
+        <div class="project-overlay-tag">Recupero Rurale</div>
+        <div class="project-overlay-title serif">Via Cerreta</div>
+        <div class="project-overlay-link">Scopri il progetto</div>
+      </div>
+    </div>
+
+    <!-- card 9 -->
+    <div class="project-card" data-category="ristrutturazione">
+      <div class="ph-3 placeholder" style="height:100%"></div>
+      <div class="project-label">
+        <div class="project-label-title serif">Via Arturo Toscanini 100</div>
+        <div class="project-label-sub">Ristrutturazione · 100 m²</div>
+      </div>
+      <div class="project-overlay">
+        <div class="project-overlay-tag">Ristrutturazione</div>
+        <div class="project-overlay-title serif">Via Arturo Toscanini 100</div>
+        <div class="project-overlay-link">Scopri il progetto</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── PRIMA E DOPO ── -->
+<section id="prima-dopo" class="prima-dopo">
+  <div class="pd-text">
+    <div class="section-header" style="text-align:left; padding:0 0 24px 0">
+      <span class="tag tag--terra" style="margin-bottom:12px; display:block">Trasformazioni Reali</span>
+      <h2 class="section-title serif" style="font-size:clamp(26px,3.5vw,46px)">Dal rustico<br>al <em>Tiro Premium</em></h2>
+    </div>
+    <div class="divider" style="margin:0 0 24px 0; background:var(--terra)"></div>
+    <p class="pd-body">Non lavoriamo sull'apparenza: ogni trasformazione parte da un'analisi strutturale profonda. Il risultato visivo è la conseguenza naturale di un processo rigoroso, non un fine in sé.</p>
+    <p class="pd-body" style="margin-bottom:36px">Le nostre gallerie Prima &amp; Dopo documentano ogni fase: dalla posa dei massetti agli impianti, fino alla consegna delle chiavi.</p>
+    <a href="#" class="btn-primary">Vedi tutte le trasformazioni</a>
+  </div>
+  <div class="pd-visual">
+    <div class="pd-img-wrap">
+      <div class="pd-ph-prima placeholder" style="height:100%"></div>
+      <span class="pd-img-label">Prima</span>
+    </div>
+    <div class="pd-img-wrap">
+      <div class="pd-ph-dopo placeholder" style="height:100%"></div>
+      <span class="pd-img-label">Dopo</span>
+    </div>
+    <div class="pd-divider-line">↔</div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="testimonials">
+  <span class="tag tag--terra">Cosa Dicono i Clienti</span>
+  <div class="divider" style="margin:16px auto 20px"></div>
+  <h2 class="section-title serif" style="color:var(--cream)">La voce di chi<br>ha <em>vissuto il processo</em></h2>
+  <p class="section-subtitle" style="color:rgba(250,246,240,.45)">Non chiediamo fiducia cieca. La guadagniamo progetto per progetto.</p>
+
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <div class="testi-quote serif">"</div>
+      <p class="testi-text">Hanno trasformato un appartamento degli anni '60 in qualcosa di straordinario. Tempi rispettati, comunicazione continua e un risultato che supera ogni aspettativa.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">ML</div>
+        <div>
+          <div class="testi-name">Marco L.</div>
+          <div class="testi-role">Via degli Alfani 15</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <div class="testi-quote serif">"</div>
+      <p class="testi-text">Il frazionamento sembrava un progetto impossibile. Toscan Costruzioni ha gestito ogni burocrazia e ogni cantiere con una professionalità che non avevo mai visto prima.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">SF</div>
+        <div>
+          <div class="testi-name">Silvia F.</div>
+          <div class="testi-role">Viale dei Cadorna 79F</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <div class="testi-quote serif">"</div>
+      <p class="testi-text">Il casale era in rovina da vent'anni. Oggi è la nostra casa. Il recupero ha mantenuto l'anima del posto senza sacrificare nessun comfort moderno. Lavoro magistrale.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">AR</div>
+        <div>
+          <div class="testi-name">Andrea R.</div>
+          <div class="testi-role">Loc. Caiano 6/a</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <div>
+    <h2 class="cta-title serif">Hai un progetto<br>in mente? <em>Parliamone.</em></h2>
+    <p class="cta-sub">Un sopralluogo gratuito, senza impegno. Portiamo l'esperienza di 17 progetti completati al servizio della tua visione.</p>
+  </div>
+  <div class="cta-actions">
+    <a href="tel:+393270288245" class="btn-primary" style="text-align:center; display:block">Chiama Ora</a>
+    <a href="mailto:info@tailormadecostruzioni.it" class="btn-outline" style="text-align:center; display:block">Scrivici</a>
+    <p class="cta-note">Risposta entro 24 ore · Sopralluogo gratuito</p>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">Toscan Costruzioni</div>
+      <p class="footer-tagline">Il rinascimento dell'efficienza. Ristrutturiamo il patrimonio toscano con rispetto per la storia e visione per il futuro.</p>
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Instagram">ig</a>
+        <a href="#" class="social-link" aria-label="Facebook">fb</a>
+        <a href="#" class="social-link" aria-label="Houzz">hz</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigazione</div>
+      <ul class="footer-col-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Servizi</a></li>
+        <li><a href="#">Prima &amp; Dopo</a></li>
+        <li><a href="#">Contatti</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Servizi</div>
+      <ul class="footer-col-links">
+        <li><a href="#">Ristrutturazione Integrale</a></li>
+        <li><a href="#">Frazionamento</a></li>
+        <li><a href="#">Recupero Rurale</a></li>
+        <li><a href="#">Livello Premium</a></li>
+        <li><a href="#">Progettazione</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contatti</div>
+      <div class="footer-contact-item">
+        <strong>Sede</strong>
+        Via del Giglio 1<br>50123 Firenze
+      </div>
+      <div class="footer-contact-item">
+        <strong>Telefono</strong>
+        +39 327 028 8245
+      </div>
+      <div class="footer-contact-item">
+        <strong>Email</strong>
+        info@tailormadecostruzioni.it
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      Toscan Costruzioni s.r.l. · Via del Giglio 1, 50123 Firenze · P.IVA 06853120480<br>
+      Cap. Soc. € 50.000,00 i.v. · C.C.I.A.A. R.E.A. n. FI-661249
+    </div>
+    <div class="footer-credit">
+      &copy; 2025 Toscan Costruzioni · Tutti i diritti riservati
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Filter logic */
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.project-card').forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.style.display = '';
+        card.style.opacity = '0';
+        requestAnimationFrame(() => {
+          card.style.transition = 'opacity .4s';
+          card.style.opacity = '1';
+        });
+      } else {
+        card.style.opacity = '0';
+        setTimeout(() => { card.style.display = 'none' }, 400);
+      }
+    });
+  });
+});
+
+/* Scroll-aware nav */
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  nav.style.background = window.scrollY > 40
+    ? 'rgba(250,246,240,.97)'
+    : 'rgba(250,246,240,.90)';
+}, { passive: true });
+</script>
+</body>
+</html>

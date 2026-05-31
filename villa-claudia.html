@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Villa Claudia · Residenze di Pregio · Montespertoli — Toscan Costruzioni</title>
+<meta name="description" content="3 residenze esclusive chiavi in mano nel cuore del Chianti fiorentino. Consegna in 12 mesi. Scopri prezzi, piano pagamenti e tempistiche di Villa Claudia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ── TOKENS ── */
+:root {
+  --char:    #231F1B;
+  --terra:   #B85438;
+  --terra-l: #D4795B;
+  --cream:   #FAF6F0;
+  --sand:    #EDE5D8;
+  --olive:   #4C5640;
+  --muted:   #8C857D;
+  --border:  rgba(35,31,27,.1);
+  --pad:     clamp(20px, 6vw, 96px);
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box }
+html { scroll-behavior:smooth }
+body {
+  background: var(--cream);
+  color: var(--char);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { display:block; width:100%; object-fit:cover }
+a { text-decoration:none; color:inherit }
+.serif { font-family:'Cormorant Garamond', serif }
+
+/* ── NAV ── */
+.topbar {
+  position: fixed; top:0; left:0; right:0; z-index:500;
+  background: var(--char);
+  padding: 0 var(--pad);
+  display: flex; align-items:center; justify-content:space-between;
+  height: 60px;
+  border-bottom: 1px solid rgba(250,246,240,.08);
+}
+.topbar-brand {
+  display: flex; align-items:center; gap:12px;
+}
+.topbar-mono {
+  width: 32px; height:32px;
+  border: 1px solid rgba(250,246,240,.3);
+  display: flex; align-items:center; justify-content:center;
+  flex-shrink: 0;
+}
+.topbar-mono span {
+  font-family:'Cormorant Garamond', serif;
+  font-size: 13px; font-weight:500;
+  color: var(--cream);
+  letter-spacing: .04em;
+}
+.topbar-name {
+  font-family:'Cormorant Garamond', serif;
+  font-size: 15px; font-weight:500;
+  letter-spacing: .08em; text-transform:uppercase;
+  color: var(--cream);
+}
+.topbar-sep {
+  width:1px; height:24px;
+  background: rgba(250,246,240,.15);
+  margin: 0 16px;
+}
+.topbar-project {
+  font-size: 11px; font-weight:400;
+  letter-spacing: .14em; text-transform:uppercase;
+  color: var(--terra-l);
+}
+.topbar-cta {
+  display: flex; align-items:center; gap:16px;
+}
+.topbar-phone {
+  font-size: 12px; font-weight:400;
+  color: rgba(250,246,240,.55);
+  letter-spacing: .04em;
+}
+.topbar-btn {
+  padding: 8px 20px;
+  background: var(--terra);
+  color: var(--cream);
+  font-size: 10px; font-weight:500;
+  letter-spacing: .16em; text-transform:uppercase;
+  border-radius: 2px;
+  transition: background .3s;
+}
+.topbar-btn:hover { background: var(--terra-l) }
+
+/* ── ANCHOR NAV ── */
+.anchor-nav {
+  position: sticky; top:60px; z-index:400;
+  background: var(--cream);
+  border-bottom: 1px solid var(--border);
+  display: flex; justify-content:center;
+  gap: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.anchor-nav a {
+  padding: 14px 28px;
+  font-size: 10px; font-weight:500;
+  letter-spacing: .16em; text-transform:uppercase;
+  color: var(--muted);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: color .3s, border-color .3s;
+}
+.anchor-nav a:hover { color: var(--char) }
+.anchor-nav a.active { color: var(--terra); border-bottom-color: var(--terra) }
+
+/* ── HERO ── */
+.hero {
+  padding-top: 60px;
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  position: relative;
+  overflow: hidden;
+}
+.hero-img {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+}
+.hero-img-bg {
+  width:100%; height:100%;
+  background: linear-gradient(160deg, #5C4A3A 0%, #3A2820 40%, #2A1E18 100%);
+}
+.hero-img-overlay {
+  position:absolute; inset:0;
+  background: linear-gradient(to right, transparent 60%, rgba(250,246,240,.06));
+}
+.hero-img-tag {
+  position:absolute; top:32px; left:32px;
+  background: var(--terra);
+  color: var(--cream);
+  font-size: 9px; font-weight:500;
+  letter-spacing:.2em; text-transform:uppercase;
+  padding: 7px 14px; border-radius:2px;
+}
+.hero-img-location {
+  position:absolute; bottom:32px; left:32px;
+  display: flex; align-items:center; gap:10px;
+}
+.hero-img-location-dot {
+  width:8px; height:8px; border-radius:50%;
+  background: var(--terra-l);
+}
+.hero-img-location-text {
+  font-size: 12px; font-weight:400;
+  color: rgba(250,246,240,.7);
+  letter-spacing:.06em;
+}
+.hero-content {
+  background: var(--cream);
+  display: flex; flex-direction:column; justify-content:center;
+  padding: clamp(40px,6vw,72px) clamp(32px,5vw,72px);
+  border-left: 1px solid var(--border);
+}
+.hero-eyebrow {
+  font-size: 9px; font-weight:500;
+  letter-spacing:.22em; text-transform:uppercase;
+  color: var(--terra);
+  margin-bottom: 16px;
+}
+.hero-title {
+  font-family:'Cormorant Garamond', serif;
+  font-size: clamp(44px, 5.5vw, 76px);
+  font-weight: 400;
+  line-height: 1.0;
+  margin-bottom: 8px;
+}
+.hero-subtitle {
+  font-family:'Cormorant Garamond', serif;
+  font-size: clamp(17px, 2vw, 24px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+.hero-line { width:40px; height:1px; background:var(--terra); margin-bottom:28px }
+.hero-desc {
+  font-size: 14px; font-weight:300;
+  line-height: 1.85;
+  color: var(--muted);
+  margin-bottom: 36px;
+  max-width: 400px;
+}
+.hero-pills {
+  display: flex; flex-wrap:wrap; gap:8px;
+  margin-bottom: 40px;
+}
+.pill {
+  padding: 7px 16px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 11px; font-weight:400;
+  letter-spacing:.08em;
+  color: var(--char);
+}
+.pill--terra { background:var(--terra); border-color:var(--terra); color:var(--cream) }
+.hero-cta-row {
+  display: flex; gap:12px; flex-wrap:wrap; align-items:center;
+}
+.btn-terra {
+  padding: 14px 32px;
+  background: var(--terra);
+  color: var(--cream);
+  font-size: 11px; font-weight:500;
+  letter-spacing:.16em; text-transform:uppercase;
+  border-radius:2px;
+  transition: background .3s;
+  cursor:pointer; border:none;
+}
+.btn-terra:hover { background: var(--terra-l) }
+.btn-outline {
+  padding: 14px 32px;
+  background: none;
+  border: 1.5px solid var(--char);
+  color: var(--char);
+  font-size: 11px; font-weight:500;
+  letter-spacing:.16em; text-transform:uppercase;
+  border-radius:2px;
+  transition: background .3s, color .3s;
+  cursor:pointer;
+}
+.btn-outline:hover { background: var(--char); color: var(--cream) }
+
+/* ── QUICK STATS ── */
+.quick-stats {
+  background: var(--sand);
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  border-bottom: 1px solid var(--border);
+}
+.qs-item {
+  padding: 28px var(--pad);
+  border-right: 1px solid var(--border);
+  text-align: center;
+}
+.qs-item:last-child { border-right:none }
+.qs-num {
+  font-family:'Cormorant Garamond', serif;
+  font-size: 36px; font-weight:400;
+  color: var(--char);
+  line-height:1;
+}
+.qs-label {
+  font-size: 10px; font-weight:400;
+  letter-spacing:.16em; text-transform:uppercase;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* ── SECTION WRAPPER ── */
+section { padding: clamp(60px,8vw,100px) var(--pad) }
+.section-label {
+  font-size: 9px; font-weight:500;
+  letter-spacing:.24em; text-transform:uppercase;
+  color: var(--terra);
+  margin-bottom: 12px;
+}
+.section-title {
+  font-family:'Cormorant Garamond', serif;
+  font-size: clamp(28px, 3.5vw, 50px);
+  font-weight:400;
+  line-height:1.12;
+  margin-bottom: 14px;
+}
+.section-title em { font-style:italic; color:var(--terra) }
+.section-sub {
+  font-size: 14px; font-weight:300;
+  line-height:1.85;
+  color: var(--muted);
+  max-width: 540px;
+  margin-bottom: 48px;
+}
+
+/* ── RESIDENZE ── */
+#residenze { background: var(--cream) }
+.residenze-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2px;
+}
+.res-card {
+  background: var(--sand);
+  display: flex; flex-direction:column;
+  overflow: hidden;
+  border-radius: 2px;
+  transition: box-shadow .4s;
+}
+.res-card:hover { box-shadow: 0 16px 48px rgba(35,31,27,.12) }
+.res-card-img {
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+}
+.res-img-ph {
+  width:100%; height:100%;
+  transition: transform .6s;
+}
+.res-card:hover .res-img-ph { transform: scale(1.04) }
+.ph-ulivo   { background: linear-gradient(135deg, #7B6355 0%, #3E2820 100%) }
+.ph-vite    { background: linear-gradient(135deg, #6B7850 0%, #3A4228 100%) }
+.ph-brunello{ background: linear-gradient(135deg, #8B5E44 0%, #4A2E18 100%) }
+.res-floor-tag {
+  position:absolute; bottom:16px; left:16px;
+  background: rgba(35,31,27,.65);
+  color: var(--cream);
+  font-size: 9px; font-weight:400;
+  letter-spacing:.18em; text-transform:uppercase;
+  padding: 5px 12px; border-radius:100px;
+}
+.res-body {
+  padding: 28px 28px 32px;
+  display:flex; flex-direction:column; flex:1;
+}
+.res-name {
+  font-family:'Cormorant Garamond', serif;
+  font-size: 26px; font-weight:400;
+  margin-bottom: 4px;
+}
+.res-floor {
+  font-size: 11px; font-weight:400;
+  letter-spacing:.1em; text-transform:uppercase;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.res-specs {
+  display: grid; grid-template-columns:1fr 1fr;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+.res-spec-item {}
+.res-spec-label {
+  font-size: 9px; font-weight:400;
+  letter-spacing:.18em; text-transform:uppercase;
+  color: var(--muted);
+  margin-bottom: 3px;
+}
+.res-spec-val {
+  font-size: 15px; font-weight:400;
+  color: var(--char);
+}
+.res-price-block {
+  margin-top: auto;
+}
+.res-price-label {
+  font-size: 9px; font-weight:400;
+  letter-spacing:.18em; text-transform:uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.res-price {
+  font-family:'Cormorant Garamond', serif;
+  font-size: 36px; font-weight:400;
+  color: var(--char);
+  line-height:1;
+  margin-bottom: 6px;
+}
+.res-price-sqm {
+  font-size: 11px; font-weight:300;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.res-caparra {
+  display:flex; justify-content:space-between; align-items:center;
+  background: rgba(35,31,27,.04);
+  border-radius:2px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+}
+.res-caparra-label { font-size:11px; color:var(--muted) }
+.res-caparra-val { font-size:13px; font-weight:500; color:var(--char) }
+.res-rate {
+  display:flex; justify-content:space-between; align-items:center;
+  background: rgba(184,84,56,.06);
+  border-radius:2px;
+  padding: 10px 14px;
+  margin-bottom: 20px;
+}
+.res-rate-label { font-size:11px; color:var(--muted) }
+.res-rate-val { font-size:13px; font-weight:500; color:var(--terra) }
+.res-cta {
+  display:block; text-align:center;
+  padding: 13px;
+  background: var(--char);
+  color: var(--cream);
+  font-size: 10px; font-weight:500;
+  letter-spacing:.16em; text-transform:uppercase;
+  border-radius:2px;
+  transition: background .3s;
+}
+.res-cta:hover { background: var(--terra) }
+
+/* ── INCLUSO ── */
+#incluso { background: var(--char) }
+#incluso .section-title { color:var(--cream) }
+#incluso .section-label { color:var(--terra-l) }
+#incluso .section-sub { color:rgba(250,246,240,.5) }
+.incluso-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2px;
+}
+.incluso-cat {
+  background: rgba(250,246,240,.04);
+  border: 1px solid rgba(250,246,240,.07);
+  border-radius:2px;
+  padding: 32px;
+}
+.incluso-cat-icon {
+  width:40px; height:40px;
+  border: 1px solid rgba(250,246,240,.15);
+  border-radius:2px;
+  display:flex; align-items:center; justify-content:center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.incluso-cat-title {
+  font-family:'Cormorant Garamond', serif;
+  font-size: 20px; font-weight:400;
+  color: var(--cream);
+  margin-bottom: 16px;
+}
+.incluso-items {
+  list-style:none;
+  display:flex; flex-direction:column; gap:10px;
+}
+.incluso-items li {
+  display:flex; align-items:flex-start; gap:10px;
+  font-size:13px; font-weight:300;
+  line-height:1.5;
+  color:rgba(250,246,240,.6);
+}
+.incluso-items li::before {
+  content:'';
+  width:16px; height:1px;
+  background: var(--terra);
+  margin-top:8px;
+  flex-shrink:0;
+}
+.incluso-note {
+  margin-top:32px;
+  padding: 20px 24px;
+  background: rgba(184,84,56,.12);
+  border-left: 2px solid var(--terra);
+  border-radius:2px;
+}
+.incluso-note p {
+  font-size:13px; font-weight:300;
+  line-height:1.7;
+  color:rgba(250,246,240,.65);
+}
+.incluso-note strong { color: var(--terra-l); font-weight:500 }
+
+/* ── PAGAMENTO ── */
+#pagamento { background: var(--cream) }
+.payment-phases {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2px;
+  margin-bottom: 48px;
+}
+.phase-card {
+  padding: 36px 32px;
+  position:relative;
+  overflow:hidden;
+}
+.phase-card--1 { background: var(--sand) }
+.phase-card--2 { background: var(--char) }
+.phase-card--3 { background: var(--terra) }
+.phase-num {
+  font-family:'Cormorant Garamond', serif;
+  font-size: 64px; font-weight:300;
+  line-height:1;
+  margin-bottom: 20px;
+  opacity:.2;
+}
+.phase-card--2 .phase-num { color:var(--cream) }
+.phase-card--3 .phase-num { color:var(--cream) }
+.phase-percent {
+  font-family:'Cormorant Garamond', serif;
+  font-size: 52px; font-weight:400;
+  line-height:1;
+  margin-bottom: 8px;
+  color: var(--char);
+}
+.phase-card--2 .phase-percent { color:var(--cream) }
+.phase-card--3 .phase-percent { color:var(--cream) }
+.phase-name {
+  font-size: 11px; font-weight:500;
+  letter-spacing:.16em; text-transform:uppercase;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.phase-card--2 .phase-name { color:rgba(250,246,240,.5) }
+.phase-card--3 .phase-name { color:rgba(250,246,240,.65) }
+.phase-when {
+  font-size: 13px; font-weight:300;
+  line-height:1.6;
+  color: var(--char);
+  padding-top:16px;
+  border-top: 1px solid rgba(35,31,27,.1);
+}
+.phase-card--2 .phase-when {
+  color:rgba(250,246,240,.6);
+  border-top-color:rgba(250,246,240,.1);
+}
+.phase-card--3 .phase-when {
+  color:rgba(250,246,240,.75);
+  border-top-color:rgba(250,246,240,.2);
+}
+.phase-method {
+  display:inline-flex; align-items:center; gap:6px;
+  margin-top:12px;
+  font-size:11px; font-weight:400;
+  letter-spacing:.1em; text-transform:uppercase;
+  color:var(--muted);
+}
+.phase-card--2 .phase-method { color:rgba(250,246,240,.4) }
+.phase-card--3 .phase-method { color:rgba(250,246,240,.55) }
+.phase-method::before {
+  content:'';
+  width:16px; height:1px;
+  background:currentColor;
+}
+
+/* payment table */
+.payment-table-wrap {
+  overflow-x:auto;
+  border: 1px solid var(--border);
+  border-radius:2px;
+  margin-bottom: 32px;
+}
+.payment-table {
+  width:100%;
+  border-collapse:collapse;
+}
+.payment-table th {
+  background: var(--char);
+  color: rgba(250,246,240,.65);
+  font-size:9px; font-weight:500;
+  letter-spacing:.18em; text-transform:uppercase;
+  padding: 14px 20px;
+  text-align:left;
+  white-space:nowrap;
+}
+.payment-table th:first-child { border-radius:2px 0 0 0 }
+.payment-table th:last-child  { border-radius:0 2px 0 0 }
+.payment-table td {
+  padding: 16px 20px;
+  font-size:14px; font-weight:300;
+  border-bottom: 1px solid var(--border);
+  vertical-align:middle;
+}
+.payment-table tr:last-child td { border-bottom:none }
+.payment-table tr:nth-child(even) td { background:rgba(35,31,27,.02) }
+.td-unit { font-family:'Cormorant Garamond', serif; font-size:18px; font-weight:400 }
+.td-total { font-weight:500 }
+.td-caparra { color:var(--olive); font-weight:500 }
+.td-rogito { color:var(--char); font-weight:500 }
+.td-rate { color:var(--terra); font-weight:500 }
+.td-mensile { color:var(--terra); font-size:12px }
+
+.payment-options {
+  display:grid; grid-template-columns:repeat(2,1fr);
+  gap:16px;
+  margin-bottom:24px;
+}
+.pay-option {
+  display:flex; align-items:flex-start; gap:14px;
+  padding:20px;
+  background:var(--sand);
+  border-radius:2px;
+}
+.pay-option-icon {
+  width:36px; height:36px; flex-shrink:0;
+  background:var(--char);
+  border-radius:2px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:16px;
+}
+.pay-option-title {
+  font-size:13px; font-weight:500;
+  margin-bottom:4px;
+}
+.pay-option-desc {
+  font-size:12px; font-weight:300;
+  color:var(--muted);
+  line-height:1.6;
+}
+.payment-note {
+  background:rgba(76,86,64,.08);
+  border-left:2px solid var(--olive);
+  padding:16px 20px;
+  border-radius:2px;
+  font-size:13px; font-weight:300;
+  line-height:1.7;
+  color:var(--muted);
+}
+.payment-note strong { color:var(--char); font-weight:500 }
+
+/* ── TIMELINE ── */
+#tempistiche { background: var(--sand) }
+.timeline {
+  position:relative;
+}
+.timeline-line {
+  position:absolute;
+  top:28px; left:0; right:0; height:2px;
+  background: var(--border);
+}
+.timeline-progress {
+  position:absolute;
+  top:0; left:0; width:0; height:100%;
+  background: var(--terra);
+  transition:width .8s ease;
+}
+.timeline-nodes {
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  position:relative;
+  margin-bottom:0;
+}
+.timeline-node {
+  display:flex; flex-direction:column; align-items:center;
+  padding-top:0;
+}
+.timeline-dot {
+  width:56px; height:56px;
+  border-radius:50%;
+  border:2px solid var(--border);
+  background:var(--cream);
+  display:flex; align-items:center; justify-content:center;
+  font-size:18px;
+  position:relative; z-index:2;
+  flex-shrink:0;
+  transition:border-color .3s, background .3s;
+}
+.timeline-node.done .timeline-dot {
+  border-color: var(--terra);
+  background: var(--terra);
+}
+.timeline-node.done .timeline-dot span { filter:brightness(10) }
+.timeline-node.active .timeline-dot {
+  border-color: var(--terra);
+  background: var(--cream);
+  box-shadow:0 0 0 4px rgba(184,84,56,.15);
+}
+.timeline-node.key .timeline-dot {
+  border-color: var(--char);
+  background: var(--char);
+  width:64px; height:64px;
+}
+.timeline-node.key .timeline-dot span { filter:brightness(10) }
+.timeline-content {
+  padding-top: 20px;
+  text-align:center;
+  padding-left:8px; padding-right:8px;
+}
+.tl-month {
+  font-size:10px; font-weight:500;
+  letter-spacing:.18em; text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:6px;
+}
+.tl-phase {
+  font-family:'Cormorant Garamond', serif;
+  font-size:16px; font-weight:400;
+  color:var(--char);
+  margin-bottom:6px;
+}
+.timeline-node.key .tl-phase {
+  color:var(--terra);
+  font-size:18px;
+}
+.tl-desc {
+  font-size:11px; font-weight:300;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+/* ── GARANZIE ── */
+#garanzie { background: var(--cream) }
+.garanzie-top {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap: clamp(32px,5vw,64px);
+  margin-bottom:48px;
+  align-items:start;
+}
+.consegna-list {
+  display:flex; flex-direction:column; gap:10px;
+  margin-top:20px;
+}
+.consegna-item {
+  display:flex; align-items:flex-start; gap:14px;
+  padding:14px 16px;
+  background:var(--sand);
+  border-radius:2px;
+}
+.consegna-check {
+  width:20px; height:20px; flex-shrink:0;
+  border-radius:50%;
+  background:var(--olive);
+  display:flex; align-items:center; justify-content:center;
+  font-size:10px;
+  color:var(--cream);
+  margin-top:1px;
+}
+.consegna-text {
+  font-size:13px; font-weight:300;
+  line-height:1.6;
+  color:var(--char);
+}
+.garanzie-table-wrap {
+  overflow-x:auto;
+  border:1px solid var(--border);
+  border-radius:2px;
+}
+.garanzie-table {
+  width:100%; border-collapse:collapse;
+}
+.garanzie-table th {
+  background:var(--char);
+  color:rgba(250,246,240,.6);
+  font-size:9px; font-weight:500;
+  letter-spacing:.18em; text-transform:uppercase;
+  padding:12px 20px; text-align:left;
+}
+.garanzie-table td {
+  padding:14px 20px;
+  font-size:13px; font-weight:300;
+  border-bottom:1px solid var(--border);
+  vertical-align:middle;
+  line-height:1.5;
+}
+.garanzie-table tr:last-child td { border-bottom:none }
+.garanzie-table tr:nth-child(even) td { background:rgba(35,31,27,.02) }
+.td-tipo { font-weight:500 }
+.td-durata {
+  font-family:'Cormorant Garamond', serif;
+  font-size:18px; font-weight:400;
+  color:var(--terra);
+  white-space:nowrap;
+}
+
+/* ── PASSI ── */
+#passi { background: var(--terra) }
+#passi .section-label { color:rgba(250,246,240,.6) }
+#passi .section-title { color:var(--cream) }
+#passi .section-sub { color:rgba(250,246,240,.65) }
+.steps-grid {
+  display:grid; grid-template-columns:repeat(5,1fr);
+  gap:2px;
+}
+.step-card {
+  background:rgba(250,246,240,.08);
+  border:1px solid rgba(250,246,240,.1);
+  padding:28px 24px;
+  border-radius:2px;
+}
+.step-num {
+  font-family:'Cormorant Garamond', serif;
+  font-size:40px; font-weight:300;
+  color:rgba(250,246,240,.2);
+  line-height:1;
+  margin-bottom:16px;
+}
+.step-title {
+  font-size:13px; font-weight:500;
+  color:var(--cream);
+  margin-bottom:8px;
+  line-height:1.3;
+}
+.step-desc {
+  font-size:12px; font-weight:300;
+  line-height:1.65;
+  color:rgba(250,246,240,.55);
+}
+
+/* ── CTA / CONTATTI ── */
+#contatti { background: var(--char) }
+.contatti-inner {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap: clamp(40px,6vw,80px);
+  align-items:start;
+}
+.contatti-text .section-label { color:var(--terra-l) }
+.contatti-text .section-title { color:var(--cream) }
+.contatti-text .section-sub { color:rgba(250,246,240,.5) }
+.contact-card {
+  background:rgba(250,246,240,.04);
+  border:1px solid rgba(250,246,240,.08);
+  border-radius:2px;
+  padding:36px;
+}
+.contact-header {
+  display:flex; align-items:center; gap:16px;
+  margin-bottom:28px;
+  padding-bottom:24px;
+  border-bottom:1px solid rgba(250,246,240,.08);
+}
+.contact-avatar {
+  width:52px; height:52px;
+  border-radius:50%;
+  background:var(--terra);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Cormorant Garamond', serif;
+  font-size:22px; font-weight:500;
+  color:var(--cream);
+  flex-shrink:0;
+}
+.contact-name {
+  font-family:'Cormorant Garamond', serif;
+  font-size:22px; font-weight:400;
+  color:var(--cream);
+  margin-bottom:3px;
+}
+.contact-role {
+  font-size:10px; font-weight:400;
+  letter-spacing:.16em; text-transform:uppercase;
+  color:rgba(250,246,240,.35);
+}
+.contact-info {
+  display:flex; flex-direction:column; gap:16px;
+  margin-bottom:28px;
+}
+.contact-row {
+  display:flex; align-items:flex-start; gap:12px;
+}
+.contact-row-icon {
+  width:32px; height:32px; flex-shrink:0;
+  border:1px solid rgba(250,246,240,.12);
+  border-radius:2px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:13px;
+}
+.contact-row-label {
+  font-size:9px; font-weight:400;
+  letter-spacing:.18em; text-transform:uppercase;
+  color:rgba(250,246,240,.3);
+  margin-bottom:2px;
+}
+.contact-row-val {
+  font-size:14px; font-weight:300;
+  color:rgba(250,246,240,.8);
+}
+.contact-row-val a { transition:color .3s }
+.contact-row-val a:hover { color:var(--terra-l) }
+.contact-hours {
+  font-size:11px; font-weight:300;
+  color:rgba(250,246,240,.35);
+  padding-top:16px;
+  border-top:1px solid rgba(250,246,240,.07);
+  line-height:1.6;
+}
+.contact-ctas {
+  display:flex; flex-direction:column; gap:10px;
+  margin-top:28px;
+}
+.contact-btn-tel {
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  padding:15px;
+  background:var(--terra);
+  color:var(--cream);
+  font-size:11px; font-weight:500;
+  letter-spacing:.14em; text-transform:uppercase;
+  border-radius:2px;
+  transition:background .3s;
+}
+.contact-btn-tel:hover { background:var(--terra-l) }
+.contact-btn-mail {
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  padding:14px;
+  background:none;
+  border:1px solid rgba(250,246,240,.15);
+  color:rgba(250,246,240,.65);
+  font-size:11px; font-weight:500;
+  letter-spacing:.14em; text-transform:uppercase;
+  border-radius:2px;
+  transition:border-color .3s, color .3s;
+}
+.contact-btn-mail:hover { border-color:var(--terra); color:var(--cream) }
+.legal-note {
+  margin-top:48px;
+  padding-top:24px;
+  border-top:1px solid rgba(250,246,240,.06);
+  font-size:11px; font-weight:300;
+  line-height:1.7;
+  color:rgba(250,246,240,.2);
+  text-align:center;
+}
+
+/* ── FOOTER ── */
+footer {
+  background:var(--char);
+  padding:20px var(--pad);
+  display:flex; justify-content:space-between; align-items:center;
+  flex-wrap:wrap; gap:12px;
+  border-top:1px solid rgba(250,246,240,.06);
+}
+.footer-name {
+  font-family:'Cormorant Garamond', serif;
+  font-size:15px; font-weight:400;
+  letter-spacing:.08em; text-transform:uppercase;
+  color:rgba(250,246,240,.35);
+}
+.footer-copy {
+  font-size:11px; font-weight:300;
+  color:rgba(250,246,240,.2);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width:1024px) {
+  .residenze-grid { grid-template-columns:1fr }
+  .incluso-grid { grid-template-columns:1fr 1fr }
+  .payment-phases { grid-template-columns:1fr }
+  .payment-options { grid-template-columns:1fr }
+  .timeline-nodes { grid-template-columns:1fr 1fr 1fr; gap:20px 0 }
+  .timeline-line { display:none }
+  .steps-grid { grid-template-columns:1fr 1fr }
+  .contatti-inner { grid-template-columns:1fr }
+}
+@media (max-width:768px) {
+  .topbar-sep, .topbar-project, .topbar-phone { display:none }
+  .hero { grid-template-columns:1fr; min-height:auto }
+  .hero-img { min-height:260px }
+  .quick-stats { grid-template-columns:1fr 1fr }
+  .qs-item:nth-child(2) { border-right:none }
+  .qs-item { border-bottom:1px solid var(--border) }
+  .qs-item:nth-child(3), .qs-item:nth-child(4) { border-bottom:none }
+  .garanzie-top { grid-template-columns:1fr }
+  .incluso-grid { grid-template-columns:1fr }
+  .steps-grid { grid-template-columns:1fr }
+  .timeline-nodes { grid-template-columns:1fr 1fr }
+}
+@media (max-width:480px) {
+  .anchor-nav a { padding:12px 14px }
+  .residenze-grid { gap:16px }
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-brand">
+    <div class="topbar-mono"><span>TC</span></div>
+    <span class="topbar-name">Toscan Costruzioni</span>
+    <div class="topbar-sep"></div>
+    <span class="topbar-project">Villa Claudia</span>
+  </div>
+  <div class="topbar-cta">
+    <span class="topbar-phone">+39 351 038 0392</span>
+    <a href="#contatti" class="topbar-btn">Contatta Giuliano</a>
+  </div>
+</div>
+
+<!-- ANCHOR NAV -->
+<nav class="anchor-nav">
+  <a href="#residenze" class="active">Le Residenze</a>
+  <a href="#incluso">Cosa è Incluso</a>
+  <a href="#pagamento">Piano Pagamenti</a>
+  <a href="#tempistiche">Tempistiche</a>
+  <a href="#garanzie">Garanzie</a>
+  <a href="#contatti">Contatti</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-img">
+    <div class="hero-img-bg" style="height:100%"></div>
+    <div class="hero-img-overlay"></div>
+    <div class="hero-img-tag">Montespertoli · Chianti Fiorentino</div>
+    <div class="hero-img-location">
+      <div class="hero-img-location-dot"></div>
+      <span class="hero-img-location-text">Comune di Montespertoli · Area Firenze</span>
+    </div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Residenze di Pregio · Chiavi in Mano</p>
+    <h1 class="hero-title serif">Villa<br>Claudia</h1>
+    <p class="hero-subtitle serif">Montespertoli, Toscana</p>
+    <div class="hero-line"></div>
+    <p class="hero-desc">Tre residenze esclusive nel cuore del Chianti fiorentino. Completamente ristrutturate, consegnate finite e pronte all'uso. Consegna garantita in 12 mesi.</p>
+    <div class="hero-pills">
+      <span class="pill pill--terra">3 Residenze Disponibili</span>
+      <span class="pill">Consegna 12 Mesi</span>
+      <span class="pill">Chiavi in Mano</span>
+      <span class="pill">€3.800 / m²</span>
+    </div>
+    <div class="hero-cta-row">
+      <a href="#residenze" class="btn-terra">Vedi Prezzi e Unità</a>
+      <a href="#pagamento" class="btn-outline">Piano Pagamenti</a>
+    </div>
+  </div>
+</header>
+
+<!-- QUICK STATS -->
+<div class="quick-stats">
+  <div class="qs-item">
+    <div class="qs-num serif">403</div>
+    <div class="qs-label">m² totali complesso</div>
+  </div>
+  <div class="qs-item">
+    <div class="qs-num serif">3</div>
+    <div class="qs-label">Residenze indipendenti</div>
+  </div>
+  <div class="qs-item">
+    <div class="qs-num serif">12</div>
+    <div class="qs-label">Mesi alla consegna</div>
+  </div>
+  <div class="qs-item">
+    <div class="qs-num serif">10</div>
+    <div class="qs-label">Anni garanzia strutturale</div>
+  </div>
+</div>
+
+<!-- LE RESIDENZE -->
+<section id="residenze">
+  <div class="section-label">Cosa Stai Acquistando</div>
+  <h2 class="section-title serif">Le <em>tre residenze</em></h2>
+  <p class="section-sub">Ogni unità è indipendente, con caratteristiche proprie. Tutte consegnate completamente finite, con impianti nuovi, cucina arredata e accesso alle amenities condivise del complesso.</p>
+
+  <div class="residenze-grid">
+
+    <!-- ULIVO -->
+    <div class="res-card">
+      <div class="res-card-img">
+        <div class="ph-ulivo res-img-ph" style="height:100%"></div>
+        <div class="res-floor-tag">Piano Terra</div>
+      </div>
+      <div class="res-body">
+        <div class="res-name serif">Residenza Ulivo</div>
+        <div class="res-floor">Piano Terra · Ingresso Indipendente</div>
+        <div class="res-specs">
+          <div class="res-spec-item">
+            <div class="res-spec-label">Superficie</div>
+            <div class="res-spec-val">75 m²</div>
+          </div>
+          <div class="res-spec-item">
+            <div class="res-spec-label">Prezzo al m²</div>
+            <div class="res-spec-val">€3.800</div>
+          </div>
+          <div class="res-spec-item">
+            <div class="res-spec-label">Tipologia</div>
+            <div class="res-spec-val">Appartamento</div>
+          </div>
+          <div class="res-spec-item">
+            <div class="res-spec-label">Disponibilità</div>
+            <div class="res-spec-val" style="color:var(--olive)">Disponibile</div>
+          </div>
+        </div>
+        <div class="res-price-block">
+          <div class="res-price-label">Prezzo di Vendita</div>
+          <div class="res-price serif">€ 285.000</div>
+          <div class="res-price-sqm">75 m² · €3.800/m² · Chiavi in mano</div>
+          <div class="res-caparra">
+            <span class="res-caparra-label">Caparra (20%) al compromesso</span>
+            <span class="res-caparra-val">€57.000</span>
+          </div>
+          <div class="res-caparra" style="background:rgba(35,31,27,.04)">
+            <span class="res-caparra-label">Saldo (60%) al rogito — Mese 12</span>
+            <span class="res-caparra-val">€171.000</span>
+          </div>
+          <div class="res-rate">
+            <span class="res-rate-label">Rate post-consegna · 24 mesi (20%)</span>
+            <span class="res-rate-val">€2.375 / mese</span>
+          </div>
+          <a href="#contatti" class="res-cta">Richiedi Informazioni</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- VITE -->
+    <div class="res-card">
+      <div class="res-card-img">
+        <div class="ph-vite res-img-ph" style="height:100%"></div>
+        <div class="res-floor-tag">Primo Piano</div>
+      </div>
+      <div class="res-body">
+        <div class="res-name serif">Residenza Vite</div>
+        <div class="res-floor">Primo Piano · Vista panoramica</div>
+        <div class="res-specs">
+          <div class="res-spec-item">
+            <div class="res-spec-label">Superficie</div>
+            <div class="res-spec-val">105 m²</div>
+          </div>
+          <div class="res-spec-item">
+            <div class="res-spec-label">Prezzo al m²</div>
+            <div class="res-spec-val">€3.800</div>
+          </div>
+          <div class="res-spec-item">
+            <div class="res-spec-label">Tipologia</div>
+            <div class="res-spec-val">Appartamento</div>
+          </div>
+          <div class="res-spec-item">
+            <div class="res-spec-label">Disponibilità</div>
+            <div class="res-spec-val" style="color:var(--olive)">Disponibile</div>
+          </div>
+        </div>
+        <div class="res-price-block">
+          <div class="res-price-label">Prezzo di Vendita</div>
+          <div class="res-price serif">€ 399.000</div>
+          <div class="res-price-sqm">105 m² · €3.800/m² · Chiavi in mano</div>
+          <div class="res-caparra">
+            <span class="res-caparra-label">Caparra (20%) al compromesso</span>
+            <span class="res-caparra-val">€79.800</span>
+          </div>
+          <div class="res-caparra" style="background:rgba(35,31,27,.04)">
+            <span class="res-caparra-label">Saldo (60%) al rogito — Mese 12</span>
+            <span class="res-caparra-val">€239.400</span>
+          </div>
+          <div class="res-rate">
+            <span class="res-rate-label">Rate post-consegna · 24 mesi (20%)</span>
+            <span class="res-rate-val">€3.325 / mese</span>
+          </div>
+          <a href="#contatti" class="res-cta">Richiedi Informazioni</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BRUNELLO -->
+    <div class="res-card">
+      <div class="res-card-img">
+        <div class="ph-brunello res-img-ph" style="height:100%"></div>
+        <div class="res-floor-tag">1° & 2° Piano · Duplex</div>
+      </div>
+      <div class="res-body">
+        <div class="res-name serif">Residenza Brunello</div>
+        <div class="res-floor">Duplex Piano 1° e 2° · Terrazza</div>
+        <div class="res-specs">
+          <div class="res-spec-item">
+            <div class="res-spec-label">Superficie</div>
+            <div class="res-spec-val">223 m²</div>
+          </div>
+          <div class="res-spec-item">
+            <div class="res-spec-label">Prezzo al m²</div>
+            <div class="res-spec-val">€3.800</div>
+          </div>
+          <div class="res-spec-item">
+            <div class="res-spec-label">Tipologia</div>
+            <div class="res-spec-val">Duplex</div>
+          </div>
+          <div class="res-spec-item">
+            <div class="res-spec-label">Disponibilità</div>
+            <div class="res-spec-val" style="color:var(--olive)">Disponibile</div>
+          </div>
+        </div>
+        <div class="res-price-block">
+          <div class="res-price-label">Prezzo di Vendita</div>
+          <div class="res-price serif">€ 847.400</div>
+          <div class="res-price-sqm">223 m² · €3.800/m² · Chiavi in mano</div>
+          <div class="res-caparra">
+            <span class="res-caparra-label">Caparra (20%) al compromesso</span>
+            <span class="res-caparra-val">€169.480</span>
+          </div>
+          <div class="res-caparra" style="background:rgba(35,31,27,.04)">
+            <span class="res-caparra-label">Saldo (60%) al rogito — Mese 12</span>
+            <span class="res-caparra-val">€508.440</span>
+          </div>
+          <div class="res-rate">
+            <span class="res-rate-label">Rate post-consegna · 24 mesi (20%)</span>
+            <span class="res-rate-val">€7.062 / mese</span>
+          </div>
+          <a href="#contatti" class="res-cta">Richiedi Informazioni</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COSA È INCLUSO -->
+<section id="incluso">
+  <div class="section-label">Nel Prezzo di Vendita</div>
+  <h2 class="section-title serif" style="color:var(--cream)">Tutto <em>incluso,</em><br>nessuna sorpresa</h2>
+  <p class="section-sub">Il prezzo di vendita comprende la ristrutturazione integrale e tutte le dotazioni elencate di seguito. Nessun costo aggiuntivo per le voci indicate.</p>
+
+  <div class="incluso-grid">
+    <div class="incluso-cat">
+      <div class="incluso-cat-icon">🏗️</div>
+      <div class="incluso-cat-title serif">Struttura e Finiture</div>
+      <ul class="incluso-items">
+        <li>Ristrutturazione integrale chiavi in mano</li>
+        <li>Murature, intonaci, pavimenti e rivestimenti</li>
+        <li>Legno toscano, pietra naturale, ceramiche italiane</li>
+        <li>Serramenti legno-alluminio a taglio termico, doppi vetri</li>
+        <li>Interior design dedicato a cura di Toscan Costruzioni</li>
+      </ul>
+    </div>
+    <div class="incluso-cat">
+      <div class="incluso-cat-icon">⚡</div>
+      <div class="incluso-cat-title serif">Impianti e Tecnologia</div>
+      <ul class="incluso-items">
+        <li>Impianto elettrico nuovo e certificato</li>
+        <li>Impianto idraulico e termotecnico nuovi</li>
+        <li>Climatizzazione completa</li>
+        <li>Domotica base inclusa</li>
+        <li>Tutte le conformità (DM 37/2008)</li>
+      </ul>
+    </div>
+    <div class="incluso-cat">
+      <div class="incluso-cat-icon">🍽️</div>
+      <div class="incluso-cat-title serif">Cucina e Bagni</div>
+      <ul class="incluso-items">
+        <li>Cucina arredata su misura (capitolato standard)</li>
+        <li>Bagni completi con sanitari di design</li>
+        <li>Box doccia in cristallo</li>
+        <li>Rubinetteria di alta gamma</li>
+        <li>Personalizzazioni disponibili entro Mese 6</li>
+      </ul>
+    </div>
+    <div class="incluso-cat">
+      <div class="incluso-cat-icon">🏊</div>
+      <div class="incluso-cat-title serif">Amenities Condivise</div>
+      <ul class="incluso-items">
+        <li>Piscina esterna con area relax</li>
+        <li>Sauna e jacuzzi</li>
+        <li>Area relax esterna comune</li>
+        <li>Posto auto / cantina</li>
+        <li>Regolamento condominio e amministrazione</li>
+      </ul>
+    </div>
+    <div class="incluso-cat">
+      <div class="incluso-cat-icon">📋</div>
+      <div class="incluso-cat-title serif">Certificazioni alla Consegna</div>
+      <ul class="incluso-items">
+        <li>APE — Attestato Prestazione Energetica classe A+</li>
+        <li>Certificato di agibilità (Comune di Montespertoli)</li>
+        <li>Atto notarile registrato e trascritto</li>
+        <li>Manuale d'uso e manutenzione</li>
+        <li>Documentazione fotografica del cantiere</li>
+      </ul>
+    </div>
+    <div class="incluso-cat">
+      <div class="incluso-cat-icon">🛡️</div>
+      <div class="incluso-cat-title serif">Garanzie</div>
+      <ul class="incluso-items">
+        <li>Garanzia decennale strutturale (art. 1669 c.c.)</li>
+        <li>Polizza postuma decennale obbligatoria</li>
+        <li>Garanzia biennale finiture e impianti</li>
+        <li>Assistenza tecnica dedicata 24 mesi</li>
+        <li>Hotline urgenze Toscan Costruzioni</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="incluso-note" style="margin-top:32px">
+    <p><strong>Nota sui prezzi:</strong> tutti gli importi indicati sono al netto di IVA, spese notarili e imposte di registro a carico dell'acquirente secondo normativa vigente. I prezzi sono bloccati alla firma del contratto preliminare e non soggetti a revisione. Per pagamento integrale anticipato è previsto uno <strong>sconto del 3%</strong> sull'importo totale.</p>
+  </div>
+</section>
+
+<!-- PIANO DI PAGAMENTO -->
+<section id="pagamento">
+  <div class="section-label">Come Puoi Pagare</div>
+  <h2 class="section-title serif">Piano di pagamento<br><em>in tre fasi</em></h2>
+  <p class="section-sub">Il pagamento segue il ciclo del cantiere. Nessun esborso immediato del totale: il 40% rimane nelle tue mani fino alla consegna delle chiavi.</p>
+
+  <div class="payment-phases">
+    <div class="phase-card phase-card--1">
+      <div class="phase-num serif">01</div>
+      <div class="phase-percent serif">20%</div>
+      <div class="phase-name">Caparra Confirmatoria</div>
+      <div class="phase-when">
+        Alla firma del contratto preliminare di vendita (compromesso).<br>Versata su conto vincolato — tutelata per legge (art. 1385 c.c.).
+      </div>
+      <div class="phase-method">Bonifico bancario</div>
+    </div>
+    <div class="phase-card phase-card--2">
+      <div class="phase-num serif" style="color:var(--cream)">02</div>
+      <div class="phase-percent serif">60%</div>
+      <div class="phase-name">Saldo al Rogito</div>
+      <div class="phase-when">
+        All'atto notarile di compravendita — Mese 12.<br>Possibile tramite mutuo bancario: Toscan Costruzioni fornisce tutta la documentazione per l'istruttoria.
+      </div>
+      <div class="phase-method">Bonifico o Mutuo bancario</div>
+    </div>
+    <div class="phase-card phase-card--3">
+      <div class="phase-num serif">03</div>
+      <div class="phase-percent serif">20%</div>
+      <div class="phase-name">Rate Post-Consegna</div>
+      <div class="phase-when">
+        24 rate mensili dopo il rogito — paghi mentre già vivi nella tua casa.<br>Addebito automatico SDD/RID o bonifico mensile.
+      </div>
+      <div class="phase-method">SDD / Bonifico mensile</div>
+    </div>
+  </div>
+
+  <div class="payment-table-wrap">
+    <table class="payment-table">
+      <thead>
+        <tr>
+          <th>Residenza</th>
+          <th>Superficie</th>
+          <th>Prezzo Totale</th>
+          <th>Caparra 20% — al compromesso</th>
+          <th>Saldo 60% — al rogito (Mese 12)</th>
+          <th>Rate 24 mesi — post rogito</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-unit">Ulivo</td>
+          <td>75 m²</td>
+          <td class="td-total">€285.000</td>
+          <td class="td-caparra">€57.000</td>
+          <td class="td-rogito">€171.000</td>
+          <td class="td-rate">€57.000 tot.<br><span class="td-mensile">€2.375 / mese</span></td>
+        </tr>
+        <tr>
+          <td class="td-unit">Vite</td>
+          <td>105 m²</td>
+          <td class="td-total">€399.000</td>
+          <td class="td-caparra">€79.800</td>
+          <td class="td-rogito">€239.400</td>
+          <td class="td-rate">€79.800 tot.<br><span class="td-mensile">€3.325 / mese</span></td>
+        </tr>
+        <tr>
+          <td class="td-unit">Brunello</td>
+          <td>223 m²</td>
+          <td class="td-total">€847.400</td>
+          <td class="td-caparra">€169.480</td>
+          <td class="td-rogito">€508.440</td>
+          <td class="td-rate">€169.480 tot.<br><span class="td-mensile">€7.062 / mese</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="payment-options">
+    <div class="pay-option">
+      <div class="pay-option-icon">🏦</div>
+      <div>
+        <div class="pay-option-title">Mutuo Bancario</div>
+        <div class="pay-option-desc">Toscan Costruzioni fornisce tutta la documentazione tecnica e catastale per l'istruttoria. Convenzioni attive con primari istituti bancari italiani.</div>
+      </div>
+    </div>
+    <div class="pay-option">
+      <div class="pay-option-icon">🏠</div>
+      <div>
+        <div class="pay-option-title">Permuta Immobiliare</div>
+        <div class="pay-option-desc">Valutata caso per caso tramite perizia indipendente. Contatta Giuliano per discutere la tua situazione specifica.</div>
+      </div>
+    </div>
+    <div class="pay-option">
+      <div class="pay-option-icon">💶</div>
+      <div>
+        <div class="pay-option-title">Pagamento Anticipato Integrale</div>
+        <div class="pay-option-desc">Sconto commerciale del <strong>3%</strong> sull'importo totale per chi paga l'intero importo anticipatamente.</div>
+      </div>
+    </div>
+    <div class="pay-option">
+      <div class="pay-option-icon">🔒</div>
+      <div>
+        <div class="pay-option-title">Prezzi Bloccati</div>
+        <div class="pay-option-desc">Il prezzo si blocca alla firma del preliminare e non è soggetto a revisione per tutta la durata del cantiere.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="payment-note">
+    Le rate post-consegna superiori a €100.000 richiedono fideiussione bancaria da parte dell'acquirente. <strong>Tutti i prezzi sono al netto di IVA, oneri fiscali, spese notarili e imposte di registro</strong> a carico dell'acquirente secondo normativa vigente.
+  </div>
+</section>
+
+<!-- TEMPISTICHE -->
+<section id="tempistiche">
+  <div class="section-label">Cronoprogramma</div>
+  <h2 class="section-title serif">Dalla firma<br>alle <em>chiavi in mano</em></h2>
+  <p class="section-sub">12 mesi dalla firma del preliminare alla consegna. Il cantiere è strutturato in fasi chiare con milestone verificabili dall'acquirente.</p>
+
+  <div class="timeline" style="margin-bottom:0">
+    <div class="timeline-nodes">
+      <div class="timeline-node">
+        <div class="timeline-dot"><span>✍️</span></div>
+        <div class="timeline-content">
+          <div class="tl-month">Mese 0</div>
+          <div class="tl-phase serif">Sottoscrizione</div>
+          <div class="tl-desc">Firma preliminare, caparra 20%, scelta personalizzazioni</div>
+        </div>
+      </div>
+      <div class="timeline-node">
+        <div class="timeline-dot"><span>🏗️</span></div>
+        <div class="timeline-content">
+          <div class="tl-month">Mesi 1–2</div>
+          <div class="tl-phase serif">Avvio Cantiere</div>
+          <div class="tl-desc">Permessi comunali, demolizioni, opere strutturali</div>
+        </div>
+      </div>
+      <div class="timeline-node">
+        <div class="timeline-dot"><span>🧱</span></div>
+        <div class="timeline-content">
+          <div class="tl-month">Mesi 3–8</div>
+          <div class="tl-phase serif">Costruzione</div>
+          <div class="tl-desc">Murature, impianti, finiture, installazione piscina e amenities</div>
+        </div>
+      </div>
+      <div class="timeline-node">
+        <div class="timeline-dot"><span>🎨</span></div>
+        <div class="timeline-content">
+          <div class="tl-month">Mesi 9–11</div>
+          <div class="tl-phase serif">Finitura & Collaudi</div>
+          <div class="tl-desc">Finiture finali, home staging, APE, collaudi tecnici</div>
+        </div>
+      </div>
+      <div class="timeline-node key">
+        <div class="timeline-dot"><span>🔑</span></div>
+        <div class="timeline-content">
+          <div class="tl-month">Mese 12</div>
+          <div class="tl-phase serif">CONSEGNA</div>
+          <div class="tl-desc">Rogito notarile, saldo 60%, consegna chiavi e documentazione</div>
+        </div>
+      </div>
+      <div class="timeline-node">
+        <div class="timeline-dot"><span>📅</span></div>
+        <div class="timeline-content">
+          <div class="tl-month">Mesi 13–36</div>
+          <div class="tl-phase serif">Post-Consegna</div>
+          <div class="tl-desc">24 rate mensili e garanzie attive. Sei già a casa tua.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:48px; padding:28px 32px; background:rgba(35,31,27,.06); border-radius:2px; border-left:2px solid var(--terra)">
+    <p style="font-size:14px; font-weight:300; line-height:1.85; color:var(--muted)">
+      <strong style="color:var(--char); font-weight:500">Personalizzazioni:</strong> l'acquirente può richiedere varianti su finiture, materiali e arredo cucina entro il <strong style="color:var(--char)">Mese 6</strong> del cantiere. Ogni variante viene quotata separatamente e formalizzata tramite addendum contrattuale firmato — senza bloccare i lavori.
+    </p>
+  </div>
+</section>
+
+<!-- GARANZIE -->
+<section id="garanzie">
+  <div class="section-label">Tutele per l'Acquirente</div>
+  <h2 class="section-title serif">Cosa ricevi<br>alla <em>consegna</em></h2>
+  <p class="section-sub">Al rogito non ricevi solo le chiavi. Ecco tutto ciò che Toscan Costruzioni consegna all'acquirente il giorno del passaggio di proprietà.</p>
+
+  <div class="garanzie-top">
+    <div>
+      <div class="section-label" style="margin-bottom:16px">Documentazione Consegnata al Rogito</div>
+      <div class="consegna-list">
+        <div class="consegna-item">
+          <div class="consegna-check">✓</div>
+          <div class="consegna-text">Chiavi dell'unità e locali accessori (cantina, posto auto)</div>
+        </div>
+        <div class="consegna-item">
+          <div class="consegna-check">✓</div>
+          <div class="consegna-text">Atto notarile di compravendita registrato e trascritto</div>
+        </div>
+        <div class="consegna-item">
+          <div class="consegna-check">✓</div>
+          <div class="consegna-text">APE — Attestato Prestazione Energetica classe A o superiore</div>
+        </div>
+        <div class="consegna-item">
+          <div class="consegna-check">✓</div>
+          <div class="consegna-text">Certificato di agibilità rilasciato dal Comune di Montespertoli</div>
+        </div>
+        <div class="consegna-item">
+          <div class="consegna-check">✓</div>
+          <div class="consegna-text">Dichiarazioni di conformità tutti gli impianti (DM 37/2008)</div>
+        </div>
+        <div class="consegna-item">
+          <div class="consegna-check">✓</div>
+          <div class="consegna-text">Manuale d'uso e manutenzione dell'immobile e degli impianti</div>
+        </div>
+        <div class="consegna-item">
+          <div class="consegna-check">✓</div>
+          <div class="consegna-text">Polizza assicurativa postuma decennale a tutela dell'acquirente</div>
+        </div>
+        <div class="consegna-item">
+          <div class="consegna-check">✓</div>
+          <div class="consegna-text">Regolamento condominiale e inventario amenities condivise</div>
+        </div>
+        <div class="consegna-item">
+          <div class="consegna-check">✓</div>
+          <div class="consegna-text">Documentazione fotografica e tecnica completa del cantiere</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="section-label" style="margin-bottom:16px">Tabella Garanzie</div>
+      <div class="garanzie-table-wrap">
+        <table class="garanzie-table">
+          <thead>
+            <tr>
+              <th>Tipo di Garanzia</th>
+              <th>Durata</th>
+              <th>Copertura</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="td-tipo">Strutturale</td>
+              <td class="td-durata">10 anni</td>
+              <td>Vizi gravi su stabilità e durabilità (art. 1669 c.c.)</td>
+            </tr>
+            <tr>
+              <td class="td-tipo">Polizza postuma</td>
+              <td class="td-durata">10 anni</td>
+              <td>Assicurazione obbligatoria a copertura del rischio costruttore (D.lgs. 122/2005)</td>
+            </tr>
+            <tr>
+              <td class="td-tipo">Finiture</td>
+              <td class="td-durata">2 anni</td>
+              <td>Pavimenti, rivestimenti, serramenti, difformità finiture</td>
+            </tr>
+            <tr>
+              <td class="td-tipo">Impianti</td>
+              <td class="td-durata">2 anni</td>
+              <td>Elettrico, idraulico, termico, climatizzazione</td>
+            </tr>
+            <tr>
+              <td class="td-tipo">Elettrodomestici e sanitari</td>
+              <td class="td-durata">Variabile</td>
+              <td>Secondo garanzia del produttore</td>
+            </tr>
+            <tr>
+              <td class="td-tipo">Assistenza tecnica</td>
+              <td class="td-durata">24 mesi</td>
+              <td>Supporto dedicato Toscan Costruzioni post-consegna</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROSSIMI PASSI -->
+<section id="passi">
+  <div class="section-label">Come Procedere</div>
+  <h2 class="section-title serif" style="color:var(--cream)">Il percorso<br>di <em>acquisto</em></h2>
+  <p class="section-sub">5 passi semplici e strutturati per arrivare alla firma in sicurezza.</p>
+
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num serif">01</div>
+      <div class="step-title">Sopralluogo gratuito</div>
+      <div class="step-desc">Visita al cantiere e presentazione dei render 3D delle unità. Nessun impegno.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num serif">02</div>
+      <div class="step-title">Capitolato e personalizzazioni</div>
+      <div class="step-desc">Presentazione del capitolato dettagliato e scelta delle opzioni disponibili.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num serif">03</div>
+      <div class="step-title">Verifica mutuo</div>
+      <div class="step-desc">Supporto diretto per la pre-istruttoria con gli istituti bancari convenzionati.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num serif">04</div>
+      <div class="step-title">Proposta vincolante</div>
+      <div class="step-desc">Firma della proposta d'acquisto con 10 giorni di esclusiva sull'unità scelta.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num serif">05</div>
+      <div class="step-title">Preliminare e caparra</div>
+      <div class="step-desc">Stipula del contratto preliminare e versamento della caparra confirmatoria del 20%.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATTI -->
+<section id="contatti">
+  <div class="contatti-inner">
+    <div class="contatti-text">
+      <div class="section-label">Referente Commerciale</div>
+      <h2 class="section-title serif" style="color:var(--cream)">Parla con<br><em>Giuliano</em></h2>
+      <p class="section-sub">Sopralluogo gratuito senza impegno. Rispondiamo entro poche ore nei giorni lavorativi.</p>
+
+      <div style="margin-top:8px">
+        <div style="display:flex; flex-direction:column; gap:12px">
+          <div style="display:flex; align-items:center; gap:10px; padding:16px 20px; background:rgba(250,246,240,.04); border:1px solid rgba(250,246,240,.07); border-radius:2px">
+            <span style="font-size:16px">📍</span>
+            <div>
+              <div style="font-size:9px; letter-spacing:.18em; text-transform:uppercase; color:rgba(250,246,240,.3); margin-bottom:2px">Localizzazione</div>
+              <div style="font-size:14px; font-weight:300; color:rgba(250,246,240,.75)">Villa Claudia · Montespertoli (FI) · Toscana</div>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; padding:16px 20px; background:rgba(250,246,240,.04); border:1px solid rgba(250,246,240,.07); border-radius:2px">
+            <span style="font-size:16px">🕐</span>
+            <div>
+              <div style="font-size:9px; letter-spacing:.18em; text-transform:uppercase; color:rgba(250,246,240,.3); margin-bottom:2px">Orari</div>
+              <div style="font-size:14px; font-weight:300; color:rgba(250,246,240,.75)">Lunedì – Venerdì 9:00–19:00 · Sabato su appuntamento</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <div class="contact-header">
+        <div class="contact-avatar">G</div>
+        <div>
+          <div class="contact-name serif">Giuliano</div>
+          <div class="contact-role">Referente Commerciale · Toscan Costruzioni</div>
+        </div>
+      </div>
+      <div class="contact-info">
+        <div class="contact-row">
+          <div class="contact-row-icon">📞</div>
+          <div>
+            <div class="contact-row-label">Telefono</div>
+            <div class="contact-row-val"><a href="tel:+393510380392">+39 351 038 0392</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-icon">✉️</div>
+          <div>
+            <div class="contact-row-label">Email</div>
+            <div class="contact-row-val"><a href="mailto:toscancostruzioni@bluearroyo.it">toscancostruzioni@bluearroyo.it</a></div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-icon">🏡</div>
+          <div>
+            <div class="contact-row-label">Azienda</div>
+            <div class="contact-row-val">Toscan Costruzioni</div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-hours">
+        Lunedì – Venerdì · 9:00–19:00<br>
+        Sabato su appuntamento · Sopralluogo gratuito
+      </div>
+      <div class="contact-ctas">
+        <a href="tel:+393510380392" class="contact-btn-tel">📞 Chiama Ora</a>
+        <a href="mailto:toscancostruzioni@bluearroyo.it" class="contact-btn-mail">✉️ Scrivici</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="legal-note">
+    La presente pagina ha valore informativo e non costituisce offerta vincolante ai sensi degli artt. 1336 e ss. c.c.<br>
+    Le condizioni definitive saranno formalizzate nel contratto preliminare di compravendita.<br>
+    Toscan Costruzioni · Maggio 2026 · Documento riservato e confidenziale
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Toscan Costruzioni · Villa Claudia</div>
+  <div class="footer-copy">&copy; 2026 Toscan Costruzioni · Tutti i diritti riservati</div>
+</footer>
+
+<script>
+/* Active anchor nav on scroll */
+const sections = document.querySelectorAll('section[id], div[id]');
+const navLinks = document.querySelectorAll('.anchor-nav a');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const link = document.querySelector(`.anchor-nav a[href="#${entry.target.id}"]`);
+      if (link) link.classList.add('active');
+    }
+  });
+}, { rootMargin: '-30% 0px -60% 0px' });
+sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

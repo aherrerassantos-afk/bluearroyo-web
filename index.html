@@ -3,16 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blue Arroyo — Pulizie post check-out e Biancheria · Firenze</title>
-<meta name="description" content="Cerchi un'impresa di pulizie affidabile e professionale a Firenze? Blue Arroyo è la soluzione ideale per te! Offriamo una vasta gamma di servizi di pulizia post check-out e gestione biancheria per case vacanza e Airbnb, garantendo risultati impeccabili e la massima soddisfazione del cliente." />
-<link rel="canonical" href="https://www.bluearroyo.it" />
-<meta property="og:title" content="Blue Arroyo — Pulizie post check-out e Biancheria · Firenze" />
-<meta property="og:description" content="Cerchi un'impresa di pulizie affidabile e professionale a Firenze? Blue Arroyo è la soluzione ideale per te! Offriamo una vasta gamma di servizi di pulizia post check-out e gestione biancheria per case vacanza e Airbnb, garantendo risultati impeccabili e la massima soddisfazione del cliente." />
-<meta property="og:url" content="https://www.bluearroyo.it" />
+<meta name="google-site-verification" content="8cyP5aIsDDh9xB6mPFCzbpgmcG8NNoDqJfzBMe_9h_M" />
+<title>Pulizie Post Check-out Airbnb Firenze | Property Manager | Blue Arroyo</title>
+<meta name="description" content="Pulizie post check-out Airbnb a Firenze per property manager. Biancheria lavanderia industriale inclusa. Struttura pronta entro le 15:00. Preventivo gratuito." />
+<link rel="canonical" href="https://palazzobluearroyo.it/" />
+<link rel="alternate" hreflang="it" href="https://palazzobluearroyo.it/" />
+<link rel="alternate" hreflang="x-default" href="https://palazzobluearroyo.it/" />
+<meta property="og:title" content="Pulizie Post Check-out Airbnb Firenze | Property Manager | Blue Arroyo" />
+<meta property="og:description" content="Pulizie post check-out Airbnb a Firenze per property manager. Biancheria lavanderia industriale inclusa. Struttura pronta entro le 15:00. Preventivo gratuito." />
+<meta property="og:url" content="https://palazzobluearroyo.it/" />
 <meta property="og:type" content="website" />
+<meta property="og:site_name" content="Blue Arroyo" />
+<meta property="og:locale" content="it_IT" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Blue Arroyo — Pulizie post check-out e Biancheria · Firenze" />
-<meta name="twitter:description" content="Cerchi un'impresa di pulizie affidabile e professionale a Firenze? Blue Arroyo è la soluzione ideale per te! Offriamo una vasta gamma di servizi di pulizia post check-out e gestione biancheria per case vacanza e Airbnb, garantendo risultati impeccabili e la massima soddisfazione del cliente." />
+<meta name="twitter:title" content="Pulizie Post Check-out Airbnb Firenze | Property Manager | Blue Arroyo" />
+<meta name="twitter:description" content="Pulizie post check-out Airbnb a Firenze per property manager. Biancheria lavanderia industriale inclusa. Struttura pronta entro le 15:00. Preventivo gratuito." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -203,10 +208,10 @@ nav {
 
 /* Glass panel for content-heavy phases */
 .phase-panel {
-  background:rgba(8,8,6,.65);
-  backdrop-filter:blur(8px);
-  -webkit-backdrop-filter:blur(8px);
-  border:1px solid rgba(198,169,107,.12);
+  background:rgba(8,8,6,.85);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border:1px solid rgba(198,169,107,.2);
   padding:40px 48px;
   max-width:960px; width:100%;
   margin-top:24px;
@@ -272,6 +277,24 @@ nav {
   content:''; display:block; width:6px; height:6px;
   border-radius:50%; background:var(--gold); opacity:.6;
 }
+
+/* ── PHASE PHOTO GALLERY ── */
+.phase-photo-grid {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:6px; max-width:1100px; width:100%; margin-top:28px;
+}
+.phase-photo-item {
+  aspect-ratio:1; overflow:hidden;
+  cursor:pointer;
+}
+.phase-photo-item img {
+  width:100%; height:100%; object-fit:cover;
+  opacity:.85; transition:transform .5s ease, opacity .3s;
+  display:block;
+}
+.phase-photo-item:hover img { opacity:1 }
+@media(max-width:900px){ .phase-photo-grid { grid-template-columns:repeat(3,1fr) } }
+@media(max-width:600px){ .phase-photo-grid { grid-template-columns:repeat(2,1fr); gap:3px } }
 
 /* ── PHASE 4: PROCESS ── */
 .phase-steps {
@@ -491,6 +514,24 @@ nav {
   transition:all .25s;
 }
 .mf-links a:hover { border-color:var(--gold); color:var(--gold) }
+.seo-links-bar {
+  background:#0a0a09;
+  border-top:1px solid rgba(255,255,255,.04);
+  padding:32px var(--pad);
+}
+.seo-links-bar h3 {
+  font-family:'Cormorant Garamond',serif;
+  font-size:.7rem; letter-spacing:.2em; text-transform:uppercase;
+  color:rgba(255,255,255,.25); margin-bottom:14px;
+}
+.seo-links-grid {
+  display:flex; flex-wrap:wrap; gap:8px 20px;
+}
+.seo-links-grid a {
+  font-size:.65rem; color:rgba(255,255,255,.3); text-decoration:none;
+  letter-spacing:.06em; transition:color .25s;
+}
+.seo-links-grid a:hover { color:var(--gold) }
 
 /* ── PARTNER LOGOS ── */
 .phase-partners {
@@ -515,7 +556,7 @@ nav {
   width:100%; max-width:900px;
 }
 .phase-value {
-  background:rgba(8,8,6,.65); padding:28px 24px; text-align:left;
+  background:rgba(8,8,6,.85); padding:28px 24px; text-align:left;
 }
 .phase-value-title {
   font-size:8.5px; letter-spacing:.2em; text-transform:uppercase;
@@ -640,6 +681,47 @@ nav {
   color:rgba(255,255,255,.3); line-height:1.7;
 }
 
+/* ── PRINT / PDF EXPORT ── */
+@media print {
+  body > *:not(#ba-print-overlay) { display:none !important }
+  #ba-print-overlay {
+    display:block !important;
+    position:static !important;
+    width:100% !important;
+    background:#fff !important;
+    color:#1a1a1a !important;
+    padding:0 !important;
+    margin:0 !important;
+  }
+}
+#ba-print-overlay {
+  display:none;
+  position:fixed; inset:0; z-index:9999;
+  background:#fff; color:#1a1a1a;
+  overflow-y:auto; padding:40px 28px;
+  font-family:Georgia,serif; font-size:14px;
+}
+.ba-pdf-logo { font-family:Georgia,serif; font-size:1.2rem; letter-spacing:.08em; text-transform:uppercase; color:#0C0C0B; margin-bottom:2px }
+.ba-pdf-sub  { font-size:.62rem; letter-spacing:.2em; text-transform:uppercase; color:#C6A96B; margin-bottom:20px }
+.ba-pdf-bar  { width:36px; height:2px; background:#C6A96B; margin-bottom:24px }
+.ba-pdf-h1   { font-size:.95rem; letter-spacing:.14em; text-transform:uppercase; color:#C6A96B; margin-bottom:8px }
+.ba-pdf-meta { font-size:.78rem; color:#555; margin-bottom:24px; line-height:1.75 }
+.ba-pdf-table{ width:100%; border-collapse:collapse; margin-bottom:10px }
+.ba-pdf-table td { padding:8px 0; border-bottom:1px solid #e8e8e8; font-size:.82rem }
+.ba-pdf-table td:last-child { text-align:right; min-width:72px }
+.ba-pdf-total td { border-top:2px solid #C6A96B; border-bottom:none; font-weight:bold; padding-top:12px; font-size:.9rem }
+.ba-pdf-total td:last-child { color:#C6A96B; font-size:1rem }
+.ba-pdf-iva  { font-size:.68rem; color:#aaa; text-align:right; margin-bottom:24px }
+.ba-pdf-footer { margin-top:28px; padding-top:14px; border-top:1px solid #e8e8e8; font-size:.7rem; color:#999; line-height:1.8 }
+.ba-pdf-close {
+  position:fixed; top:16px; right:16px; z-index:10000;
+  background:#C6A96B; color:#fff; border:none; border-radius:50%;
+  width:36px; height:36px; font-size:1.1rem; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.18);
+}
+@media print { .ba-pdf-close { display:none !important } }
+
 /* ── CHATBOT ── */
 .chat-toggle {
   position:fixed; bottom:32px; right:var(--pad); z-index:400;
@@ -747,9 +829,23 @@ nav {
   40%          { opacity:1; transform:scale(1) }
 }
 
+.chat-question {
+  padding:14px 18px 12px;
+  border-top:1px solid rgba(198,169,107,.2);
+  background:rgba(198,169,107,.06);
+  flex-shrink:0;
+  display:none;
+}
+.chat-question-text {
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem; font-weight:400; color:var(--white);
+  line-height:1.35;
+}
+.chat-question.visible { display:block }
+
 .chat-options {
-  padding:12px 16px; border-top:1px solid rgba(255,255,255,.06);
-  display:flex; flex-wrap:wrap; gap:8px; flex-shrink:0; min-height:56px;
+  padding:10px 16px 14px; border-top:1px solid rgba(255,255,255,.06);
+  display:flex; flex-wrap:wrap; gap:8px; flex-shrink:0; min-height:48px;
 }
 .chat-opt {
   font-family:'Jost',sans-serif; font-size:.78rem; letter-spacing:.06em;
@@ -904,7 +1000,7 @@ nav {
       </h1>
       <div class="phase-stats">
         <div><div class="ps-n serif">300+</div><div class="ps-l"><span class="it">Proprietà attive</span><span class="es">Propiedades activas</span></div></div>
-        <div><div class="ps-n serif">4.9★</div><div class="ps-l"><span class="it">Valutazione media</span><span class="es">Valoración media</span></div></div>
+        <div><div class="ps-n serif">5.0★</div><div class="ps-l"><span class="it">Google Reviews</span><span class="es">Google Reviews</span></div></div>
         <div><div class="ps-n serif">&lt;3h</div><div class="ps-l"><span class="it">Ogni pulizia</span><span class="es">Cada limpieza</span></div></div>
         <div><div class="ps-n serif">24/7</div><div class="ps-l"><span class="it">Assistenza</span><span class="es">Asistencia</span></div></div>
       </div>
@@ -994,16 +1090,20 @@ nav {
         <span class="es">Es vuestra confianza la que nos permite ayudaros a construir una reputación sólida y respetada en el sector de la hospitalidad en Florencia.</span>
       </p>
       <div class="phase-partners">
-        <img src="https://static.wixstatic.com/media/2de5da_4d13e7aab18345edabeb5e03f0203cfc~mv2.png/v1/fill/w_362,h_362,al_c,q_85,enc_avif,quality_auto/Logos%20clientes%20_zip%20-%204.png"
-             alt="FLO Hotel Italia" class="phase-partner-logo">
-        <img src="https://static.wixstatic.com/media/2de5da_e0c2de2573fd47d58451a32e4d0a0f98~mv2.png/v1/fill/w_248,h_248,al_c,q_85,enc_avif,quality_auto/Logos%20clientes%20_zip%20-%205.png"
-             alt="Mamo Florence Hotel" class="phase-partner-logo">
-        <img src="https://static.wixstatic.com/media/2de5da_27c1d0dc2ba14b279011dce84d66931a~mv2.png/v1/fill/w_288,h_288,al_c,q_85,enc_avif,quality_auto/Logos%20clientes%20_zip%20-%201.png"
-             alt="Wine Florence Hotel" class="phase-partner-logo">
+        <img src="https://cdn.krbo.eu/houseflo/contents/87626117ac22a832ea44e77332d6347d.png"
+             alt="House Flo" class="phase-partner-logo">
+        <img src="https://floapartments.com/wp-content/uploads/2023/02/logo-flo-apt.svg"
+             alt="FLO Apartments" class="phase-partner-logo">
+        <img src="https://www.halldis.com/halldis/base_website_v3/templates/img/logo.svg"
+             alt="Halldis" class="phase-partner-logo">
+        <img src="https://www.wineapartmentsflorence.com/wp-content/uploads/2022/08/logo-WAF-orizzontale-trasp.png"
+             alt="Wine Apartments Florence" class="phase-partner-logo">
+        <img src="https://maisonflorence.it/wp-content/uploads/2025/03/Logo-2025.svg"
+             alt="Maison Florence" class="phase-partner-logo">
       </div>
       <div class="phase-partner-caption">
-        <span class="it">Hotel · Boutique · Strutture ricettive · Airbnb · Affitti brevi · Firenze</span>
-        <span class="es">Hoteles · Boutique · Alojamientos · Airbnb · Alquileres cortos · Florencia</span>
+        <span class="it">Property Manager · Airbnb · Affitti brevi · Boutique Hotel · Firenze</span>
+        <span class="es">Property Managers · Airbnb · Alquileres cortos · Boutique Hotel · Florencia</span>
       </div>
     </div>
 
@@ -1028,7 +1128,7 @@ nav {
         <span class="es">→ El próximo huésped encuentra el apartamento como nuevo. Siempre.</span>
       </div>
       <div class="phase-cta">
-        <button class="btn-gold" onclick="scrollToPhase(12)">
+        <button class="btn-gold" onclick="scrollToPhase(13)">
           <span class="it">Preventivo gratuito</span>
           <span class="es">Presupuesto gratis</span>
         </button>
@@ -1050,19 +1150,19 @@ nav {
       <div class="phase-panel">
         <ul class="phase-checklist">
           <li><span class="it">Pulizia completa di tutti gli ambienti</span><span class="es">Limpieza completa de todos los ambientes</span></li>
-          <li><span class="it">Cambio biancheria da letto (lenzuola, federe)</span><span class="es">Cambio de ropa de cama (sábanas, fundas)</span></li>
-          <li><span class="it">Lavaggio e stiratura della biancheria</span><span class="es">Lavado y planchado de la ropa de cama</span></li>
+          <li><span class="it">Cambio biancheria di <strong>lavanderia industriale</strong> (lenzuola, federe)</span><span class="es">Cambio ropa de cama de <strong>lavandería industrial</strong> (sábanas, fundas)</span></li>
+          <li><span class="it">Lavaggio industriale + stiratura professionale inclusi</span><span class="es">Lavado industrial + planchado profesional incluidos</span></li>
           <li><span class="it">Cambio asciugamani e teli bagno</span><span class="es">Cambio de toallas y alfombras de baño</span></li>
           <li><span class="it">Sanificazione bagni e cucina</span><span class="es">Saneamiento de baños y cocina</span></li>
           <li><span class="it">Rifornimento automatico amenities</span><span class="es">Reposición automática de amenities</span></li>
           <li><span class="it">Ispezione danni post check-out</span><span class="es">Inspección de daños post check-out</span></li>
           <li><span class="it">Report fotografico via WhatsApp</span><span class="es">Informe fotográfico por WhatsApp</span></li>
           <li><span class="it">Coordinamento calendario Airbnb / Booking</span><span class="es">Coordinación calendario Airbnb / Booking</span></li>
-          <li><span class="it">Completato in meno di 3 ore dal check-out</span><span class="es">Completado en menos de 3 horas</span></li>
+          <li><span class="it">Struttura <strong>pronta prima del check-in</strong> (garantito dopo le 15:00)</span><span class="es">Estructura <strong>lista antes del check-in</strong> (garantizado después de las 15:00)</span></li>
         </ul>
         <div class="phase-eco">
-          <span class="it">Prodotti 100% biodegradabili · Certificati eco · Zero chimica aggressiva</span>
-          <span class="es">Productos 100% biodegradables · Certificados eco · Sin química agresiva</span>
+          <span class="it">Biancheria di lavanderia industriale · Garanzia: non soddisfatto = ripuliamo gratis</span>
+          <span class="es">Ropa de cama lavandería industrial · Garantía: no satisfecho = limpiamos gratis</span>
         </div>
       </div>
     </div>
@@ -1117,8 +1217,8 @@ nav {
       </h2>
       <div class="phase-team-grid">
         <div class="phase-team-card">
-          <img src="https://static.wixstatic.com/media/834a85_086fe065371c45fc91210b360e6cef77~mv2.jpg/v1/fill/w_834,h_994,al_c,q_85,enc_avif,quality_auto/JulianHerreraBlueArroyoCleaning.jpg"
-               alt="Julian Herrera" class="phase-team-img">
+          <img src="/photos/julian_herrera.jpg"
+               alt="Julian Herrera — Fondatore Blue Arroyo Firenze" class="phase-team-img">
           <div class="phase-team-info">
             <div class="phase-team-name">Julian Herrera</div>
             <div class="phase-team-role"><span class="it">Fondatore &amp; Operations Manager</span><span class="es">Fundador &amp; Director Operativo</span></div>
@@ -1126,8 +1226,8 @@ nav {
           </div>
         </div>
         <div class="phase-team-card">
-          <img src="https://static.wixstatic.com/media/2de5da_a383174a44104cf4816f3ebeab47d697~mv2.jpeg/v1/fill/w_834,h_994,fp_0.50_0.50,q_85,enc_avif,quality_auto/WhatsApp%20Image%202024-09-29%20at%2018_49_35.jpeg"
-               alt="Blue Arroyo Team" class="phase-team-img">
+          <img src="/photos/ba_team_group.jpg"
+               alt="Team Blue Arroyo Firenze — specialisti pulizie Airbnb" class="phase-team-img">
           <div class="phase-team-info">
             <div class="phase-team-name"><span class="it">Il Nostro Team</span><span class="es">Nuestro Equipo</span></div>
             <div class="phase-team-role"><span class="it">Specialisti in pulizie &amp; ospitalità</span><span class="es">Especialistas en limpieza &amp; hospitalidad</span></div>
@@ -1143,12 +1243,36 @@ nav {
     </div>
 
     <!-- ════════════════════
-         PHASE 5 — RECENSIONI
+         PHASE 9 — GALLERIA FOTO REALI
          ════════════════════ -->
     <div class="svideo-phase" id="sv-phase-9">
       <div class="phase-eyebrow">
-        <span class="it">Risultati reali</span>
-        <span class="es">Resultados reales</span>
+        <span class="it">Il nostro lavoro reale</span>
+        <span class="es">Nuestro trabajo real</span>
+      </div>
+      <h2 class="phase-title md serif">
+        <span class="it">Ogni appartamento.<br><em>Impeccabile.</em></span>
+        <span class="es">Cada apartamento.<br><em>Impecable.</em></span>
+      </h2>
+      <div class="phase-photo-grid">
+        <div class="phase-photo-item"><img src="/photos/ba_letto.jpg" alt="Appartamento pulito Blue Arroyo Firenze — camera da letto con biancheria fresca" loading="lazy"></div>
+        <div class="phase-photo-item"><img src="/photos/ba_bagno.jpg" alt="Appartamento pulito Blue Arroyo Firenze — bagno in marmo con asciugamani" loading="lazy"></div>
+        <div class="phase-photo-item"><img src="/photos/ba_appartamento2.jpg" alt="Appartamento pulito Blue Arroyo Firenze — specchio camera" loading="lazy"></div>
+        <div class="phase-photo-item"><img src="/photos/ba_appartamento3.jpg" alt="Appartamento pulito Blue Arroyo Firenze — soggiorno" loading="lazy"></div>
+        <div class="phase-photo-item"><img src="/photos/ba_appartamento4.jpg" alt="Appartamento pulito Blue Arroyo Firenze — divano letto" loading="lazy"></div>
+        <div class="phase-photo-item"><img src="/photos/ba_appartamento5.jpg" alt="Appartamento pulito Blue Arroyo Firenze — cucina" loading="lazy"></div>
+        <div class="phase-photo-item"><img src="/photos/ba_appartamento1.jpg" alt="Appartamento pulito Blue Arroyo Firenze — camera" loading="lazy"></div>
+        <div class="phase-photo-item"><img src="/photos/ba_team1.jpg" alt="Team Blue Arroyo al lavoro in cucina — pulizie Airbnb Firenze" loading="lazy"></div>
+      </div>
+    </div>
+
+    <!-- ════════════════════
+         PHASE 5 — RECENSIONI
+         ════════════════════ -->
+    <div class="svideo-phase" id="sv-phase-10">
+      <div class="phase-eyebrow">
+        <span class="it">Cosa dicono di noi · Google Reviews verificate</span>
+        <span class="es">Qué dicen de nosotros · Google Reviews verificadas</span>
       </div>
       <h2 class="phase-title md serif">
         <span class="it">Proprietari &amp; Property Manager<br>che dormono <em>tranquilli.</em></span>
@@ -1157,7 +1281,7 @@ nav {
       <div class="phase-testi-grid" style="max-width:960px; width:100%; margin-top:28px">
         <div class="phase-tcard">
           <div class="phase-t-stars">★★★★★</div>
-          <div class="phase-t-result"><span class="it">Da 4.3 a 4.9 in 60 giorni</span><span class="es">De 4.3 a 4.9 en 60 días</span></div>
+          <div class="phase-t-result"><span class="it">Da 4.2 a 5.0 in 60 giorni</span><span class="es">De 4.2 a 5.0 en 60 días</span></div>
           <p class="phase-t-quote serif"><span class="it">«Un servizio impeccabile, sempre puntuale. Non tornerei più a gestire senza Blue Arroyo.»</span><span class="es">«Un servicio impecable, siempre puntual. No volvería a gestionar sin Blue Arroyo.»</span></p>
           <div class="phase-t-name">Carlos R. · <span class="it">Host Airbnb · Firenze · 3 proprietà</span><span class="es">Host Airbnb · Florencia · 3 prop.</span></div>
         </div>
@@ -1175,22 +1299,30 @@ nav {
         </div>
       </div>
       <div class="phase-rating-bar">
-        <strong class="serif">4.9</strong>
-        <span><span class="it">su 180+ recensioni verificate Google</span><span class="es">sobre 180+ reseñas verificadas Google</span></span>
+        <strong class="serif">5.0</strong>
+        <span><span class="it">su 10 recensioni verificate Google</span><span class="es">sobre 10 reseñas verificadas Google</span></span>
       </div>
-      <div class="phase-google-badge">
+      <div class="phase-google-badge" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);padding:20px 32px;gap:24px;margin-top:24px">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.1c-.22-.66-.35-1.36-.35-2.1s.13-1.44.35-2.1V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.83z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.83c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+        </svg>
         <div>
           <div class="phase-google-score serif">5.0</div>
-          <div style="color:var(--gold);font-size:.75rem;letter-spacing:2px;margin-top:2px">★★★★★</div>
+          <div style="color:#FBBC05;font-size:.85rem;letter-spacing:2px;margin-top:2px">★★★★★</div>
         </div>
-        <div class="phase-google-label">
-          <span class="it">Valutazione media<br>su Google Reviews<br>10 recensioni verificate</span>
-          <span class="es">Valoración media<br>en Google Reviews<br>10 reseñas verificadas</span>
+        <div class="phase-google-label" style="text-align:left">
+          <span class="it"><strong style="color:var(--white);font-size:.9rem">Google Reviews</strong><br>10 recensioni verificate · Firenze</span>
+          <span class="es"><strong style="color:var(--white);font-size:.9rem">Google Reviews</strong><br>10 reseñas verificadas · Florencia</span>
         </div>
         <a href="https://www.google.com/maps/place//data=!4m4!3m3!1s0x132a558f6a725e37:0x56ffa4a65bb483a0!9m1!1b1"
-           target="_blank" style="font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none;white-space:nowrap">
-          <span class="it">Leggi su Google →</span>
-          <span class="es">Ver en Google →</span>
+           target="_blank" style="font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);text-decoration:none;white-space:nowrap;border:1px solid var(--gold);padding:8px 16px;transition:all .3s"
+           onmouseover="this.style.background='var(--gold)';this.style.color='var(--dark)'"
+           onmouseout="this.style.background='transparent';this.style.color='var(--gold)'">
+          <span class="it">Leggi tutte le recensioni →</span>
+          <span class="es">Ver todas las reseñas →</span>
         </a>
       </div>
     </div>
@@ -1198,7 +1330,7 @@ nav {
     <!-- ════════════════════
          PHASE 10 — LISTINO PREZZI
          ════════════════════ -->
-    <div class="svideo-phase" id="sv-phase-10">
+    <div class="svideo-phase" id="sv-phase-11">
       <div class="phase-eyebrow">
         <span class="it">Listino prezzi · IVA inclusa</span>
         <span class="es">Lista de precios · IVA incluido</span>
@@ -1275,7 +1407,7 @@ nav {
         <span class="es">Todos los precios incluyen IVA · Para información contactar Blue Arroyo</span>
       </div>
       <div class="phase-cta" style="margin-top:20px">
-        <button class="btn-gold" onclick="scrollToPhase(12)">
+        <button class="btn-gold" onclick="scrollToPhase(13)">
           <span class="it">Richiedi preventivo gratuito</span>
           <span class="es">Solicitar presupuesto gratis</span>
         </button>
@@ -1285,7 +1417,7 @@ nav {
     <!-- ════════════════════
          PHASE 6 — PRENOTAZIONI DIRETTE
          ════════════════════ -->
-    <div class="svideo-phase" id="sv-phase-11">
+    <div class="svideo-phase" id="sv-phase-12">
       <div class="phase-eyebrow">
         <span class="it">Esclusivo Blue Arroyo</span>
         <span class="es">Exclusivo Blue Arroyo</span>
@@ -1303,7 +1435,7 @@ nav {
         <div><div class="db-sn serif">0%</div><div class="db-sl"><span class="it">commissioni prenotazioni dirette</span><span class="es">comisiones reservas directas</span></div></div>
       </div>
       <div class="phase-cta">
-        <button class="btn-outline-light" onclick="scrollToPhase(12)">
+        <button class="btn-outline-light" onclick="scrollToPhase(13)">
           <span class="it">Scopri come funziona →</span>
           <span class="es">Descubrir cómo funciona →</span>
         </button>
@@ -1313,7 +1445,7 @@ nav {
     <!-- ════════════════════
          PHASE 7 — CONTATTO
          ════════════════════ -->
-    <div class="svideo-phase" id="sv-phase-12">
+    <div class="svideo-phase" id="sv-phase-13">
       <div class="phase-eyebrow">
         <span class="it">Per Proprietari &amp; Property Manager · Firenze · Senza rischio</span>
         <span class="es">Para Propietarios &amp; Property Managers · Sin riesgo</span>
@@ -1429,20 +1561,14 @@ nav {
       <div class="phase-dot" data-phase="5"  title="Cosa Include"></div>
       <div class="phase-dot" data-phase="6"  title="Come Funziona"></div>
       <div class="phase-dot" data-phase="7"  title="Il Team"></div>
-      <div class="phase-dot" data-phase="8"  title="Recensioni"></div>
-      <div class="phase-dot" data-phase="9"  title="Prezzi"></div>
-      <div class="phase-dot" data-phase="10" title="Prenotazioni Dirette"></div>
-      <div class="phase-dot" data-phase="11" title="Contatti"></div>
+      <div class="phase-dot" data-phase="8"  title="Foto Reali"></div>
+      <div class="phase-dot" data-phase="9"  title="Recensioni"></div>
+      <div class="phase-dot" data-phase="10" title="Prezzi"></div>
+      <div class="phase-dot" data-phase="11" title="Prenotazioni Dirette"></div>
+      <div class="phase-dot" data-phase="12" title="Contatti"></div>
     </div>
 
     <!-- Sound toggle -->
-    <button class="sound-btn" id="soundBtn" onclick="toggleSound()" title="Audio">
-      <svg id="sound-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-        <line x1="23" y1="9" x2="17" y2="15" id="mute-x1"/>
-        <line x1="17" y1="9" x2="23" y2="15" id="mute-x2"/>
-      </svg>
-    </button>
 
     <!-- Progress bar -->
     <div class="svideo-progress">
@@ -1476,12 +1602,37 @@ nav {
     <button class="chat-close" onclick="toggleChat()">×</button>
   </div>
   <div class="chat-messages" id="chatMessages"></div>
+  <div class="chat-question" id="chatQuestion"><div class="chat-question-text" id="chatQuestionText"></div></div>
   <div class="chat-options" id="chatOptions"></div>
+</div>
+
+<!-- SEO INTERNAL LINKS -->
+<div class="seo-links-bar">
+  <h3>Approfondimenti e Zone Servite</h3>
+  <div class="seo-links-grid">
+    <a href="/pulizie-airbnb-firenze.html">Pulizie Airbnb Firenze</a>
+    <a href="/pulizie-post-checkout-firenze.html">Pulizie Post Checkout Firenze</a>
+    <a href="/property-manager-firenze.html">Property Manager Firenze</a>
+    <a href="/biancheria-airbnb-firenze.html">Biancheria Airbnb Firenze</a>
+    <a href="/gestione-affitti-brevi-firenze.html">Gestione Affitti Brevi Firenze</a>
+    <a href="/preventivo-pulizie-airbnb-firenze.html">Preventivo Pulizie Airbnb</a>
+    <a href="/pulizie-centro-storico-firenze.html">Pulizie Centro Storico</a>
+    <a href="/pulizie-oltrarno-firenze.html">Pulizie Oltrarno Firenze</a>
+    <a href="/impresa-pulizie-firenze.html">Impresa Pulizie Firenze</a>
+    <a href="/pulizie-casa-vacanze-firenze.html">Pulizie Case Vacanze</a>
+    <a href="/servizio-checkin-checkout-firenze.html">Servizio Check-in Check-out</a>
+    <a href="/servizi.html">Tutti i Servizi</a>
+    <a href="/aree-servite.html">Zone Servite</a>
+    <a href="/pacchetti-tariffe.html">Tariffe</a>
+    <a href="/chi-siamo.html">Chi Siamo</a>
+    <a href="/contatti.html">Contatti</a>
+    <a href="/sitemap.xml">Sitemap</a>
+  </div>
 </div>
 
 <!-- MINIMAL FOOTER -->
 <footer class="mini-footer">
-  <div class="mf-copy">© 2025 Blue Arroyo · Via Matteo Palmieri 20R, Firenze · sales@bluearroyo.it</div>
+  <div class="mf-copy">© 2025 Blue Arroyo · Via Matteo Palmieri 20R, Firenze · hello@bluearroyo.it</div>
   <div class="mf-links">
     <a href="https://www.instagram.com/bluearroyo.it" target="_blank">IG</a>
     <a href="https://www.facebook.com/bluearroyo.it" target="_blank">FB</a>
@@ -1496,7 +1647,7 @@ function setLang(l) {
   document.getElementById('btn-es').classList.toggle('active', l==='es');
   document.getElementById('btn-it').classList.toggle('active', l==='it');
   document.title = l==='it'
-    ? 'Blue Arroyo — Pulizie post check-out e Biancheria · Firenze'
+    ? 'Pulizie Post Check-out Airbnb Firenze | Property Manager | Blue Arroyo'
     : 'Blue Arroyo — Limpieza post check-out con Ropa de cama · Florencia';
   localStorage.setItem('ba-lang', l);
 }
@@ -1514,12 +1665,12 @@ document.addEventListener('click',function(e){
   var wrapper  = document.getElementById('video-section');
   var progress = document.getElementById('sProgress');
   var dots     = document.querySelectorAll('.phase-dot');
-  var phases   = ['sv-phase-1','sv-phase-2','sv-phase-3','sv-phase-4','sv-phase-5','sv-phase-6','sv-phase-7','sv-phase-8','sv-phase-9','sv-phase-10','sv-phase-11','sv-phase-12'];
-  /* video cycling: 12 phases → v1 v2 v3 v1 v2 v3 v1 v2 v3 v1 v2 v3 */
-  var videoMap = [0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2];
+  var phases   = ['sv-phase-1','sv-phase-2','sv-phase-3','sv-phase-4','sv-phase-5','sv-phase-6','sv-phase-7','sv-phase-8','sv-phase-9','sv-phase-10','sv-phase-11','sv-phase-12','sv-phase-13'];
+  /* video cycling: 13 phases → v1 v2 v3 v1 v2 v3 v1 v2 v3 v1 v2 v3 v1 */
+  var videoMap = [0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0];
   var videoIds = ['sv-v1','sv-v2','sv-v3'];
-  /* 11 breakpoints for 12 phases */
-  var breaks   = [0.11, 0.20, 0.29, 0.37, 0.46, 0.54, 0.63, 0.71, 0.79, 0.87, 0.93];
+  /* 12 breakpoints for 13 phases */
+  var breaks   = [0.10, 0.18, 0.26, 0.34, 0.43, 0.51, 0.59, 0.67, 0.74, 0.81, 0.87, 0.93];
   if (!wrapper) return;
   var lastIdx  = -1;
 
@@ -1662,7 +1813,7 @@ var state = {};
 var serviceType = null;
 
 function resetState(){
-  state = { mq:null, matrimoniali:0, singoli:0, kitBagnoExtra:0, kitCucina:false, nome:'', contatto:'' };
+  state = { mq:null, matrimoniali:0, singoli:0, divaniMatri:0, divaniSingoli:0, bagniDoccia:0, bagniSenza:0, kitCucina:false, nome:'', email:'', contatto:'' };
   serviceType = null;
 }
 resetState();
@@ -1683,6 +1834,12 @@ function msgs(){ return document.getElementById('chatMessages'); }
 function opts(){ return document.getElementById('chatOptions'); }
 function scrollBottom(){ var m=msgs(); m.scrollTop=m.scrollHeight; }
 function clearOpts(){ opts().innerHTML=''; }
+function setQuestion(text){
+  var q = document.getElementById('chatQuestion');
+  var qt = document.getElementById('chatQuestionText');
+  if(text){ qt.innerHTML = text; q.classList.add('visible'); }
+  else { q.classList.remove('visible'); qt.innerHTML=''; }
+}
 function fmt(n){ return '€ '+n.toFixed(2).replace('.',','); }
 
 function waIcon(){
@@ -1778,10 +1935,10 @@ function selectService(type){
   clearOpts();
   addUserBubble(serviceLabels[type]);
   if(type === 'checkout'){
-    addBubble('Perfetto! 🏡 Calcoliamo subito il tuo preventivo.\n\nQuanti m² ha l\'appartamento?', 'bot', 500);
-    setTimeout(showMqOptions, 1800);
+    addBubble('Perfetto! 🏡 Calcoliamo il preventivo.', 'bot', 500);
+    setTimeout(function(){ setQuestion('📐 Quanti m² ha l\'appartamento?'); showMqOptions(); }, 1800);
   } else {
-    addBubble('Ottima scelta! 👍 Prepariamo un\'offerta su misura.\n\nCome ti chiami?', 'bot', 500);
+    setQuestion(''); addBubble('Ottima scelta! 👍 Prepariamo un\'offerta su misura.\n\nCome ti chiami?', 'bot', 500);
     setTimeout(showNameInput, 1800);
   }
 }
@@ -1793,8 +1950,8 @@ function showMqOptions(){
       state.mq = m;
       addUserBubble(m.label);
       clearOpts();
-      addBubble('Mano d\'opera + prodotti ('+m.label+'): <strong>'+fmt(m.price)+'</strong> ✓\n\nQuanti letti matrimoniali hai?', 'bot', 400);
-      setTimeout(showMatrimoniali, 1400);
+      addBubble('Quanti letti matrimoniali hai?', 'bot', 400);
+      setTimeout(function(){ setQuestion('🛏 Letti matrimoniali'); showMatrimoniali(); }, 1400);
     }};
   }));
 }
@@ -1803,10 +1960,10 @@ function showMatrimoniali(){
   addOpts(NUMS.map(function(n){
     return { label: n, action: function(){
       state.matrimoniali = n==='4+'?4:parseInt(n,10);
-      addUserBubble(n+' matrimoniali');
+      addUserBubble((state.matrimoniali===1?'1 letto matrimoniale':state.matrimoniali+' letti matrimoniali'));
       clearOpts();
       addBubble('Quanti letti singoli?', 'bot', 400);
-      setTimeout(showSingoli, 1100);
+      setTimeout(function(){ setQuestion('🛏 Letti singoli'); showSingoli(); }, 1100);
     }};
   }));
 }
@@ -1815,47 +1972,101 @@ function showSingoli(){
   addOpts(NUMS.map(function(n){
     return { label: n, action: function(){
       state.singoli = n==='4+'?4:parseInt(n,10);
-      addUserBubble(n+' singoli');
+      addUserBubble(state.singoli===1?'1 letto singolo':state.singoli+' letti singoli');
       clearOpts();
-      addBubble('Kit Bagno aggiuntivi?\n(carta igienica + sapone + tappeto doccia — '+fmt(3)+' cad.)', 'bot', 400);
-      setTimeout(showKitBagno, 1200);
+      addBubble('Ci sono divani letto matrimoniali?', 'bot', 400);
+      setTimeout(function(){ setQuestion('🛋 Divani letto matrimoniali'); showDivaniMatri(); }, 1200);
     }};
   }));
 }
 
-function showKitBagno(){
+function showDivaniMatri(){
+  addOpts(NUMS.map(function(n){
+    return { label: n, action: function(){
+      state.divaniMatri = n==='4+'?4:parseInt(n,10);
+      addUserBubble((parseInt(n)||0)===1?'1 divano letto matrimoniale':n+' divani letto matrimoniali');
+      clearOpts();
+      addBubble('E divani letto singoli?', 'bot', 400);
+      setTimeout(function(){ setQuestion('🛋 Divani letto singoli'); showDivaniSingoli(); }, 1200);
+    }};
+  }));
+}
+
+function showDivaniSingoli(){
+  addOpts(NUMS.map(function(n){
+    return { label: n, action: function(){
+      state.divaniSingoli = n==='4+'?4:parseInt(n,10);
+      addUserBubble(n+' divani letto singoli');
+      clearOpts();
+      addBubble('Quanti bagni CON doccia o vasca ci sono?', 'bot', 400);
+      setTimeout(function(){ setQuestion('🚿 Bagni con doccia o vasca'); showBagniDoccia(); }, 1200);
+    }};
+  }));
+}
+
+function showBagniDoccia(){
+  addOpts(['0','1','2','3','4+'].map(function(n){
+    return { label: n, action: function(){
+      state.bagniDoccia = n==='4+'?4:parseInt(n,10);
+      addUserBubble(n+' bagni con doccia');
+      clearOpts();
+      addBubble('E bagni SENZA doccia (solo lavabo/WC)?', 'bot', 400);
+      setTimeout(function(){ setQuestion('🚽 Bagni senza doccia'); showBagniSenza(); }, 1100);
+    }};
+  }));
+}
+
+function showBagniSenza(){
   addOpts(['0','1','2','3'].map(function(n){
-    return { label: n==='0'?'Nessuno':n, action: function(){
-      state.kitBagnoExtra = parseInt(n,10);
-      addUserBubble(n==='0'?'Nessuno':n+' kit bagno');
+    return { label: n, action: function(){
+      state.bagniSenza = n==='4+'?4:parseInt(n,10);
+      addUserBubble(n+' bagni senza doccia');
       clearOpts();
-      addBubble('Aggiungiamo il Kit Cucina?\n(pastiglie lavastoviglie, sapone piatti, spugna, buste — '+fmt(3)+')', 'bot', 400);
-      setTimeout(showKitCucina, 1200);
+      state.kitCucina = true; // Auto-set kit cucina to true (always included)
+      setQuestion('');
+      setTimeout(showQuickPrice, 600);
     }};
   }));
 }
 
-function showKitCucina(){
-  addOpts([
-    { label:'Sì, aggiungilo +'+fmt(3), cls:'primary', action:function(){
-      state.kitCucina=true;
-      addUserBubble('Sì, Kit Cucina');
-      clearOpts();
-      setTimeout(function(){ showNameInput(true); }, 600);
-    }},
-    { label:'No grazie', action:function(){
-      state.kitCucina=false;
-      addUserBubble('No grazie');
-      clearOpts();
-      setTimeout(function(){ showNameInput(true); }, 600);
-    }}
-  ]);
+/* ── Show price first, then ask interest ── */
+function showQuickPrice(){
+  var q = calcQuote();
+  var html = '💰 <strong>Stima preventivo:</strong><br><br>';
+  q.rows.forEach(function(r){
+    html += '<div class="summary-row"><span>'+r.label+'</span><span>'+fmt(r.price)+'</span></div>';
+  });
+  html += '<div class="summary-divider"></div>';
+  html += '<div class="summary-row"><strong>TOTALE</strong><strong style="color:var(--gold)">'+fmt(q.total)+'</strong></div>';
+  html += '<small style="opacity:.45;font-size:.72rem">IVA inclusa · preventivo indicativo</small>';
+  addBubble(html, 'bot summary', 400);
+  if(q.extras.length>0){
+    var extHtml = '<div style="font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500">+ Costo extra su richiesta</div>';
+    q.extras.forEach(function(e){
+      extHtml += '<div class="summary-row"><span>'+e.label+'</span><span style="color:var(--gold);font-weight:500">'+fmt(e.price)+'</span></div>';
+    });
+    extHtml += '<small style="opacity:.4;font-size:.68rem;display:block;margin-top:6px">Non incluso nel totale standard sopra</small>';
+    addBubble(extHtml, 'bot summary', 900);
+  }
+  setTimeout(function(){
+    addBubble('Vuoi ricevere questo preventivo ufficiale via email o WhatsApp?', 'bot', 300);
+    setTimeout(function(){
+      addOpts([
+        { label:'✓ Sì, voglio procedere', cls:'primary', action:function(){
+          addUserBubble('Sì, voglio procedere');
+          clearOpts();
+          setTimeout(function(){ showNameInput(true); }, 400);
+        }},
+        { label:'↺ Ricomincia', action:function(){ msgs().innerHTML=''; resetState(); startChat(); }}
+      ]);
+    }, 1400);
+  }, 1800);
 }
 
 /* ── Collect name ── */
 function showNameInput(withSummary){
   if(withSummary){
-    addBubble('Quasi fatto! 📋 Come ti chiami?', 'bot', 400);
+    addBubble('Perfetto! Come ti chiami?', 'bot', 400);
   }
   setTimeout(function(){
     clearOpts();
@@ -1871,24 +2082,50 @@ function showNameInput(withSummary){
       state.nome = val;
       clearOpts();
       addUserBubble(val);
+      setTimeout(function(){ showEmailInput(withSummary); }, 400);
+    };
+    inp.addEventListener('keydown', function(e){ if(e.key==='Enter') btn.click(); });
+    row.appendChild(inp); row.appendChild(btn);
+    opts().appendChild(row);
+    setTimeout(function(){ inp.focus(); }, 100);
+  }, withSummary ? 1000 : 600);
+}
+
+/* ── Collect email ── */
+function showEmailInput(withSummary){
+  addBubble('La tua email per ricevere il preventivo 📧', 'bot', 300);
+  setTimeout(function(){
+    clearOpts();
+    var row = document.createElement('div');
+    row.className = 'chat-input-row';
+    var inp = document.createElement('input');
+    inp.type = 'email'; inp.placeholder = 'nome@email.com'; inp.className = 'chat-text-input';
+    var btn = document.createElement('button');
+    btn.className = 'chat-opt primary'; btn.textContent = 'Continua →';
+    btn.onclick = function(){
+      var val = inp.value.trim();
+      if(!val || val.indexOf('@') < 1){ inp.style.borderColor='#e55'; return; }
+      state.email = val;
+      clearOpts();
+      addUserBubble(val);
       setTimeout(function(){ showContactInput(withSummary); }, 400);
     };
     inp.addEventListener('keydown', function(e){ if(e.key==='Enter') btn.click(); });
     row.appendChild(inp); row.appendChild(btn);
     opts().appendChild(row);
     setTimeout(function(){ inp.focus(); }, 100);
-  }, withSummary ? 1200 : 600);
+  }, 1000);
 }
 
-/* ── Collect phone/email ── */
+/* ── Collect phone ── */
 function showContactInput(withSummary){
-  addBubble('E il tuo numero di telefono o email? Ti risponderemo entro 2 ore 📲', 'bot', 300);
+  addBubble('E il tuo numero di telefono? 📲', 'bot', 300);
   setTimeout(function(){
     clearOpts();
     var row = document.createElement('div');
     row.className = 'chat-input-row';
     var inp = document.createElement('input');
-    inp.type = 'text'; inp.placeholder = '+39 333 000 0000 o email@…'; inp.className = 'chat-text-input';
+    inp.type = 'tel'; inp.placeholder = '+39 333 000 0000'; inp.className = 'chat-text-input';
     var btn = document.createElement('button');
     btn.className = 'chat-opt primary'; btn.textContent = 'Invia →';
     btn.onclick = function(){
@@ -1907,49 +2144,161 @@ function showContactInput(withSummary){
     row.appendChild(inp); row.appendChild(btn);
     opts().appendChild(row);
     setTimeout(function(){ inp.focus(); }, 100);
-  }, 1100);
+  }, 1000);
 }
 
 /* ── Quote summary (checkout) ── */
 function calcQuote(){
-  var rows=[], total=0;
+  var rows=[], extras=[], total=0;
   var mo = state.mq.price; total += mo;
   rows.push({ label:'Mano d\'opera + prodotti ('+state.mq.label+')', price:mo });
   if(state.matrimoniali>0){
     var bm=25+(state.matrimoniali-1)*15; total+=bm;
-    rows.push({ label:state.matrimoniali+' matrimoniale'+(state.matrimoniali>1?'i':'')+' (biancheria incl.)', price:bm });
+    rows.push({ label:state.matrimoniali+(state.matrimoniali>1?' letti matrimoniali':' letto matrimoniale')+' (biancheria incl.)', price:bm });
   }
   if(state.singoli>0){
-    var bs=state.singoli*10; total+=bs;
-    rows.push({ label:state.singoli+' letto/i singolo/i', price:bs });
+    var bs=state.singoli*11; total+=bs; // Letto singolo: updated from €10 to €11
+    rows.push({ label:state.singoli+(state.singoli>1?' letti singoli':' letto singolo')+' (biancheria incl.)', price:bs });
   }
-  if(state.kitBagnoExtra>0){
-    var kb=state.kitBagnoExtra*3; total+=kb;
-    rows.push({ label:state.kitBagnoExtra+' kit bagno extra', price:kb });
+  var totalBagni = (state.bagniDoccia||0) + (state.bagniSenza||0);
+  var kitBagnoExtra = Math.max(0, totalBagni - 1);
+  if(kitBagnoExtra>0){
+    var kb=kitBagnoExtra*3; total+=kb;
+    rows.push({ label:kitBagnoExtra+' kit bagno extra (1° già incluso)', price:kb });
   }
-  if(state.kitCucina){ total+=3; rows.push({ label:'Kit Cucina', price:3 }); }
-  return { rows:rows, total:total };
+  if(state.kitCucina){ rows.push({ label:'Kit Cucina (Sempre incluso)', price:0 }); } // Kitchen kit: always included, price €0
+  /* Divani letto = extra, NON inclusi nel totale */
+  if(state.divaniMatri>0){
+    extras.push({ label:state.divaniMatri+(state.divaniMatri>1?' divani letto matrimoniali':' divano letto matrimoniale')+' — biancheria incl.', price:state.divaniMatri*18 });
+  }
+  if(state.divaniSingoli>0){
+    extras.push({ label:state.divaniSingoli+(state.divaniSingoli>1?' divani letto singoli':' divano letto singolo')+' — biancheria incl.', price:state.divaniSingoli*12 });
+  }
+  return { rows:rows, extras:extras, total:total };
+}
+
+function exportPDF(q) {
+  var date = new Date().toLocaleDateString('it-IT', {day:'2-digit',month:'2-digit',year:'numeric'});
+  var rows = q.rows.map(function(r){
+    return '<tr><td>'+r.label+'</td><td>'+fmt(r.price)+'</td></tr>';
+  }).join('');
+
+  // Remove existing overlay if any
+  var old = document.getElementById('ba-print-overlay');
+  if (old) old.remove();
+
+  var overlay = document.createElement('div');
+  overlay.id = 'ba-print-overlay';
+  overlay.innerHTML =
+    '<button class="ba-pdf-close" onclick="document.getElementById(\'ba-print-overlay\').remove()" title="Chiudi">✕</button>'
+    +'<div class="ba-pdf-logo">Blue Arroyo</div>'
+    +'<div class="ba-pdf-sub">Cleaning Co.</div>'
+    +'<div class="ba-pdf-bar"></div>'
+    +'<div class="ba-pdf-h1">Preventivo</div>'
+    +'<div class="ba-pdf-meta">'
+    +'Per: <strong>'+state.nome+'</strong><br>'
+    +'Contatto: '+state.contatto+'<br>'
+    +'Servizio: Pulizie post check-out + Biancheria<br>'
+    +'Data: '+date
+    +'</div>'
+    +'<table class="ba-pdf-table">'+rows+'</table>'
+    +'<table class="ba-pdf-table ba-pdf-total"><tr><td>TOTALE</td><td>'+fmt(q.total)+'</td></tr></table>'
+    +'<div class="ba-pdf-iva">IVA inclusa</div>'
+    +'<div style="margin-top:16px; margin-bottom:16px; padding:12px 14px; border:1px dashed #C6A96B; font-size:.74rem; color:#555; line-height:1.5; background:#FAF8F5; text-align:left;">'
+    +'<strong style="color:#C6A96B; display:block; margin-bottom:6px; font-size:.8rem;">NOTE PREVENTIVO:</strong>'
+    +'• Incluso in ogni pulizia: Aspirazione, lavaggio pavimenti, pulizia profonda di cucina/bagni, rifacimento letti e prodotti professionali eco-certificati.<br>'
+    +'• Un Kit Cucina monouso sigillato è sempre incluso gratuitamente.<br>'
+    +'• La biancheria dei letti matrimoniali (inclusi divani letto) comprende: 2 lenzuola in estate (3 in inverno), 2 federe e set asciugamani (1 viso + 1 corpo per ospite).<br>'
+    +'• La biancheria dei letti singoli (inclusi divani letto) comprende: 2 lenzuola in estate (3 in inverno), 1 federa e set asciugamani (1 viso + 1 corpo per ospite a seconda del numero di ospiti in ingresso).'
+    +'</div>'
+    +(q.extras.length>0
+      ? '<div style="margin-top:14px;padding:12px 14px;background:#f9f6f0;border-left:3px solid #C6A96B;font-size:.78rem;color:#555;text-align:left;">'
+        +'<strong style="color:#C6A96B;display:block;margin-bottom:6px">Costo extra su richiesta (non incluso nel totale):</strong>'
+        +q.extras.map(function(e){ return '+ '+e.label+': '+fmt(e.price); }).join('<br>')
+        +'</div>'
+      : '')
+    +'<div class="ba-pdf-footer">'
+    +'Blue Arroyo · Via Matteo Palmieri 20R, 50122 Firenze FI<br>'
+    +'+39 351 038 0392 · hello@bluearroyo.it · palazzobluearroyo.it<br>'
+    +'Preventivo valido 30 giorni dalla data di emissione'
+    +'</div>';
+
+  document.body.appendChild(overlay);
+
+  // Small delay to let the overlay render before print dialog opens
+  setTimeout(function(){
+    window.print();
+    // Remove overlay after print dialog closes
+    setTimeout(function(){
+      var el = document.getElementById('ba-print-overlay');
+      if (el) el.remove();
+    }, 1000);
+  }, 150);
 }
 
 function showSummary(){
   var q = calcQuote();
-  var html = '<strong>🧾 Preventivo per '+state.nome+':</strong><br><br>';
+  var date = new Date().toLocaleDateString('it-IT',{day:'2-digit',month:'2-digit',year:'numeric'});
+  var html = '<strong>🧾 Preventivo ufficiale per '+state.nome+':</strong><br><br>';
   q.rows.forEach(function(r){
-    html += '<div class="summary-row"><span>'+r.label+'</span><span>'+fmt(r.price)+'</span></div>';
+    html += '<div class="summary-row"><span>'+r.label+'</span><span>'+(r.price===0?'Incluso':fmt(r.price))+'</span></div>';
   });
   html += '<div class="summary-divider"></div>';
   html += '<div class="summary-row"><strong>TOTALE</strong><strong style="color:var(--gold)">'+fmt(q.total)+'</strong></div>';
-  html += '<small style="opacity:.45;font-size:.72rem">IVA inclusa</small>';
+  html += '<small style="opacity:.45;font-size:.72rem;display:block;margin-bottom:8px;">IVA inclusa · '+date+'</small>';
+  html += '<div style="font-size:.7rem; line-height:1.5; color:rgba(255,255,255,.65); margin-top:8px; border-top:1px solid rgba(255,255,255,.08); padding-top:8px; text-align:left;">'
+    +'<strong style="color:var(--gold); display:block; margin-bottom:4px;">NOTA COMPOSIZIONE:</strong>'
+    +'• Incluso: aspirazione, lavaggio pavimenti, pulizia profonda cucina/bagni, rifacimento letti, prodotti eco.<br>'
+    +'• Incluso: 1 Kit Cucina monouso sigillato.<br>'
+    +'• Letto Matrimoniale comprende: 2 lenzuola in estate (3 in inverno), 2 federe e set asciugamani (1 viso + 1 corpo per ospite).<br>'
+    +'• Letto Singolo comprende: 2 lenzuola in estate (3 in inverno), 1 federa e set asciugamani (1 viso + 1 corpo per ospite a seconda degli ospiti in ingresso).'
+    +'</div>';
   addBubble(html, 'bot summary', 400);
+  if(q.extras.length>0){
+    var extHtml = '<div style="font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500">+ Costo extra su richiesta</div>';
+    q.extras.forEach(function(e){
+      extHtml += '<div class="summary-row"><span>'+e.label+'</span><span style="color:var(--gold);font-weight:500">'+fmt(e.price)+'</span></div>';
+    });
+    extHtml += '<small style="opacity:.4;font-size:.68rem;display:block;margin-top:6px">Non incluso nel totale standard sopra</small>';
+    addBubble(extHtml, 'bot summary', 1000);
+  }
   setTimeout(function(){
+    var rowsText = q.rows.map(function(r){ return '▸ '+r.label+': '+(r.price===0?'Incluso':fmt(r.price)); }).join('\n');
+    var extrasText = q.extras.length>0 ? '\n\n📌 *Costo extra su richiesta (non nel totale):*\n'+q.extras.map(function(e){ return '+ '+e.label+': '+fmt(e.price); }).join('\n') : '';
+    var extrasEmailText = q.extras.length>0 ? '\n\n--- Costo extra su richiesta (non incluso nel totale) ---\n'+q.extras.map(function(e){ return '+ '+e.label+': '+fmt(e.price); }).join('\n') : '';
     var waText = '🔵 *Preventivo Blue Arroyo*\n'
-      +'Nome: '+state.nome+'\nContatto: '+state.contatto+'\nServizio: Pulizie standard post check-out\n\n'
-      +q.rows.map(function(r){ return '▸ '+r.label+': '+fmt(r.price); }).join('\n')
-      +'\n─────────────────\n*TOTALE: '+fmt(q.total)+'*\n\n_IVA inclusa — palazzobluearroyo.it_';
+      +'Nome: '+state.nome+'\nTel: '+state.contatto+'\nEmail: '+state.email+'\nServizio: Pulizie post check-out\n\n'
+      +rowsText+'\n─────────────────\n*TOTALE: '+fmt(q.total)+'*'+extrasText+'\n\n'
+      +'*NOTE COMPOSIZIONE:*\n'
+      +'• Incluso in ogni pulizia: aspirazione, lavaggio pavimenti, pulizia cucina/bagni, rifacimento letti e prodotti professionali eco-certificati.\n'
+      +'• Un Kit Cucina monouso sigillato è sempre incluso gratuitamente.\n'
+      +'• Lenzuola Matrimoniali: 2 lenzuola in estate (3 in inverno), 2 federe, set asciugamani (1 viso + 1 corpo per ospite).\n'
+      +'• Lenzuola Singole: 2 lenzuola in estate (3 in inverno), 1 federa, set asciugamani (1 viso + 1 corpo per ospite a seconda del numero di ospiti in ingresso).\n\n'
+      +'_IVA inclusa — palazzobluearroyo.it_';
+    var emailSubject = 'Preventivo Blue Arroyo — '+state.nome+' — '+fmt(q.total);
+    var emailBody = 'Gentile '+state.nome+',\n\ndi seguito il preventivo richiesto per le pulizie post check-out.\n\n'
+      +'Data: '+date+'\nServizio: Pulizie post check-out + Biancheria lavanderia industriale\n\n'
+      +rowsText+'\n\n─────────────────\nTOTALE: '+fmt(q.total)+' (IVA inclusa)'
+      +extrasEmailText+'\n\n'
+      +'--- NOTE COMPOSIZIONE ---\n'
+      +'• Incluso in ogni pulizia: aspirazione, lavaggio pavimenti, pulizia profonda cucina/bagni, rifacimento letti e prodotti professionali eco-certificati.\n'
+      +'• Un Kit Cucina monouso sigillato è sempre incluso gratuitamente.\n'
+      +'• La biancheria dei letti matrimoniali (anche divani) comprende: 2 lenzuola in estate (3 in inverno), 2 federe e set asciugamani (1 viso + 1 corpo per ospite).\n'
+      +'• La biancheria dei letti singoli (anche divani) comprende: 2 lenzuola in estate (3 in inverno), 1 federa e set asciugamani (1 viso + 1 corpo per ospite a seconda degli ospiti in ingresso).\n\n'
+      +'Per confermare o avere informazioni:\nWhatsApp: +39 351 038 0392\nEmail: hello@bluearroyo.it\n\n'
+      +'Preventivo valido 30 giorni.\n\nBlue Arroyo Cleaning Co.\nVia Matteo Palmieri 20R, 50122 Firenze\npalazzobluearroyo.it';
+    var mailtoLink = 'mailto:'+state.email
+      +'?cc=admin@bluearroyo.it'
+      +'&subject='+encodeURIComponent(emailSubject)
+      +'&body='+encodeURIComponent(emailBody);
     addOpts([
       { label:waIcon()+' Invia su WhatsApp', cls:'wa', action:function(){
           window.open('https://wa.me/393510380392?text='+encodeURIComponent(waText),'_blank');
       }},
+      { label:'📧 Invia per email (Copia a admin@bluearroyo.it)', cls:'primary', action:function(){
+          window.location.href = mailtoLink;
+      }},
+      { label:'📄 Scarica PDF', action:function(){ exportPDF(q); }},
       { label:'↺ Ricomincia', action:function(){ msgs().innerHTML=''; resetState(); startChat(); }}
     ]);
   }, 1600);
@@ -1971,13 +2320,18 @@ function showNonCheckoutCTA(){
   }, 1400);
 }
 
-/* Auto-open after 2.5 seconds */
-setTimeout(function(){
-  var panel = document.getElementById('chatPanel');
-  if(panel && !panel.classList.contains('open')){
-    toggleChat();
-  }
-}, 2500);
+/* Expose startChat globally so preventivo.html can call it */
+window.startChat = startChat;
+
+/* Auto-open after 2.5 seconds (homepage only) */
+if(!document.body.classList.contains('prev-page')){
+  setTimeout(function(){
+    var panel = document.getElementById('chatPanel');
+    if(panel && !panel.classList.contains('open')){
+      toggleChat();
+    }
+  }, 2500);
+}
 
 })(); /* end chatbot IIFE */
 

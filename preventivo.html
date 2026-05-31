@@ -869,8 +869,25 @@ function showSummary(){
       { label:waIcon()+' Invia su WhatsApp', cls:'wa', action:function(){
           window.open('https://wa.me/393510380392?text='+encodeURIComponent(waText),'_blank');
       }},
-      { label:'📧 Invia per email (Copia a admin@bluearroyo.it)', cls:'primary', action:function(){
-          window.location.href = mailtoLink;
+      { label:'📧 Invia preventivo per email', cls:'primary', action:function(){
+          var allBtns = opts().querySelectorAll('button');
+          allBtns.forEach(function(b){ b.disabled = true; b.style.opacity = '0.5'; });
+          addBubble('📨 Invio in corso...', 'bot', 0);
+          fetch('https://aherreras.app.n8n.cloud/webhook/preventivo-chatbot', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              to_email: state.email,
+              subject: emailSubject,
+              message: emailBody
+            })
+          }).then(function(res){ return res.json(); }).then(function(data){
+            addBubble('✅ Preventivo inviato con successo a <strong>'+state.email+'</strong>!<br><small style="opacity:.6">Una copia è stata inviata anche a admin@bluearroyo.it.</small>', 'bot', 300);
+            allBtns.forEach(function(b){ b.disabled = false; b.style.opacity = '1'; });
+          }).catch(function(){
+            addBubble('⚠️ Errore nell\'invio. Prova con WhatsApp o scarica il PDF.', 'bot', 300);
+            allBtns.forEach(function(b){ b.disabled = false; b.style.opacity = '1'; });
+          });
       }},
       { label:'📄 Scarica PDF', action:function(){ exportPDF(q); }},
       { label:'↺ Ricomincia', action:function(){ msgs().innerHTML=''; resetState(); startChat(); }}

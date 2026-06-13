@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordine Confermato — Palazzo Blue Arroyo</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/shared.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { background: var(--bg-off); }
+    .success-wrap {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--pad);
+    }
+    .success-card {
+      background: var(--white);
+      max-width: 560px;
+      width: 100%;
+      padding: 64px 48px;
+      text-align: center;
+      border-top: 3px solid var(--gold);
+    }
+    .success-icon {
+      width: 56px;
+      height: 56px;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin: 0 auto 28px;
+    }
+    .success-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .success-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .success-title em { font-style: italic; color: var(--gold); }
+    .success-body {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 36px;
+    }
+    .success-divider {
+      border: none;
+      border-top: 1px solid var(--border-gold);
+      margin: 32px 0;
+    }
+    .success-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .success-actions .btn {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 12px 24px;
+      text-decoration: none;
+      transition: background 150ms, color 150ms;
+    }
+    .btn-dark {
+      background: var(--bg-dark);
+      color: var(--white);
+    }
+    .btn-dark:hover { background: var(--gold); color: var(--white); }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border-gold);
+      color: var(--text);
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="/" class="brand" aria-label="Palazzo Blue Arroyo">
+        <span class="brand__name">Palazzo</span>
+        <span class="brand__lineage">by Blue Arroyo srl</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="success-wrap">
+    <div class="success-card">
+      <div class="success-icon">✓</div>
+      <p class="success-eyebrow">Ordine confermato</p>
+      <h1 id="successTitle" class="success-title">Grazie per il tuo acquisto.</h1>
+      <p id="successBody" class="success-body">
+        Il pagamento è andato a buon fine. Riceverai una ricevuta dettagliata all'indirizzo email indicato durante il checkout. Il nostro team ti contatterà a breve con i dettagli sulla spedizione.
+      </p>
+      <hr class="success-divider">
+      <div class="success-actions">
+        <a href="/shop.html" class="btn btn-dark">Continua lo shopping</a>
+        <a href="/" class="btn btn-outline">Torna al sito</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="site-footer__name">Palazzo Blue Arroyo</p>
+        <p class="site-footer__lineage">by Blue Arroyo srl</p>
+      </div>
+      <div class="site-footer__contact">
+        <p><a href="mailto:hello@bluearroyo.it">hello@bluearroyo.it</a></p>
+        <p>Firenze, Italia</p>
+      </div>
+      <div class="site-footer__meta">
+        <p class="site-footer__copy">&copy; 2026 Blue Arroyo srl</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    localStorage.removeItem('ba_cart');
+    const params = new URLSearchParams(window.location.search);
+    const name   = params.get('name');
+    if(name) {
+      const t = document.getElementById('successTitle');
+      const b = document.getElementById('successBody');
+      if(t) t.innerHTML = `Grazie, <em>${name}</em>.`;
+      if(b) b.textContent = `Il pagamento è andato a buon fine, ${name}. Riceverai la ricevuta all'indirizzo email che hai indicato. Il team Blue Arroyo ti contatterà per i dettagli sulla spedizione.`;
+    }
+  </script>
+</body>
+</html>

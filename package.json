@@ -1,0 +1,11 @@
+{
+  "name": "bluearroyo-ecommerce",
+  "version": "1.0.0",
+  "description": "E-commerce abbigliamento Blue Arroyo — palazzobluearroyo.it",
+  "dependencies": {
+    "stripe": "^14.22.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

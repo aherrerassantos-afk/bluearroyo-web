@@ -408,5 +408,30 @@ document.getElementById('contactForm').addEventListener('submit',function(e){
   window.open('https://wa.me/393510380392?text='+encodeURIComponent(text),'_blank');
 });
 </script>
+
+<script>
+// MILA LEADS — Blue Cleaning
+(function(){
+  var form = document.getElementById('contactForm');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var data = {
+      nome: document.getElementById('cf-nome')?.value || '',
+      telefono: document.getElementById('cf-tel')?.value || '',
+      email: document.getElementById('cf-email')?.value || '',
+      note: document.getElementById('cf-msg')?.value || '',
+      tipo_locale: document.getElementById('cf-tipo')?.value || '',
+      zona: 'Firenze'
+    };
+    fetch('https://aherreras.app.n8n.cloud/webhook/leads/blue-cleaning', {
+      method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)
+    }).catch(function(){});
+    var btn = form.querySelector('button[type="submit"]');
+    if(btn){ btn.textContent='✅ Messaggio inviato!'; btn.disabled=true; }
+    form.reset();
+  });
+})();
+</script>
 </body>
 </html>
